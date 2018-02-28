@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Екатерина Шмыголь](https://up.htmlacademy.ru/htmlcss/20/user/620461).
-* Наставник: `Неизвестно`.
+* Наставник: [Дарья Морено-Гоголева](https://htmlacademy.ru/profile/iwanttobealight).
 
 ---
 
