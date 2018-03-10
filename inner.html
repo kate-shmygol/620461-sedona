@@ -11,30 +11,178 @@
       <!-- Навигационное меню -->
       <nav class="main-navigation">
         <!-- Логотип сайта -->
+        <!-- Добавляем ссылку логотипу, ведущую на главную страницу сайта -->
         <a class="main-header-logo" href="index.html">
-         <img src="http://placehold.it/150x100" alt="Логотип города Седона" width="150" height="100">
+          <img src="http://placehold.it/150x100" alt="Логотип города Седона" width="150" height="100">
         </a>
         <!-- Неупорядоченный список меню, содержащий 4 пункта -->
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="gallery.html">Фото и видео</a></li>
           <li><a href="map_of_state.html">Карта штата</a></li>
-          <li class="site-navigation-current"><a href="hotels.html">Гостиницы</a></li>
+          <!-- Задаём класс активному пункту меню - Гостиницы -->
+          <li class="site-navigation-current"><a href="inner.html">Гостиницы</a></li>
         </ul>
       </nav>    
     </header>
 
-    <!-- Тег 'main' для основного содержимого страницы -->
+    <!-- Основное содержимое страницы -->
     <main class="container">
       
-        <!-- Скрытый заголовок. Как скрывать?  -->
+        <!-- Скрытый заголовок 'Гостиницы Седоны'-->
         <h1 class="visually-hidden">Гостиницы Седоны</h1>
         
         <!-- Тег 'section' для фильтра гостиниц города Седона -->
         <section class="filtres">
-          <!-- Ещё один скрытый заголовок -->
+          <!-- Cкрытый заголовок 'Фильтр гостиниц' -->
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
-          <!-- Здесь будет форма -->
+          <!-- Здесь будет форма фильтра гостиниц -->
+        </section>
+
+        <!-- Тег 'section' для вывода результатов и сортировки -->
+        <section class="results">
+            <!-- Заголовок для результатов -->
+            <h3>Найдено: 3</h3>  <!-- вместо цифры '3' какая-то другая запись будет -->
+            <!-- Сортировка. Как правильно прописывать 'хрефы' сортировки? -->
+            <h4>Сортировка:</h4> <!-- Текст 'Сортировка:' оборачиваем в тег <span>, т.к.он не является заголовком -->
+            <ul class="hotels-sorting">
+              <li class="hotels-sorting-current"><a href="#price">По цене</a></li>
+              <li><a href="#category">По типу</a></li>
+              <li><a href="#raiting">По рейтингу</a></li>
+            </ul>
+            <!-- Здесь будут кнопки сортировки. Как настроить сортировку, если больше одного параметра? -->
+            <!-- Здесь будет кнопка со стрелкой - вверх -->
+            <p class="hotels-item-sorting">
+              <a class="button-top" href="#start_cheap">
+                <img src="http://placehold.it/10x10" alt="Сначала дешёвые" width="10" height="10">
+              </a>
+              <!-- Здесь будет кнопка со стрелкой - вниз -->
+              <a class="button-top" href="#start_expansive">
+                  <img src="http://placehold.it/10x10" alt="Сначала дорогие" width="10" height="10">
+              </a> 
+            </p>
+        </section>
+
+        <!-- Вопрос: размер шрифта тип гостиницы, список сортировки и рейтинг каждой гостиницы - одни и те же?  -->
+        
+        <section class="hotels">
+          <h2 class="visually-hidden">Список гостиниц</h2>
+          <!-- Список найденных гостиниц -->
+          <ul class="hotels-list">
+              <li class="hotels-item">
+                  <!-- Заголовок названия гостиницы №1 -->
+                  <h3>
+                    <a href="hotels-item.html">
+                      <span class="hotels-item-title">Amara Resort & SPA</span>
+                    </a>
+                  </h3>
+                  
+                  <!-- Картинка гостиницы №1 -->
+                  <p class="hotels-item-image">
+                    <a href="hotels-item.html">
+                      <img src="http://placehold.it/100x70" alt="Гостиница Amara Resort & SPA" width="100" height="70">
+                    </a>
+                  </p>
+                  
+                  <!-- Блок 'Тип гостиницы' и кнопка-ссылка 'Подробнее', ведущая на страницу описания выбранной гостиницы -->
+                  <p class="hotels-category">
+                    <span>Гостиница</span><br>
+                    <a class="button-more-info" href="#AmaraResort&SPA">Подробнее</a>
+                  </p>
+
+                  <!-- Блок 'Цена' и кнопка-ссылка 'Забронировать', ведущая на форму бронирования -->
+                  <p class="hotels-item-price">
+                    <span>От 4000 Р.</span><br>
+                    <a class="button-to-book" href="#to-book">Забронировать</a>
+                  </p>
+                  
+                  <!-- Блок 'Рейтинг' -->
+                  <p class="hotels-item-raiting">
+                    <!-- Здесь будут картинки звёздочек --> 
+                    <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
+                    <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
+                    <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
+                    <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10"><br>
+                    <span>Рейтинг: 8,5</span>  <!-- вместо цифры '8,5' какая-то другая запись будет -->
+                  </p>
+              </li>
+
+              <li class="hotels-item">
+                    <!-- Заголовок названия гостиницы №2 -->
+                    <h3>
+                      <a href="hotels-item.html">
+                        <span class="hotels-item-title">Desert Quail Inn</span>
+                      </a>
+                    </h3>
+                    
+                    <!-- Картинка гостиницы №2 -->
+                    <p class="hotels-item-image">
+                      <a href="hotels-item.html">
+                        <img src="http://placehold.it/100x70" alt="Мотель Desert Quail Inn" width="100" height="70">
+                      </a>
+                    </p>
+                    
+                    <!-- Блок 'Тип гостиницы' и кнопка-ссылка 'Подробнее', ведущая на страницу описания выбранной гостиницы -->
+                    <p class="hotels-category">
+                      <span>Мотель</span><br>
+                      <a class="button-more-info" href="#DesertQuailInn">Подробнее</a>
+                    </p>
+  
+                    <!-- Блок 'Цена' и кнопка-ссылка 'Забронировать', ведущая на форму бронирования -->
+                    <p class="hotels-item-price">
+                      <span>От 3000 Р.</span><br>
+                      <a class="button-to-book" href="#to-book">Забронировать</a>
+                    </p>
+                    
+                    <!-- Блок 'Рейтинг' -->
+                    <p class="hotels-item-raiting">
+                      <!-- Здесь будут картинки звёздочек --> 
+                      <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
+                      <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
+                      <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10"><br>
+                      <span>Рейтинг: 8,9</span>  <!-- вместо цифры '8,9' какая-то другая запись будет -->
+                    </p>
+                </li>
+
+                <li class="hotels-item">
+                        <!-- Заголовок названия гостиницы №3 -->
+                        <h3>
+                          <a href="hotels-item.html">
+                            <span class="hotels-item-title">Villas At Poco Diablo</span>
+                          </a>
+                        </h3>
+                        
+                        <!-- Картинка гостиницы №3 -->
+                        <p class="hotels-item-image">
+                          <a href="hotels-item.html">
+                            <img src="http://placehold.it/100x70" alt="Апартаменты Villas At Poco Diablo" width="100" height="70">
+                          </a>
+                        </p>
+                        
+                        <!-- Блок 'Тип гостиницы' и кнопка-ссылка 'Подробнее', ведущая на страницу описания выбранной гостиницы -->
+                        <p class="hotels-category">
+                          <span>Апартаменты</span><br>
+                          <a class="button-more-info" href="#VillasAtPocoDiablo">Подробнее</a>
+                        </p>
+      
+                        <!-- Блок 'Цена' и кнопка-ссылка 'Забронировать', ведущая на форму бронирования -->
+                        <p class="hotels-item-price">
+                          <span>От 2000 Р.</span><br>
+                          <a class="button-to-book" href="#to-book">Забронировать</a>
+                        </p>
+                        
+                        <!-- Блок 'Рейтинг' -->
+                        <p class="hotels-item-raiting">
+                          <!-- Здесь будут картинки звёздочек --> 
+                          <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
+                          <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10"><br>
+                          <span>Рейтинг: 9,2</span>  <!-- вместо цифры '9,2' какая-то другая запись будет -->
+                        </p>
+                    </li>
+
+          </ul>
+
+
         </section>
   
       </main>
