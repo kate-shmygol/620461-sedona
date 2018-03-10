@@ -40,6 +40,7 @@
         </section>
 
         <!-- Тег 'section' для вывода результатов и сортировки -->
+        <!-- Правильно применён тег? Или лучше в 'div' обернуть этот раздел? -->
         <section class="results">
             <!-- Заголовок для результатов -->
             <h3>Найдено: 3</h3>  <!-- вместо цифры '3' какая-то другая запись будет -->
@@ -145,47 +146,65 @@
                 </li>
 
                 <li class="hotels-item">
-                        <!-- Заголовок названия гостиницы №3 -->
-                        <h3>
-                          <a href="hotels-item.html">
-                            <span class="hotels-item-title">Villas At Poco Diablo</span>
-                          </a>
-                        </h3>
+                  <!-- Заголовок названия гостиницы №3 -->
+                  <h3>
+                    <a href="hotels-item.html">
+                        <span class="hotels-item-title">Villas At Poco Diablo</span>
+                        </a>
+                  </h3>
                         
-                        <!-- Картинка гостиницы №3 -->
-                        <p class="hotels-item-image">
-                          <a href="hotels-item.html">
-                            <img src="http://placehold.it/100x70" alt="Апартаменты Villas At Poco Diablo" width="100" height="70">
-                          </a>
-                        </p>
+                  <!-- Картинка гостиницы №3 -->
+                  <p class="hotels-item-image">
+                      <a href="hotels-item.html">
+                      <img src="http://placehold.it/100x70" alt="Апартаменты Villas At Poco Diablo" width="100" height="70">
+                      </a>
+                  </p>
                         
-                        <!-- Блок 'Тип гостиницы' и кнопка-ссылка 'Подробнее', ведущая на страницу описания выбранной гостиницы -->
-                        <p class="hotels-category">
-                          <span>Апартаменты</span><br>
-                          <a class="button-more-info" href="#VillasAtPocoDiablo">Подробнее</a>
-                        </p>
+                  <!-- Блок 'Тип гостиницы' и кнопка-ссылка 'Подробнее', ведущая на страницу описания выбранной гостиницы -->
+                  <p class="hotels-category">
+                      <span>Апартаменты</span><br>
+                      <a class="button-more-info" href="#VillasAtPocoDiablo">Подробнее</a>
+                  </p>
       
-                        <!-- Блок 'Цена' и кнопка-ссылка 'Забронировать', ведущая на форму бронирования -->
-                        <p class="hotels-item-price">
-                          <span>От 2000 Р.</span><br>
-                          <a class="button-to-book" href="#to-book">Забронировать</a>
-                        </p>
+                  <!-- Блок 'Цена' и кнопка-ссылка 'Забронировать', ведущая на форму бронирования -->
+                  <p class="hotels-item-price">
+                      <span>От 2000 Р.</span><br>
+                      <a class="button-to-book" href="#to-book">Забронировать</a>
+                  </p>
                         
-                        <!-- Блок 'Рейтинг' -->
-                        <p class="hotels-item-raiting">
-                          <!-- Здесь будут картинки звёздочек --> 
-                          <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
-                          <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10"><br>
-                          <span>Рейтинг: 9,2</span>  <!-- вместо цифры '9,2' какая-то другая запись будет -->
-                        </p>
-                    </li>
-
+                  <!-- Блок 'Рейтинг' -->
+                  <p class="hotels-item-raiting">
+                      <!-- Здесь будут картинки звёздочек --> 
+                      <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
+                      <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10"><br>
+                      <span>Рейтинг: 9,2</span>  <!-- вместо цифры '9,2' какая-то другая запись будет -->
+                  </p>
+                </li>
           </ul>
-
-
         </section>
-  
       </main>
 
+    <!-- Подвал сайта -->
+    <footer class="main-footer">
+            <!-- #VisitSedona. Ссылка на другой сайт ведёт? -->
+            <p>
+              <a href="info.html">#VisitSedona</a>
+            </p>
+            <!-- Социальные кнопки -->
+            <div class="footer-social">
+              <ul>
+               <li><a class="social-button" href="https://twitter.com/htmlacademy_ru">Twitter</a></li>
+               <li><a class="social-button" href="https://www.facebook.com/htmlacademy">Facebook</a></li>
+               <li><a class="social-button" href="https://www.youtube.com/user/htmlacademyru">Youtube</a></li>
+              </ul>
+            </div>
+            <!-- Копирайт -->
+            <p class="footer-copyright">
+             <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
+              <!-- Нашла только логотип белого цвета. Где найти логотип чёрного цвета? https://htmlacademy.ru/favicon.ico - Здесь без надписи -->
+              <img src="https://assets.htmlacademy.ru/img/logo.v2.svg" width="161" height="55" alt="HTML Academy">
+             </a>
+            </p>
+          </footer>
     </body>
 </html>
