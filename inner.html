@@ -9,21 +9,29 @@
     <!-- Шапка сайта -->
     <header class="main-header">
       <!-- Навигационное меню -->
-      <nav class="main-navigation">
+      <nav class="main-navigation-header">
         <!-- Логотип сайта -->
-        <!-- Добавляем ссылку логотипу, ведущую на главную страницу сайта -->
-        <a class="main-header-logo" href="index.html">
-          <img src="img/logo-sedona.png" alt="Логотип города Седона" width="10%" height="10%">
+        <a class="main-logo-header">
+          <!-- width="575" height="292" -->
+         <img class="logo-header" src="img/logo-sedona.png" alt="Логотип города Седона" width="10%" height="10%">
         </a>
         <!-- Неупорядоченный список меню, содержащий 4 пункта -->
-        <ul class="site-navigation">
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="gallery.html">Фото и видео</a></li>
-          <li><a href="map_of_state.html">Карта штата</a></li>
+        <ul class="site-navigation-header">
+          <li class="info-header">
+            <a class="nav-link-info" href="info.html">Информация</a>
+          </li>
+          <li class="gallery-header">
+            <a class="nav-link-gallery" href="gallery.html">Фото и видео</a>
+          </li>
+          <li class="map-header">
+            <a class="nav-link-map" href="map_of_state.html">Карта штата</a>
+          </li>
           <!-- Задаём класс активному пункту меню - Гостиницы -->
-          <li class="site-navigation-current"><a href="inner.html">Гостиницы</a></li>
+          <li class="hotels-header">
+            <a class="nav-link-hotels-current" href="inner.html">Гостиницы</a>
+          </li>
         </ul>
-      </nav>    
+      </nav>
     </header>
 
     <!-- Основное содержимое страницы -->
