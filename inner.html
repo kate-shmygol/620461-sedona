@@ -48,17 +48,25 @@
         </section>
 
         <!-- Тег 'section' для вывода результатов и сортировки -->
-        <!-- Правильно применён тег? Или лучше в 'div' обернуть этот раздел? -->
+        <!-- Вопрос: Правильно применён тег? Или лучше в 'div' обернуть этот раздел? -->
+        <!-- Ответ: правильно -->
         <section class="results">
             <!-- Заголовок для результатов -->
-            <h3>Найдено: 3</h3>  <!-- вместо цифры '3' какая-то другая запись будет -->
-            <!-- Сортировка. Как правильно прописывать 'хрефы' сортировки? -->
-            <h4>Сортировка:</h4> <!-- Текст 'Сортировка:' оборачиваем в тег <span>, т.к.он не является заголовком -->
+            <span class="found">Найдено: 3</span>
+            <!-- Сортировка -->
+            <h3 class="visually-hidden">Сортировка:</h3>
             <ul class="hotels-sorting">
-              <li class="hotels-sorting-current"><a href="#price">По цене</a></li>
-              <li><a href="#category">По типу</a></li>
-              <li><a href="#raiting">По рейтингу</a></li>
+              <li class="hotels-sorting-price-current">
+                <a class="hotels-sorting-price-link-current" href="#price">По цене</a>
+              </li>
+              <li class="hotels-sorting-category">
+                <a class="hotels-sorting-category-link" href="#category">По типу</a>
+              </li>
+              <li class="hotels-sorting-raiting">
+                <a class="hotels-sorting-raiting-link" href="#raiting">По рейтингу</a>
+              </li>
             </ul>
+
             <!-- Здесь будут кнопки сортировки. Как настроить сортировку, если больше одного параметра? -->
             <!-- Здесь будет кнопка со стрелкой - вверх -->
             <p class="hotels-item-sorting">
