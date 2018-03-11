@@ -51,78 +51,75 @@
         <!-- Вопрос: Правильно применён тег? Или лучше в 'div' обернуть этот раздел? -->
         <!-- Ответ: правильно -->
         <section class="results">
-            <!-- Заголовок для результатов -->
-            <span class="found">Найдено: 3</span>
-            <!-- Сортировка -->
-            <h3 class="visually-hidden">Сортировка:</h3>
-            <ul class="hotels-sorting">
-              <li class="hotels-sorting-price-current">
-                <a class="hotels-sorting-price-link-current" href="#price">По цене</a>
-              </li>
-              <li class="hotels-sorting-category">
-                <a class="hotels-sorting-category-link" href="#category">По типу</a>
-              </li>
-              <li class="hotels-sorting-raiting">
-                <a class="hotels-sorting-raiting-link" href="#raiting">По рейтингу</a>
-              </li>
-            </ul>
+          <!-- Заголовок для результатов -->
+          <span class="found">Найдено: 3</span>
+          <!-- Сортировка -->
+          <h3 class="visually-hidden">Сортировка:</h3>
+          <ul class="hotels-sorting">
+            <li class="hotels-sorting-price-current">
+              <a class="hotels-sorting-price-link-current" href="#price">По цене</a>
+            </li>
+            <li class="hotels-sorting-category">
+              <a class="hotels-sorting-category-link" href="#category">По типу</a>
+            </li>
+            <li class="hotels-sorting-raiting">
+              <a class="hotels-sorting-raiting-link" href="#raiting">По рейтингу</a>
+            </li>
+          </ul>
 
-            <!-- Здесь будут кнопки сортировки. Как настроить сортировку, если больше одного параметра? -->
-            <!-- Здесь будет кнопка со стрелкой - вверх -->
-            <p class="hotels-item-sorting">
-              <a class="button-top" href="#start_cheap">
-                <img src="http://placehold.it/10x10" alt="Сначала дешёвые" width="10" height="10">
-              </a>
-              <!-- Здесь будет кнопка со стрелкой - вниз -->
-              <a class="button-top" href="#start_expansive">
-                  <img src="http://placehold.it/10x10" alt="Сначала дорогие" width="10" height="10">
-              </a> 
-            </p>
+          <p class="hotels-item-sorting">
+            <!-- Здесь будет кнопка сортировки со стрелкой - вверх -->
+            <a class="button-top" href="#start_cheap">
+              <img src="http://placehold.it/10x10" alt="Сначала дешёвые" width="10" height="10">
+            </a>
+            <!-- Здесь будет кнопка сортировки со стрелкой - вниз -->
+            <a class="button-top" href="#start_expansive">
+              <img src="http://placehold.it/10x10" alt="Сначала дорогие" width="10" height="10">
+            </a> 
+          </p>
         </section>
-
-        <!-- Вопрос: размер шрифта тип гостиницы, список сортировки и рейтинг каждой гостиницы - одни и те же?  -->
-        
+    
         <section class="hotels">
           <h2 class="visually-hidden">Список гостиниц</h2>
           <!-- Список найденных гостиниц -->
           <ul class="hotels-list">
-              <li class="hotels-item">
-                  <!-- Заголовок названия гостиницы №1 -->
-                  <h3>
-                    <a href="hotels-item.html">
-                      <span class="hotels-item-title">Amara Resort & SPA</span>
-                    </a>
-                  </h3>
+            <li class="hotels-item">
+              <!-- Заголовок названия гостиницы №1 -->
+              <h3>
+                <a href="hotels-item.html">
+                  <span class="hotels-item-title">Amara Resort & SPA</span>
+                </a>
+              </h3>
                   
-                  <!-- Картинка гостиницы №1 -->
-                  <p class="hotels-item-image">
-                    <a href="hotels-item.html">
-                      <img src="http://placehold.it/100x70" alt="Гостиница Amara Resort & SPA" width="100" height="70">
-                    </a>
-                  </p>
+              <!-- Картинка гостиницы №1 -->
+              <p class="hotels-item-image">
+                <a href="hotels-item.html">
+                  <img src="http://placehold.it/100x70" alt="Гостиница Amara Resort & SPA" width="100" height="70">
+                </a>
+              </p>
                   
-                  <!-- Блок 'Тип гостиницы' и кнопка-ссылка 'Подробнее', ведущая на страницу описания выбранной гостиницы -->
-                  <p class="hotels-category">
-                    <span>Гостиница</span><br>
-                    <a class="button-more-info" href="#AmaraResort&SPA">Подробнее</a>
-                  </p>
+              <!-- Блок 'Тип гостиницы' и кнопка-ссылка 'Подробнее', ведущая на страницу описания выбранной гостиницы -->
+              <p class="hotels-category">
+                <span>Гостиница</span><br>
+                <a class="button-more-info" href="#AmaraResort&SPA">Подробнее</a>
+              </p>
 
-                  <!-- Блок 'Цена' и кнопка-ссылка 'Забронировать', ведущая на форму бронирования -->
-                  <p class="hotels-item-price">
-                    <span>От 4000 Р.</span><br>
-                    <a class="button-to-book" href="#to-book">Забронировать</a>
-                  </p>
+              <!-- Блок 'Цена' и кнопка-ссылка 'Забронировать', ведущая на форму бронирования -->
+              <p class="hotels-item-price">
+                <span>От 4000 Р.</span><br>
+                <a class="button-to-book" href="#to-book">Забронировать</a>
+              </p>
                   
-                  <!-- Блок 'Рейтинг' -->
-                  <p class="hotels-item-raiting">
-                    <!-- Здесь будут картинки звёздочек --> 
-                    <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
-                    <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
-                    <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
-                    <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10"><br>
-                    <span>Рейтинг: 8,5</span>  <!-- вместо цифры '8,5' какая-то другая запись будет -->
-                  </p>
-              </li>
+              <!-- Блок 'Рейтинг' -->
+              <p class="hotels-item-raiting">
+                <!-- Здесь будут картинки звёздочек --> 
+                <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
+                <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
+                <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10">
+                <img src="http://placehold.it/10x10" alt="Рейтинг" width="10" height="10"><br>
+                <span>Рейтинг: 8,5</span>  <!-- вместо цифры '8,5' какая-то другая запись будет -->
+              </p>
+            </li>
 
               <li class="hotels-item">
                     <!-- Заголовок названия гостиницы №2 -->
@@ -203,8 +200,8 @@
     <!-- Подвал сайта -->
     <footer class="main-footer">
             <!-- #VisitSedona. Ссылка на другой сайт ведёт? -->
-            <p>
-              <a href="info.html">#VisitSedona</a>
+            <p class="main-link-footer">
+              <a class="link-footer" href="info.html">#VisitSedona</a>
             </p>
             <!-- Социальные кнопки -->
             <div class="footer-social">
