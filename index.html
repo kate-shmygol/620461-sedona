@@ -35,11 +35,66 @@
 
     <!-- Тег 'main' для основного содержимого страницы -->
     <main class="main-page">
+      <!-- Скрытый заголовок -->
+      <h1 ></h1>
       
-      <!-- Скрытый заголовок. Как скрывать?  font-size: 0; -->
-      <h1 class="visually-hidden">Город Седона</h1>
+      <!-- Преимущества -->
+      <!-- 7 'section' для описания преимуществ города Седона -->
+      <!-- И каждому 'section' заголовок 'h2' -->
+
+      <!-- 'section' №1 - фоновая картинка, Welcome, слоган -->
+      <section class="features-logo">
+        <h2 class="visually-hidden">Добро пожаловать в город Седона</h2>
+         <!-- Найти в PS размеры фоновой картинки (в .png показывает 1200*780).  width=".." height=".." -->
+         <img class="logo" src="img/big_background_image_Sedona.png" alt="Добро пожаловать в город Седона" width="100%" height="100%">
+      </section>
       
+      <!-- 'section' №2 -  -->
+      <section class="features black-text">
+        <h2 class="feature-item">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p class="text"></p>
+      </section>
+
+      <section class="features white-text">
+        <h2 class="feature-item"></h2>
+        <p class="text"></p>
+      </section>
+
+      <section class="features">
+        <h2 class="feature-item"></h2>
+        <p class="text"></p>
+      </section>
+      <section class="features">
+        <h2 class="feature-item"></h2>
+        <p class="text"></p>
+      </section>
+      <section class="features">
+        <h2 class="feature-item"></h2>
+        <p class="text"></p>
+      </section>
+      <section class="features">
+        <h2 class="feature-item"></h2>
+        <p class="text"></p>
+      </section>
+
+
+
       <!-- Тег 'section' для описания преимуществ города Седона -->
+      <section class="logo">
+
+
+      </section>
+
+      <section class="features"></section>
+      <section class="features"></section>
+      <section class="features"></section>
+      <section class="features"></section>
+      <section class="features"></section>
+      <section class="features"></section>
+        <!-- ul.list>li*3 -->
+
+
+      
       <section class="features">
         <!-- Ещё один скрытый заголовок -->
         <h2 class="visually-hidden">Преимущества</h2>
@@ -48,7 +103,6 @@
             <!-- Лид, слоган сайта -->
             <!-- Здесь будет 1 большая фоновая картинка. Реализация - "background-image" для всего блока -->
             <!-- Здесь будет фоновые картинки с текстом. Реализация - "background-image" для всего блока или для псевдоэлемента -->
-            <!-- Параграфы удалю, когда картинки вставлю -->
             <p class="lead-small-blue">Welcome</p>
             <p class="lead-small-brown"> &mdash; &nbsp; to the gorgeous &nbsp; &mdash;</p>
             <p class="lead-big-white">Sedona</p>
@@ -59,7 +113,8 @@
              <p class="item-title-black">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
              <p class="item-subtitle-black">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           </li>
-            <!-- Преимущества -->
+          
+          <!-- Преимущества -->
           <li class="feature-item">
             <p class="feature-item-title-white">Настоящий городок</p>
             <p class="feature-item-subtitle-white">&ndash; №1 &ndash;</p>
@@ -67,7 +122,7 @@
                 
             <ul class="feature-list-city">
               <li class="feature-item feature-item-city">
-                <!-- Декоративная (вспомогательная, не имеющая смысла) картинка реализуется "background-image" для псевдоэлемента -->
+              <!-- Декоративная (вспомогательная, не имеющая смысла) картинка реализуется "background-image" для псевдоэлемента -->
                 
                 <p class="feature-item-title-black">Жилье</p> 
                 <p class="feature-item-subtitle-black">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
