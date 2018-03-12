@@ -34,7 +34,7 @@
     </header>
 
     <!-- Тег 'main' для основного содержимого страницы -->
-    <main class="container">
+    <main class="main-page">
       
       <!-- Скрытый заголовок. Как скрывать?  font-size: 0; -->
       <h1 class="visually-hidden">Город Седона</h1>
@@ -46,6 +46,9 @@
         <ul class="features-list">
           <li class="lead-text">
             <!-- Лид, слоган сайта -->
+            <!-- Здесь будет 1 большая фоновая картинка. Реализация - "background-image" для всего блока -->
+            <!-- Здесь будет фоновые картинки с текстом. Реализация - "background-image" для всего блока или для псевдоэлемента -->
+            <!-- Параграфы удалю, когда картинки вставлю -->
             <p class="lead-small-blue">Welcome</p>
             <p class="lead-small-brown"> &mdash; &nbsp; to the gorgeous &nbsp; &mdash;</p>
             <p class="lead-big-white">Sedona</p>
@@ -64,7 +67,9 @@
                 
             <ul class="feature-list-city">
               <li class="feature-item feature-item-city">
-                <p class="feature-item-title-black">Жилье</p>
+                <!-- Декоративная (вспомогательная, не имеющая смысла) картинка реализуется "background-image" для псевдоэлемента -->
+                
+                <p class="feature-item-title-black">Жилье</p> 
                 <p class="feature-item-subtitle-black">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
               </li>
               <li class="feature-item feature-item-city">
@@ -76,6 +81,7 @@
                 <p class="feature-item-subtitle-black">Не только китайского, но и местного производства!</p>
               </li>
             </ul>
+
           </li>
 
           <li class="feature-item">
@@ -123,18 +129,19 @@
       <div class="footer-social">
         <ul>
           <!-- Здесь нужно задавать классы <li>? -->
-         <li><a class="social-button" href="https://twitter.com/htmlacademy_ru">Twitter</a></li>
-         <li><a class="social-button" href="https://www.facebook.com/htmlacademy">Facebook</a></li>
-         <li><a class="social-button" href="https://www.youtube.com/user/htmlacademyru">Youtube</a></li>
+            <!-- background-image для соц-иконок (ссылки) -->
+          <li><a class="social-button" href="https://twitter.com/htmlacademy_ru">Twitter</a></li>
+          <li><a class="social-button" href="https://www.facebook.com/htmlacademy">Facebook</a></li>
+          <li><a class="social-button" href="https://www.youtube.com/user/htmlacademyru">Youtube</a></li>
         </ul>
       </div>
       <!-- Копирайт -->
       <p class="footer-copyright">
-       <b>Website by</b>
-       <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
-        <!-- width="450" height="154" -->
-       <img src="img/logo-htmlacademy.svg" width="10%" height="10%" alt="HTML Academy">
-       </a>
+        <b>Website by</b>
+        <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
+         <!-- width="450" height="154" -->
+        <img src="img/logo-htmlacademy.svg" width="10%" height="10%" alt="HTML Academy">
+        </a>
       </p>
     </footer>
   </body>
