@@ -13,7 +13,7 @@
         <!-- Логотип сайта -->
         <a class="main-logo-header">
           <!-- width="575" height="292" -->
-         <img class="logo-header" src="img/logo-sedona.png" alt="Логотип города Седона" width="10%" height="10%">
+          <img class="img-logo-header" src="img/logo-sedona.png" width="10%" height="10%" alt="Логотип города Седона">
         </a>
         <!-- Неупорядоченный список меню, содержащий 4 пункта -->
         <ul class="site-navigation-header">
@@ -36,166 +36,123 @@
     <!-- Тег 'main' для основного содержимого страницы -->
     <main class="main-page">
       <!-- Скрытый заголовок -->
-      <h1 ></h1>
+      <h1 class="visually-hidden">Город Седона</h1>
       
       <!-- Преимущества -->
-      <!-- 7 'section' для описания преимуществ города Седона -->
-      <!-- И каждому 'section' заголовок 'h2' -->
+      <!-- 7 'section' для фоновой картинки, описания преимуществ города Седона и формы -->
+      <!-- Каждому 'section' заголовок 'h2' -->
 
       <!-- 'section' №1 - фоновая картинка, Welcome, слоган -->
       <section class="features-logo">
         <h2 class="visually-hidden">Добро пожаловать в город Седона</h2>
-         <!-- Найти в PS размеры фоновой картинки (в .png показывает 1200*780).  width=".." height=".." -->
-         <img class="logo" src="img/big_background_image_Sedona.png" alt="Добро пожаловать в город Седона" width="100%" height="100%">
+        <!-- Найти в PS размеры фоновой картинки (в .png показывает 1200*780).  width=".." height=".." -->
+        <img class="img-background" src="img/background_sedona.png" width="100%" height="100%" alt="Добро пожаловать в город Седона">
       </section>
       
-      <!-- 'section' №2 -  -->
+      <!-- 'section' №2 - Текст, указывающий на преимущества -->
       <section class="features black-text">
-        <h2 class="feature-item">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p class="text"></p>
+        <h2 class="feature-item-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p class="feature-item-subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
 
+      <!-- 'section' №3 - Преимущество №1 - Настоящий городок -->
       <section class="features white-text">
-        <h2 class="feature-item"></h2>
-        <p class="text"></p>
+        <h2 class="feature-item-title">Настоящий городок</h2>
+        <p class="feature-item-subtitle">&ndash; №1 &ndash;</p>
+        <p class="feature-item-subtitle">Седона &ndash; не аттракцион для, туристов, там течет своя жизнь</p>
+        <!-- Найти в PS размеры картинки width=".." height=".." -->
+        <img class="img-real-city" src="img/.." width="100%" height="100%" alt="Настоящий городок">
       </section>
-
-      <section class="features">
-        <h2 class="feature-item"></h2>
-        <p class="text"></p>
-      </section>
-      <section class="features">
-        <h2 class="feature-item"></h2>
-        <p class="text"></p>
-      </section>
-      <section class="features">
-        <h2 class="feature-item"></h2>
-        <p class="text"></p>
-      </section>
-      <section class="features">
-        <h2 class="feature-item"></h2>
-        <p class="text"></p>
-      </section>
-
-
-
-      <!-- Тег 'section' для описания преимуществ города Седона -->
-      <section class="logo">
-
-
-      </section>
-
-      <section class="features"></section>
-      <section class="features"></section>
-      <section class="features"></section>
-      <section class="features"></section>
-      <section class="features"></section>
-      <section class="features"></section>
-        <!-- ul.list>li*3 -->
-
-
       
+      <!-- 'section' №4 - Жильё, Еда, Сувениры -->
+      <!-- Декоративная (вспомогательная, не имеющая смысла) картинка реализуется "background-image" для псевдоэлемента -->
       <section class="features">
-        <!-- Ещё один скрытый заголовок -->
-        <h2 class="visually-hidden">Преимущества</h2>
-        <ul class="features-list">
-          <li class="lead-text">
-            <!-- Лид, слоган сайта -->
-            <!-- Здесь будет 1 большая фоновая картинка. Реализация - "background-image" для всего блока -->
-            <!-- Здесь будет фоновые картинки с текстом. Реализация - "background-image" для всего блока или для псевдоэлемента -->
-            <p class="lead-small-blue">Welcome</p>
-            <p class="lead-small-brown"> &mdash; &nbsp; to the gorgeous &nbsp; &mdash;</p>
-            <p class="lead-big-white">Sedona</p>
-            <p class="lead-quote">"Because the Grand Canyon sucks!"</p>
-          </li>
-          
-          <li class="feature-item">
-             <p class="item-title-black">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
-             <p class="item-subtitle-black">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-          </li>
-          
-          <!-- Преимущества -->
-          <li class="feature-item">
-            <p class="feature-item-title-white">Настоящий городок</p>
-            <p class="feature-item-subtitle-white">&ndash; №1 &ndash;</p>
-            <p class="feature-item-subtitle-white">Седона &ndash; не аттракцион для, туристов, там течет своя жизнь</p>
-                
-            <ul class="feature-list-city">
-              <li class="feature-item feature-item-city">
-              <!-- Декоративная (вспомогательная, не имеющая смысла) картинка реализуется "background-image" для псевдоэлемента -->
-                
-                <p class="feature-item-title-black">Жилье</p> 
-                <p class="feature-item-subtitle-black">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-              </li>
-              <li class="feature-item feature-item-city">
-                <p class="feature-item-title-black">Еда</p>
-                <p class="feature-item-subtitle-black">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-              </li>
-              <li class="feature-item feature-item-city">
-                <p class="feature-item-title-black">Сувениры</p>
-                <p class="feature-item-subtitle-black">Не только китайского, но и местного производства!</p>
-              </li>
-            </ul>
-
-          </li>
-
-          <li class="feature-item">
-            <p class="feature-item-title-white">Там есть мост дьявола</p>
-            <p class="feature-item-subtitle-white">&ndash; №2 &ndash;</p>
-            <p class="feature-item-subtitle-white">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-          </li>
-          <li class="feature-item">
-              <p class="feature-item-title-black">Небольшая площадь</p>
-              <p class="feature-item-subtitle-black">&ndash; №3 &ndash;</p>
-              <p class="feature-item-subtitle-black">Все достопримечательности находятся очень близко</p>
-          </li>
-          <li class="feature-item">
-              <p class="feature-item-title-black">Красивая дорога</p>
-              <p class="feature-item-subtitle-black">&ndash; №4 &ndash;</p>
-              <p class="feature-item-subtitle-black">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
-          <li class="feature-item">
-              <p class="feature-item-title-black">Мало туристов</p>
-              <p class="feature-item-subtitle-black">&ndash; №5 &ndash;</p>
-              <p class="feature-item-subtitle-black">Большинство едет в Гранд Каньон и толпится там</p>
-          </li>
-        </ul>
+        <h2 class="visually-hidden">Преимущества города Седона</h2>
+        <div class="feature-item-city black-text">
+          <img class="img-background" src="" width="10%" height="10%" alt="Жилье">
+          <h3 class="feature-item-title">Жилье</h3>
+          <p class="feature-item-subtitle">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </div>
+        <div class="feature-item-city black-text">
+          <img class="img-background" src="" width="10%" height="10%" alt="Еда">
+          <h3 class="feature-item-title">Еда</h3>
+          <p class="feature-item-subtitle">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </div>
+        <div class="feature-item-city black-text">
+          <img class="img-background" src="" width="10%" height="10%" alt="Сувениры">
+          <h3 class="feature-item-title">Сувениры</h3>
+          <p class="feature-item-subtitle">Не только китайского, но и местного производства!</p>
+        </div>
       </section>
 
-      <!-- Тег 'section' для формы поиска гостиницы -->
+      <!-- 'section' №5 - Преимущество №2 - Мост дьявола -->
+      <section class="features white-text">
+        <h2 class="feature-item-title">Там есть мост дьявола</h2>
+        <p class="feature-item-subtitle">&ndash; №2 &ndash;</p>
+        <p class="feature-item-subtitle">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        <!-- Найти в PS размеры картинки width=".." height=".." -->
+        <img class="img-bridge" src="img/.." width="100%" height="100%" alt="Настоящий городок">
+      </section>
+      
+      <!-- 'section' №6 - Преимущества №3, №4, №5 -->
+      <section class="features">
+        <h2 class="visually-hidden">Преимущества города Седона</h2>
+        <div class="feature-item-city black-text">
+          <h3 class="feature-item-title">Небольшая площадь</h3>
+          <p class="feature-item-subtitle">&ndash; №3 &ndash;</p>
+          <p class="feature-item-subtitle">Все достопримечательности находятся очень близко</p>
+        </div>
+        <div class="feature-item-city black-text">
+          <h3 class="feature-item-title">Красивая дорога</h3>
+          <p class="feature-item-subtitle">&ndash; №4 &ndash;</p>
+          <p class="feature-item-subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+        <div class="feature-item-city black-text">
+          <h3 class="feature-item-title">Мало туристов</h3>
+          <p class="feature-item-subtitle">&ndash; №5 &ndash;</p>
+          <p class="feature-item-subtitle">Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
+
+      <!-- 'section' №7 - Заинтересовались? + форма поиска гостиницы -->
       <section class="search">
-        <p class="search-title">Заинтересовались?</p>
+        <h2 class="search-title">Заинтересовались?</h2>
         <p class="search-subtitle">Укажите предполагаемые даты поездки, мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <img class="img-map" src="img/.." width="100%" height="100%" alt="Карта Седоны">
         <!-- Здесь будет форма -->
         <form>
-          <p class="title-form-search">Поиск гостиницы в Седоне</p>
-
+          <h2 class="title-form-search">Поиск гостиницы в Седоне</h2>
+  
         </form>
       </section>
     </main>
     
     <!-- Подвал сайта -->
     <footer class="main-footer">
-      <!-- #VisitSedona. Ссылка на другой сайт ведёт? -->
+      <!-- #VisitSedona -->
       <p class="main-link-footer">
         <a class="link-footer" href="info.html">#VisitSedona</a>
       </p>
       <!-- Социальные кнопки -->
       <div class="footer-social">
         <ul>
-          <!-- Здесь нужно задавать классы <li>? -->
             <!-- background-image для соц-иконок (ссылки) -->
-          <li><a class="social-button" href="https://twitter.com/htmlacademy_ru">Twitter</a></li>
-          <li><a class="social-button" href="https://www.facebook.com/htmlacademy">Facebook</a></li>
-          <li><a class="social-button" href="https://www.youtube.com/user/htmlacademyru">Youtube</a></li>
+          <li>
+            <a class="social-button" href="https://twitter.com/htmlacademy_ru">Twitter</a>
+          </li>
+          <li>
+            <a class="social-button" href="https://www.facebook.com/htmlacademy">Facebook</a>
+          </li>
+          <li>
+            <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
+          </li>
         </ul>
       </div>
       <!-- Копирайт -->
       <p class="footer-copyright">
         <b>Website by</b>
         <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
-         <!-- width="450" height="154" -->
-        <img src="img/logo-htmlacademy.svg" width="10%" height="10%" alt="HTML Academy">
+          <!-- width="450" height="154" -->
+          <img src="img/logo-htmlacademy.svg" width="10%" height="10%" alt="HTML Academy">
         </a>
       </p>
     </footer>
