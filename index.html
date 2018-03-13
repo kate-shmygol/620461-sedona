@@ -48,6 +48,15 @@
         <h2 class="visually-hidden">Добро пожаловать в город Седона</h2>
         <!-- Контентная фоновая картинка города Седона -->
         <!-- Найти в PS размеры фоновой картинки (в .png показывает 1200*780).  width=".." height=".." -->
+        <!-- Как прописать `alt`?  -->
+        <!-- Вариант №1 - `alt`="Добро пожаловать в город Седона" -->
+        <!-- Вариант №2 - см. ниже -->
+        <!-- Текст на фоновой картинке -->
+        <!--        Welcome
+              —   to the gorgeous   —
+                     Sedona
+         "Because the Grand Canyon sucks!" -->
+         <!-- т.е. вот так - `alt`="Welcome. To the gorgeous. Sedona. Because the Grand Canyon sucks!" -->
         <img class="img-background" src="img/background_sedona.png" width="100%" height="100%" alt="Добро пожаловать в город Седона">
       </section>
       
@@ -69,21 +78,22 @@
       
       <!-- `section` №4 - Жильё, Еда, Сувениры -->
       <!-- Все 3 картинки - декоративные (вспомогательные, не имеющие смысла) -->
+      <!-- `alt` - пустые, потому что описание картинки не несёт пользы для слушающих -->
       <!-- Реализация - `background-image` для псевдоэлемента -->
       <section class="features">
         <h2 class="visually-hidden">Преимущества города Седона</h2>
         <div class="feature-item-city black-text">
-          <img class="icon-background" src="" width="10%" height="10%" alt="Жилье">
+          <img class="icon-background" src="" width="10%" height="10%" alt="">
           <h3 class="feature-item-title">Жилье</h3>
           <p class="feature-item-subtitle">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </div>
         <div class="feature-item-city black-text">
-          <img class="icon-background" src="" width="10%" height="10%" alt="Еда">
+          <img class="icon-background" src="" width="10%" height="10%" alt="">
           <h3 class="feature-item-title">Еда</h3>
           <p class="feature-item-subtitle">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
         <div class="feature-item-city black-text">
-          <img class="icon-background" src="" width="10%" height="10%" alt="Сувениры">
+          <img class="icon-background" src="" width="10%" height="10%" alt="">
           <h3 class="feature-item-title">Сувениры</h3>
           <p class="feature-item-subtitle">Не только китайского, но и местного производства!</p>
         </div>
@@ -96,7 +106,7 @@
         <p class="feature-item-subtitle">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         <!-- Контентная картинка преимущества №2 - Там есть мост дьявола -->
         <!-- Найти в PS размеры картинки width=".." height=".." -->
-        <img class="img-bridge" src="img/.." width="100%" height="100%" alt="Настоящий городок">
+        <img class="img-bridge" src="img/.." width="100%" height="100%" alt="Мост дьявола">
       </section>
       
       <!-- `section` №6 - Преимущества №3, №4, №5 -->
