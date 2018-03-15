@@ -87,32 +87,44 @@
           
         <!-- `article`№1 - вся информация о гостинице Amara Resort & SPA: картинка, название, цена, рейтинг -->
         <article>
-          <!-- Скрытый заголовок `article` - название гостиницы №1 -->
-          <h3 class="visually-hidden">Гостиница Amara Resort & SPA</h3>
-            
-          <!-- Название гостиницы №1 + ссылка на неё -->
-          <p class="hotels-item-title">
-            <a class="hotels-links" href="hotels-item-1.html">
-              <span>Amara Resort & SPA</span>
-            </a>
-          </p>
-
+          <!-- Порядок блоков: 
+            -> заголовок-ссылка
+            -> картинка-ссылка
+            -> название гостиницы(?) 
+            -> блок 'Тип гостиницы' и 'Цена'  
+            -> блок кнопки-ссылки 'Подробнее' и 'Забронировать'
+            -> блок 'Рейтинг' 
+             -->
+          <!-- Заголовок `article` - название гостиницы №1 -->
+          <a class="hotels-links" href="hotels-item-1.html">
+            <h3 class="hotels-item-title">Amara Resort & SPA</h3>
+          </a>
+                   
           <!-- Контентная картинка гостиницы №1 -->
           <p class="hotels-item-image">
             <a href="hotels-item-1.html">
               <img src="http://placehold.it/100x70" alt="Гостиница Amara Resort & SPA" width="100" height="70">
             </a>
           </p>
-            
-          <!-- Блок 'Тип гостиницы' и кнопка-ссылка 'Подробнее', ведущая на страницу описания выбранной гостиницы -->
-          <p class="hotels-category">
-            <span>Гостиница</span><br>
-            <a class="button-more-info" href="#AmaraResort&SPA">Подробнее</a>
+          
+          <!-- ??? Название гостиницы №1 + ссылка на неё -->
+          <p class="hotels-item-title">
+            <a class="hotels-links" href="hotels-item-1.html">
+              <span>Amara Resort & SPA</span>
+            </a>
+          </p>
+
+          <!-- Блок 'Тип гостиницы' и 'Цена' -->
+          <p class="hotels-item-price">
+            <span>Гостиница</span>
+            <span>От 4000 Р.</span>
           </p>
             
-          <!-- Блок 'Цена' и кнопка-ссылка 'Забронировать', ведущая на форму бронирования -->
-          <p class="hotels-item-price">
-            <span>От 4000 Р.</span><br>
+          <!-- Блок кнопок-ссылок 
+            'Подробнее' (на страницу описания гостиницы) 
+            'Забронировать' (на форму бронирования) -->
+          <p class="hotels-item-buttons">
+            <a class="button-more-info" href="#AmaraResort&SPA">Подробнее</a>
             <a class="button-to-book" href="#to-book">Забронировать</a>
           </p>
             
