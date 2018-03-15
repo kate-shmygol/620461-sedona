@@ -60,8 +60,9 @@
           <a class="sort-raiting-link" href="#raiting">По рейтингу</a>
         </div>
 
-        <div class="hotels-item-sorting">
+        <div class="hotels-sort-buttons">
           <!-- Здесь будет кнопка сортировки со стрелкой - вверх -->
+          <!-- Можно ли добавить ещё подсказки сортировки по типу и рейтингу? -->
           <a class="button-up" href="#start_cheap">
             <img src="http://placehold.it/10x10" alt="Сначала дешёвые" width="10" height="10">
           </a>
@@ -82,31 +83,24 @@
         <!-- `article`№1 - вся информация о гостинице Amara Resort & SPA: картинка, название, цена, рейтинг -->
         <article>
           <!-- Порядок блоков: 
+            -> картинка-ссылка
             -> заголовок-ссылка
             -> картинка-ссылка
-            -> название гостиницы(?) 
             -> блок 'Тип гостиницы' и 'Цена'  
-            -> блок кнопки-ссылки 'Подробнее' и 'Забронировать'
+            -> блок кнопкок-ссылок 'Подробнее' и 'Забронировать'
             -> блок 'Рейтинг'  -->
 
-          <!-- Заголовок `article` - название гостиницы №1 -->
-          <h3 class="hotels-item-title">
-            <a class="hotels-links" href="hotels-item-1.html">Amara Resort & SPA</a>
-          </h3>
-                   
           <!-- Контентная картинка гостиницы №1 -->
           <p class="hotels-item-image">
             <a href="hotels-item-1.html">
               <img src="http://placehold.it/100x70" alt="Гостиница Amara Resort & SPA" width="100" height="70">
             </a>
           </p>
-          
-          <!-- ??? Название гостиницы №1 + ссылка на неё -->
-          <p class="hotels-item-title">
-            <a class="hotels-links" href="hotels-item-1.html">
-              <span>Amara Resort & SPA</span>
-            </a>
-          </p>
+            
+          <!-- Заголовок `article` - название гостиницы №1 + ссылка на неё -->
+          <h3 class="hotels-item-title">
+            <a class="hotels-links" href="hotels-item-1.html">Amara Resort & SPA</a>
+          </h3>
 
           <!-- Блок 'Тип гостиницы' и 'Цена' -->
           <p class="hotels-item-price">
@@ -119,7 +113,7 @@
             'Забронировать' (на форму бронирования) -->
           <p class="hotels-item-buttons">
             <a class="button-more-info" href="#AmaraResort&SPA">Подробнее</a>
-            <a class="button-to-book" href="#to-book">Забронировать</a>
+            <a class="button-to-book" href="#to-book-amara">Забронировать</a>
           </p>
             
           <!-- Блок 'Рейтинг' -->
@@ -136,33 +130,30 @@
           
         <!-- `article`№2 - вся информация о мотеле Desert Quail Inn: картинка, название, цена, рейтинг -->
         <article>
-          <!-- Скрытый заголовок `article` - название мотеля №2 -->
-          <h3 class="visually-hidden">Мотель Desert Quail Inn</h3>
-                        
-          <!-- Название мотеля №2 + ссылка на него -->
-          <p class="hotels-item-title">
-            <a class="hotels-links" href="hotels-item-2.html">
-              <span>Desert Quail Inn</span>
-            </a>
-          </p>
-                    
           <!-- Контентная картинка мотеля №2 -->
           <p class="hotels-item-image">
             <a href="hotels-item-2.html">
               <img src="http://placehold.it/100x70" alt="Мотель Desert Quail Inn" width="100" height="70">
             </a>
           </p>
-                    
-          <!-- Блок 'Тип гостиницы' и кнопка-ссылка 'Подробнее', ведущая на страницу описания выбранной гостиницы -->
-          <p class="hotels-category">
-            <span>Мотель</span><br>
-            <a class="button-more-info" href="#DesertQuailInn">Подробнее</a>
-          </p>
-      
-          <!-- Блок 'Цена' и кнопка-ссылка 'Забронировать', ведущая на форму бронирования -->
+          
+          <!-- Заголовок `article` - название мотеля №2 + ссылка на него -->
+          <h3 class="hotels-item-title">
+            <a class="hotels-links" href="hotels-item-2.html">Desert Quail Inn</a>
+          </h3>
+
+          <!-- Блок 'Тип гостиницы' и 'Цена' -->
           <p class="hotels-item-price">
-            <span>От 3000 Р.</span><br>
-            <a class="button-to-book" href="#to-book">Забронировать</a>
+            <span>Мотель</span>
+            <span>От 3000 Р.</span>
+          </p>
+
+          <!-- Блок кнопок-ссылок 
+            'Подробнее' (на страницу описания гостиницы) 
+            'Забронировать' (на форму бронирования) -->
+          <p class="hotels-item-buttons">
+            <a class="button-more-info" href="#DesertQuailInn">Подробнее</a>
+            <a class="button-to-book" href="#to-book-desert">Забронировать</a>
           </p>
                     
           <!-- Блок 'Рейтинг' -->
@@ -178,33 +169,31 @@
           
         <!-- `article`№3 - вся информация об апартаментах Villas At Poco Diablo: картинка, название, цена, рейтинг -->
         <article>
-          <h3 class="visually-hidden">Апартаменты Villas At Poco Diablo</h3>
-          
-          <!-- Название апартаментов №3 + ссылка на них -->
-          <p class="hotels-item-title">
-            <a class="hotels-links" href="hotels-item-3.html">
-              <span>Villas At Poco Diablo</span>
-            </a>
-          </p>
-
           <!-- Контентная картинка апартаментов №3 -->
           <p class="hotels-item-image">
             <a href="hotels-item-3.html">
               <img src="http://placehold.it/100x70" alt="Апартаменты Villas At Poco Diablo" width="100" height="70">
             </a>
           </p>
-                      
-          <!-- Блок 'Тип гостиницы' и кнопка-ссылка 'Подробнее', ведущая на страницу описания выбранной гостиницы -->
-          <p class="hotels-category">
-            <span>Апартаменты</span><br>
-            <a class="button-more-info" href="#VillasAtPocoDiablo">Подробнее</a>
-          </p>
+
+          <!-- Заголовок `article` - название апартаментов №3 + ссылка на них -->
+          <h3 class="hotels-item-title">
+            <a class="hotels-links" href="hotels-item-3.html">Villas At Poco Diablo</a>
+          </h3>
     
-          <!-- Блок 'Цена' и кнопка-ссылка 'Забронировать', ведущая на форму бронирования -->
+          <!-- Блок 'Тип гостиницы' и 'Цена' -->
           <p class="hotels-item-price">
-            <span>От 2000 Р.</span><br>
-            <a class="button-to-book" href="#to-book">Забронировать</a>
+            <span>Апартаменты</span><br>
+            <span>От 2000 Р.</span>
           </p>
+          
+          <!-- Блок кнопок-ссылок 
+            'Подробнее' (на страницу описания гостиницы) 
+            'Забронировать' (на форму бронирования) -->
+            <p class="hotels-item-buttons">
+              <a class="button-more-info" href="#VillasAtPocoDiablo">Подробнее</a>
+              <a class="button-to-book" href="#to-book-villas">Забронировать</a>
+            </p>          
                       
           <!-- Блок 'Рейтинг' -->
           <div class="hotels-item-raiting">
