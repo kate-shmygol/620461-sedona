@@ -53,18 +53,12 @@
         <span class="found">Найдено: 3</span>
         
         <!-- Сортировка -->
-        <h3 class="visually-hidden">Сортировка:</h3>
-        <ul class="hotels-sort">
-          <li class="sort-price-current">
-            <a class="sort-price-link-current" href="#price">По цене</a>
-          </li>
-          <li class="sort-type"> 
-            <a class="sort-type-link" href="#type">По типу</a>
-          </li>
-          <li class="sort-raiting">
-            <a class="sort-raiting-link" href="#raiting">По рейтингу</a>
-          </li>
-        </ul>
+        <div class="hotels-sort">
+          <h3 class="sort-title">Сортировка:</h3>
+          <a class="sort-price-link-current" href="#price">По цене</a>
+          <a class="sort-type-link" href="#type">По типу</a>
+          <a class="sort-raiting-link" href="#raiting">По рейтингу</a>
+        </div>
 
         <div class="hotels-item-sorting">
           <!-- Здесь будет кнопка сортировки со стрелкой - вверх -->
@@ -93,12 +87,12 @@
             -> название гостиницы(?) 
             -> блок 'Тип гостиницы' и 'Цена'  
             -> блок кнопки-ссылки 'Подробнее' и 'Забронировать'
-            -> блок 'Рейтинг' 
-             -->
+            -> блок 'Рейтинг'  -->
+
           <!-- Заголовок `article` - название гостиницы №1 -->
-          <a class="hotels-links" href="hotels-item-1.html">
-            <h3 class="hotels-item-title">Amara Resort & SPA</h3>
-          </a>
+          <h3 class="hotels-item-title">
+            <a class="hotels-links" href="hotels-item-1.html">Amara Resort & SPA</a>
+          </h3>
                    
           <!-- Контентная картинка гостиницы №1 -->
           <p class="hotels-item-image">
