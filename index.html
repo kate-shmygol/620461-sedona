@@ -47,19 +47,12 @@
       <!-- `section` №1 - фоновая картинка, Welcome, слоган -->
       <section class="features-logo">
         <h2 class="visually-hidden">Добро пожаловать в город Седона</h2>
-        <!-- Контентная фоновая картинка города Седона -->
-        <!-- Найти в PS размеры фоновой картинки (в .png показывает 1200*780).  width=".." height=".." -->
-        <!-- Как прописать `alt`?  -->
-        <!--  Вариант №1 - `alt`="Добро пожаловать в город Седона"
-              Вариант №2 - см. ниже -->
-        <!-- Текст на фоновой картинке -->
-        <!--        Welcome
-              —   to the gorgeous   —
-                      Sedona
-          "Because the Grand Canyon sucks!" -->
-          <!-- т.е. вот так - `alt`="Welcome. To the gorgeous. Sedona. Because the Grand Canyon sucks!" -->
-        <img class="img-background" src="img/background_sedona.png" width="100%" height="100%" alt="Добро пожаловать в город Седона">
+        <!-- Контентная картинка - надписи. width=".." height=".." -->
+        <img class="img-welcome" src="img/.." width=".." height=".." alt="Добро пожаловать в город Седона">
+        <!-- Фоновая картинка города Седона (большое фото+белая маска внизу)
+        Реализация - `background-image` для псевдоэлемента. width="1200" height="780" -->
       </section>
+      
       
       <!-- `section` №2 - Текст, указывающий на преимущества -->
       <section class="features black-text">
@@ -84,17 +77,14 @@
       <section class="features">
         <h2 class="visually-hidden">Преимущества города Седона</h2>
         <div class="feature-item-city black-text">
-          <img class="icon-background" src="" width=".." height=".." alt="">
           <h3 class="feature-item-title">Жилье</h3>
           <p class="feature-item-subtitle">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </div>
         <div class="feature-item-city black-text">
-          <img class="icon-background" src="" width=".." height=".." alt="">
           <h3 class="feature-item-title">Еда</h3>
           <p class="feature-item-subtitle">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
         <div class="feature-item-city black-text">
-          <img class="icon-background" src="" width=".." height=".." alt="">
           <h3 class="feature-item-title">Сувениры</h3>
           <p class="feature-item-subtitle">Не только китайского, но и местного производства!</p>
         </div>
@@ -143,11 +133,11 @@
         </form>
       </section>
       
-      <!-- Контентная картинка - карта Седоны - после кнопки "Поиск гостиницы в Седоне" -->
+      <!-- Фоновая картинка - карта Седоны - после кнопки "Поиск гостиницы в Седоне" -->
+      <!-- Реализация - `background-image` для псевдоэлемента -->
       <section>
         <div id="map">
           <!-- width="1200" height="593" -->
-          <img class="img-map" src="img/map.png" width="1200" height="593" alt="Карта Седоны">
         </div>
       </section>
 
@@ -162,9 +152,9 @@
       <!-- Социальные кнопки -->
       <div class="footer-social">
         <ul>
-            <!-- Здесь будут 3 соц.иконки в каждом `li`>`a` -->
             <!-- Все 3 картинки - декоративные. Реализация - `background-image` для соц-иконок (ссылки) -->
             <!-- Обязательно их подписать, чтобы скринридеры смогли их прочесть -->
+            <!-- width=".." height=".." -->
           <li>
             <a class="social-button" href="https://twitter.com/htmlacademy_ru">Twitter</a>
           </li>
@@ -180,7 +170,7 @@
       <p class="footer-copyright">
         <b>Website by</b>
         <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
-          <!-- Логотип HTML Academy - декоративная картинка. Реализация - `background-image` -->
+          <!-- Логотип HTML Academy - контент -->
           <!-- width="450" height="154" -->
           <img src="img/logo-htmlacademy.svg" width="10%" height="10%" alt="HTML Academy">
         </a>
