@@ -1,6 +1,112 @@
 
-font-family: 'PT Sans', sans-serif;
+/* ВСЯ СТРАНИЦА */
+/* Удаление отступов, подключение шрифта, настройка шрифта и фона */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+/* Скрываем подчёркивание у ВСЕХ ссылок */
+a {
+  text-decoration: none;
+}
+/* НАВИГАЦИЯ */
+/* Настраиваем шрифт и фон */
+.main-navigation-header {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+/* Удаляем маркеры в списке */
+.site-navigation-header {
+  list-style: none;
+}
+/* Меняем цвет ссылок */
+.site-navigation-header a {
+  color: #000000;
+}
+/* Цвет ссылок при наведении и в фокусе */
+.site-navigation-header a:hover,
+.site-navigation-header a:focus {
+  color: #81b3d2;
+}
+/* Цвет активных ссылок (при нажатии) */
+.site-navigation-header a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* Как стилизовать ссылку в состоянии "Активный, Находимся на странице"? Пробовала ставить перед hover - не помогает */
+.nav-link-hotels-current a:visited {
+  color: #766357;
+}
+/* ТЕКСТ */
+/* Центруем текст в преимуществах, в блоке "Поиск гостиницы" */
+/* форму поиска (pop-up) будем стилизовать отдельно */
+.features,
+.search {
+  text-align: center;
+}
+/* ЦВЕТ ТЕКСТА */
+/* Белый цвет текста для некоторых элементов (текст, фильтр, кнопки) */
+.white-text {
+  color: #ffffff;
+}
+/* Н1-H3 - заголовки */
+/* Размер и интерлиньяж для всех `h2` и `h3` во `features` №2-5,  */
+.features h2,
+.features h3 {
+  font-size: 21px;
+  line-height: 21px;
+}
+/* Интерлиньяж для одного `h2` во `features` №1 */
+.black-text-sedona h2 {
+  line-height: 26px;
+}
+/* Размер и интерлиньяж для `h2` в `search` */
+.search h2 {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+/* P - параграфы */
+/* Размер и интерлиньяж для всех `p` */
+p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;  /* Нужно ли прописывать дополнительно? */
+}
+
+/* Интерлиньяж для `search-subtitle` */
+.search-subtitle {
+  line-height: 24px;
+}
 
 
 
+/*Белый цвет для кнопок "Подробнее" и "Забронировать" */
+.hotels-item-buttons a {
+  color: #ffffff;
+}
 
+
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
