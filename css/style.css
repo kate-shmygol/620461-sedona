@@ -1,12 +1,12 @@
 
-/* ВСЯ СТРАНИЦА */
+/* WHOLE PAGE */
 /* Удаление отступов, подключение шрифта, настройка шрифта и фона */
 body {
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 21px;
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
@@ -19,7 +19,7 @@ body {
 a {
   text-decoration: none;
 }
-/* НАВИГАЦИЯ */
+/* NAVIGATION */
 /* Настраиваем шрифт и фон */
 .main-navigation-header {
   font-size: 14px;
@@ -50,24 +50,23 @@ a {
 .nav-link-hotels-current a:visited {
   color: #766357;
 }
-/* ТЕКСТ */
+/* TEXT */
 /* Центруем текст в преимуществах, в блоке "Поиск гостиницы" */
 /* форму поиска (pop-up) будем стилизовать отдельно */
 .features,
 .search {
   text-align: center;
 }
-/* ЦВЕТ ТЕКСТА */
+/* COLOR OF TEXT */
 /* Белый цвет текста для некоторых элементов (текст, фильтр, кнопки) */
 .white-text {
   color: #ffffff;
 }
-/* Н1-H3 - заголовки */
+/* Н1-H3 - HEADLINES */
 /* Размер и интерлиньяж для всех `h2` и `h3` во `features` №2-5,  */
 .features h2,
 .features h3 {
   font-size: 21px;
-  line-height: 21px;
 }
 /* Интерлиньяж для одного `h2` во `features` №1 */
 .black-text-sedona h2 {
@@ -78,26 +77,101 @@ a {
   font-size: 30px;
   line-height: 36px;
 }
-
-/* P - параграфы */
-/* Размер и интерлиньяж для всех `p` */
-p {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: normal;  /* Нужно ли прописывать дополнительно? */
-}
-
-/* Интерлиньяж для `search-subtitle` */
+/* Интерлиньяж для `p` в `search-subtitle` */
 .search-subtitle {
   line-height: 24px;
 }
+/* Размер и жирное начертание для подписей и 'placeholder' формы поиска */
+/* Как стилизовать текст внутри `input` (placeholder)? */
+.search-item {
+  line-height: 26px;
+  font-weight: bold;
+}
+/* Размер и жирное начертание для заголовков (`legend`) фильтра */
+.filter legend {
+  font-size: 16px;
+  font-weight: bold;
+}
+/* Размер, интерлиньяж и жирное начертание для 'НАЙДЕНО' */
+.found {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+/* SORTING */
+/* Размер и интерлиньяж для 'СОРТИРОВКИ' */
+.hotels-sort {
+  font-size: 12px;
+  line-height: 18px;
+}
+/* Меняем цвет ссылок */
+.hotels-sort a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline;
+  text-decoration-style: dotted; /* точки в макете квадратные, здесь круглые. Есть ещё вариант dashed. Но там штришки длиннее  */
+  text-decoration-color: #81b3d2;
+}
+/* Цвет ссылок при наведении и в фокусе */
+.hotels-sort a:hover,
+.hotels-sort a:focus {
+  color: #81b3d2;
+}
+/* Цвет активных ссылок (при нажатии) */
+.hotels-sort a:active {
+  color: #000000;
+  text-decoration: none;
+}
+/* Как стилизовать ссылку в состоянии "Активный"? Пробовала ставить перед hover - не помогает */
+.hotels-sort a:visited {
+  color: #81b3d2;
+  text-decoration: none;
+}
 
 
 
-/*Белый цвет для кнопок "Подробнее" и "Забронировать" */
-.hotels-item-buttons a {
+
+/* BUTTONS */
+/* Во всех кнопках делаем заглавные буквы и белый цвет текста */
+.button {
+  text-transform: uppercase;
   color: #ffffff;
 }
+.button-blue {
+  background-color: #81b3d2;
+}
+.button-brown {
+  background-color: #766357;
+}
+/* В кнопках начертание 'bold' кажется жирнее, чем в Photoshop. Почему так?
+Если 'bold' убрать, то больше похоже на кнопки из макета. Тогда почему в PS написано, что это 'bold'? */
+
+/* Стили кнопок "Поиск гостиницы" и "Найти" */
+.search .button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+/* Стили кнопок "Подробнее" и "Забронировать" */
+.hotels-item-buttons a {
+  font-weight: bold;
+}
+
+
+/* FOOTER */
+/* Стилизуем ссылку #VISITSEDONA */
+.main-link-footer a {
+  color: #000000;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+/* Стилизуем WEBSITE BY */
+.footer-copyright {
+  color: #000000;
+  line-height: 26px;
+}
+
 
 
 /* .visually-hidden {
