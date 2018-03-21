@@ -30,8 +30,8 @@
             <a class="nav-link-map" href="map_of_state.html">Карта штата</a>
           </li>
           <!-- Задаём класс активному пункту меню - Гостиницы -->
-          <li class="hotels-header">
-            <a class="nav-link-hotels-current" href="inner.html">Гостиницы</a>
+          <li class="nav-link-hotels-current">
+            Гостиницы
           </li>
         </ul>
       </nav>
@@ -55,11 +55,12 @@
           <!-- 2 'fieldset' для двух групп фильтра: инфраструктура и тип жилья -->
           <!-- 'fieldset' №1 - инфраструктура -->
           <!-- Добавили visually-hidden на checkbox, чтобы в будущем их скрыть и в CSS вставить вместо них другие иконки -->
-          <fieldset class="">
+          <fieldset>
+            <!-- Сделать по аналогии с Типом жилья, обернуть label в input -->
             <legend>Инфраструктура:</legend>
             <ul>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked disabled>
                 <label for="filter-pool">Бассейн</label>
               </li>
               <li class="filter-option">
@@ -86,7 +87,7 @@
 
               <li class="filter-option">
                 <label>
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" checked>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" checked disabled>
                   Мотель
                 </label>
               </li>
@@ -117,7 +118,6 @@
               </div>
               <button class="button button-show white-text" type="submit">Показать</button>
           </fieldset>
-
         </form>
       </section>
 
@@ -129,7 +129,7 @@
         <!-- Сортировка -->
         <div class="hotels-sort">
           <h3 class="sort-title">Сортировка:</h3>
-          <a class="sort-price-link-current" href="#price">По цене</a>
+          <span class="sort-price-link-current">По цене</span>
           <a class="sort-type-link" href="#type">По типу</a>
           <a class="sort-raiting-link" href="#raiting">По рейтингу</a>
         </div>
@@ -138,12 +138,13 @@
           <!-- Здесь будет кнопка сортировки со стрелкой - вверх -->
           <!-- Можно ли добавить ещё подсказки сортировки по типу и рейтингу? -->
           <a class="button-up" href="#start_cheap">
-            <!-- width=".." height=".." -->
-            <img src="http://placehold.it/10x10" alt="Сначала дешёвые" width="10" height="10">
+            <!-- width="46" height="42" -->
+            <img src="img/icon-up-dir.svg" alt="Сначала дешёвые" width="15" height="10">
           </a>
           <!-- Здесь будет кнопка сортировки со стрелкой - вниз -->
+          <!-- Текущая кнопка -->
           <a class="button-down" href="#start_expensive">
-            <img src="http://placehold.it/10x10" alt="Сначала дорогие" width="10" height="10">
+            <img src="img/icon-down-dir.svg" alt="Сначала дорогие" width="15" height="10">
           </a>
         </div>
       </section>
@@ -164,7 +165,6 @@
           -> блок кнопкок-ссылок 'Подробнее' и 'Забронировать'
           -> блок 'Рейтинг'  -->
         <article>
-
           <!-- Контентная картинка гостиницы №1 -->
           <div class="hotels-item-image">
             <a href="hotels-item-1.html">
@@ -277,14 +277,14 @@
     </main>
 
     <!-- Подвал сайта -->
-    <footer class="main-footer">
+    <footer class="main-footer-inner">
       <!-- #VisitSedona -->
       <p class="main-link-footer">
         <a class="link-footer" href="info.html">#VisitSedona</a>
       </p>
       <!-- Социальные кнопки -->
-      <div class="footer-social">
-        <ul>
+      <nav class="main-navigation-footer footer-social">
+        <ul class="site-navigation-footer">
             <!-- Все 3 картинки - декоративные. Реализация - `background-image` для соц-иконок (ссылки) -->
             <!-- Обязательно их подписать, чтобы скринридеры смогли их прочесть -->
             <!-- width=".." height=".." -->
@@ -298,11 +298,11 @@
             <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
           </li>
         </ul>
-      </div>
+      </nav>
       <!-- Копирайт -->
       <p class="footer-copyright">
         Website by
-        <a class="button-link" href="https://htmlacademy.ru/intensive/htmlcss">
+        <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
           <!-- Логотип HTML Academy - контент -->
           <!-- width="450" height="154" -->
           <img src="img/logo-htmlacademy.svg" width="10%" height="10%" alt="HTML Academy">

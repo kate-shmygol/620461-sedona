@@ -49,7 +49,7 @@
       <!-- `section` №1 - фоновая картинка, Welcome, слоган -->
       <section class="features-logo">
         <h2 class="visually-hidden">Добро пожаловать в город Седона</h2>
-        <!-- Контентная картинка - надписи. width=".." height=".." -->
+        <!-- Контентная картинка - надписи. width="458" height="352" -->
         <img class="img-welcome" src="img/welcome.png" width="458" height="352" alt="Добро пожаловать в город Седона">
         <!-- Фоновая картинка города Седона (большое фото+белая маска внизу)
         Реализация - `background-image` для псевдоэлемента. width="1200" height="780" -->
@@ -125,12 +125,14 @@
 
       <!-- `section` №7 - Заинтересовались? + форма поиска гостиницы -->
       <section class="search">
-        <h2 class="search-title">Заинтересовались?</h2>
-        <p class="search-subtitle">Укажите предполагаемые даты поездки,
-          <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-
-        <!-- Кнопка, при нажатии на неё появляется попап с формой -->
-        <button class="button button-brown title-form-search white-text">Поиск гостиницы в Седоне</button>
+        <!-- Обернула в `div` для придания этому блоку одного фона -->
+        <div class="search-title-button">
+          <h2 class="search-title">Заинтересовались?</h2>
+          <p class="search-subtitle">Укажите предполагаемые даты поездки,
+            <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <!-- Кнопка, при нажатии на неё появляется попап с формой -->
+          <button class="button button-brown title-form-search white-text">Поиск гостиницы в Седоне</button>
+        </div>
 
         <!-- Форма поиска гостиницы в Седоне (pop-up) -->
         <form class="search-form" action="search.html" method="post">
@@ -172,8 +174,8 @@
         <a class="link-footer" href="info.html">#VisitSedona</a>
       </p>
       <!-- Социальные кнопки -->
-      <div class="footer-social">
-        <ul>
+      <nav class="main-navigation-footer footer-social">
+        <ul class="site-navigation-footer">
             <!-- Все 3 картинки - декоративные. Реализация - `background-image` для соц-иконок (ссылки) -->
             <!-- Обязательно их подписать, чтобы скринридеры смогли их прочесть -->
             <!-- width=".." height=".." -->
@@ -187,11 +189,11 @@
             <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
           </li>
         </ul>
-      </div>
+      </nav>
       <!-- Копирайт -->
       <p class="footer-copyright">
         Website by
-        <a class="button-link" href="https://htmlacademy.ru/intensive/htmlcss">
+        <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
           <!-- Логотип HTML Academy - контент -->
           <!-- width="450" height="154" -->
           <img src="img/logo-htmlacademy.svg" width="10%" height="10%" alt="HTML Academy">
