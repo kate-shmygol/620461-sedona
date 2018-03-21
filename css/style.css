@@ -11,15 +11,110 @@ body {
   color: #000000;
   text-transform: uppercase;
 
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /* + эффекты в PS white, gray back */
   background-position: top center;
   background-repeat: no-repeat;
+  /* Тень всей страницы */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-left: 40px;
+  margin-right: 40px;
 }
-/* Скрываем подчёркивание у ВСЕХ ссылок */
+
+/* Второй вариант отображения шрифтов. Как правильно оформить? */
+/* Regular */
+/* @font-face {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local('PTSans'),
+  url('/fonts/ptsans.woff') format('woff'),
+  url('/fonts/ptsans.woff2') format('woff2');
+} */
+
+/* Bold */
+/* @font-face {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-style: bold;
+  font-weight: 700;
+  src: local('PTSans'),
+  url('/fonts/ptsansbold.woff') format('woff'),
+  url('/fonts/ptsansbold.woff2') format('woff2');
+} */
+
+/* Удаляем подчёркивание у ВСЕХ ссылок */
 a {
   text-decoration: none;
 }
-/* NAVIGATION */
+
+/************************ BUTTONS **************************/
+.button {
+  font: inherit; /* наследование шрифта от родительского элемента */
+  text-align: center; /* горизонтальное выравнивание текста по центру */
+  vertical-align: middle; /* вертикальное выравнивание текста по центру */
+  text-transform: uppercase; /* заглавные буквы */
+  border: none; /* удаление стандартной рамки */
+  color: #ffffff; /* белый цвет текста */
+}
+
+/* BLUE BUTTONS */
+.button-blue {
+  background-color: #81b3d2;
+}
+/* Наведение и фокус */
+.button-blue:hover,
+.button-blue:focus {
+  background-color: #669ec0;
+}
+/* Нажатие (активная ссылка) */
+.button-blue:active {
+  color: #94b9d2;
+  background-color: #5496bd;
+}
+
+/* BROWN BUTTONS */
+.button-brown {
+  background-color: #766357;
+}
+/* Наведение и фокус */
+.button-brown:hover,
+.button-brown:focus {
+  background-color: #604e43;
+}
+/* Нажатие (активная ссылка) */
+.button-brown:active {
+  color: #928a85;
+  background-color: #503e33;
+}
+
+/* Кнопки "Поиск гостиницы" и "Найти" */
+.search .button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+/* Кнопки "Подробнее" и "Забронировать" */
+.hotels-item-buttons a {
+  font-weight: bold;
+}
+
+/* Кнопка 'ПОКАЗАТЬ' */
+/* В покое */
+.button-show {
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 3px / 3px;
+}
+/* При наведении */
+.button-show:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 2px / 2px;
+}
+/* Стиль кнопки при нажатии - НЕ УКАЗАН */
+
+/*********************** NAVIGATION ************************/
 /* Настраиваем шрифт и фон */
 .main-navigation-header {
   font-size: 14px;
@@ -42,27 +137,35 @@ a {
 .site-navigation-header a:focus {
   color: #81b3d2;
 }
-/* Цвет активных ссылок (при нажатии) */
+/* Нажатие (активная ссылка) */
 .site-navigation-header a:active {
   color: rgba(0, 0, 0, 0.3);
 }
-/* Как стилизовать ссылку в состоянии "Активный, Находимся на странице"? Пробовала ставить перед hover - не помогает */
-.nav-link-hotels-current a:visited {
+/* Текущая ссылка */
+.nav-link-hotels-current {
   color: #766357;
 }
-/* TEXT */
-/* Центруем текст в преимуществах, в блоке "Поиск гостиницы" */
-/* форму поиска (pop-up) будем стилизовать отдельно */
+/* Стилизация ЛОГОТИПА */
+
+
+/************************* TEXT *****************************/
+/* Центруем текст, картинки в блоках: Welcome, преимущества, "Поиск гостиницы". Всё, кроме Footer
+ */
+/* форму поиска (pop-up) будем стилизовать отдельно
+*/
+.features-logo,
 .features,
 .search {
   text-align: center;
 }
-/* COLOR OF TEXT */
+
+/********************** COLOR OF TEXT *********************/
 /* Белый цвет текста для некоторых элементов (текст, фильтр, кнопки) */
 .white-text {
   color: #ffffff;
 }
-/* Н1-H3 - HEADLINES */
+
+/****************** Н1-H3 - HEADLINES *********************/
 /* Размер и интерлиньяж для всех `h2` и `h3` во `features` №2-5,  */
 .features h2,
 .features h3 {
@@ -72,6 +175,9 @@ a {
 .black-text-sedona h2 {
   line-height: 26px;
 }
+
+/************************** SEARCH ***************************/
+/* Стилизация формы поиска гостиницы */
 /* Размер и интерлиньяж для `h2` в `search` */
 .search h2 {
   font-size: 30px;
@@ -82,15 +188,206 @@ a {
   line-height: 24px;
 }
 /* Размер и жирное начертание для подписей и 'placeholder' формы поиска */
-/* Как стилизовать текст внутри `input` (placeholder)? */
+
 .search-item {
+  font: inherit;
   line-height: 26px;
   font-weight: bold;
+}
+.search-item input[type="text"],
+.search-item input[type="number"] {
+  font: inherit;
+  color: #000000; /* Как сделать текст 'placeholder' чёрным? */
+  text-transform: uppercase;
+}
+/* В покое */
+.search-item input {
+  font: inherit;
+
+  color: #000000;
+  background-color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+}
+
+/* При наведении */
+.search-item input:hover {
+  background-color: #ebebeb;
+  border-color: #ebebeb;
+}
+/* В фокусе*/
+.search-item input:focus {
+  background-color: #ffffff;
+  border-color: #e5e5e5; /* В Chrome рамка почему-то другого цвета. В Mozilla всё правильно */
+}
+
+/************************* FOOTER ****************************/
+.main-footer {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.5); /* В PS не указан opacity, поставила 0.5 */
+}
+/* Фон футера на .inner.html, отличный от фона футера на главной странице */
+.main-footer-inner {
+  color: #000000;
+  background-color: #fefefe;
+}
+/* Ссылка #VISITSEDONA */
+.main-link-footer {
+  text-align: left;
+}
+.link-footer {
+  color: #000000;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+/* Стилизация соц-иконок */
+/* Добавить иконки */
+.footer-social {
+  text-align: center;
+}
+.social-button {
+  color: #000000;
+}
+.footer-social ul {
+  list-style: none;
+}
+/* В покое */
+/* Цвет #81b3d2 */
+.social-button a {
+  color: #000000;
+}
+/* ??? */
+/* Наведение и фокус */
+.social-button a:hover,
+.social-button a:focus {
+  color: #81b3d2;
+}
+/* Нажатие (активная ссылка) */
+.social-button a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Стиль WEBSITE BY */
+.footer-copyright {
+  color: #000000;
+  line-height: 26px;
+}
+/* Стиль ссылки-картинки HTML Academy */
+.footer-copyright {
+  text-align: right;
+}
+/* В покое */
+/* ??? */
+.footer-copyright .button {
+  background-color: #231f20;
+}
+/* ??? */
+/* Наведение и фокус */
+.footer-copyright .button:hover,
+.footer-copyright .button:focus {
+  background-color: #81b3d2;
+}
+/* ??? */
+/* Нажатие */
+.footer-copyright .button:active {
+  background-color: #bdbbbc;
+}
+
+/********************** ФОНЫ + КАРТИНКИ **********************/
+/* FEATURES */
+/* Фоновая картинка к Welcome */
+/* ??? не видна картинка из-за надписи. Как сделать, чтобы было видно? */
+.features-logo {
+  width: 1200px;
+  height: 563px;
+  background-image: url("/img/photo-mask.jpg");
+  background-size: 1200px 563px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-welcome {
+  position: center; /* Как подвинуть картинку Welcome? */
+}
+.features:nth-child(3),
+.features:nth-child(5),
+.search-title-button,
+.search-form {
+  color: #000000;
+  background-color: #ffffff;
+}
+.features:nth-child(4),
+.features:nth-child(6) {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+/*** Decor - house ***/
+/* width="313" height="300" */
+.feature-item-city:nth-child(2) {
+  background-image: url("/img/icon-1.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/*** Decor - food ***/
+/* width="308" height="292" */
+.feature-item-city:nth-child(3) {
+  background-image: url("/img/icon-3.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/*** Decor - souvenirs ***/
+/* width="267" height="317" */
+.feature-item-city:nth-child(4) {
+  background-image: url("/img/icon-2.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/************************* FILTER ****************************/
+/* Стилизация формы 'ФИЛЬТР' `section` №1 */
+/* Фоновая картинка к ФИЛЬТРУ */
+/* Реализация - `background-image` для псевдоэлемента.
+width="2706" height="1804" */
+.filtres fieldset {
+  border: none;
+}
+.filtres {
+  background-image: url("/img/background-inner.jpg");
+  background-size: 1200px 780px;  /* Нужно обрезать картинку */
+  background-repeat: no-repeat;
 }
 /* Размер и жирное начертание для заголовков (`legend`) фильтра */
 .filter legend {
   font-size: 16px;
   font-weight: bold;
+}
+.filtres ul {
+  list-style: none;
+}
+/* Вставить иконки */
+/* В покое */
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: #ffffff;
+}
+/* Доработать. Нужно чтобы подписи в Типе жилья тоже окрашивались в коричневый цвет */
+.filter-input:disabled + label {
+  color: #6a6a6a;
+}
+
+/* Checkbox */
+
+
+/* Ползунки */
+
+
+/***************************** FOUND **************************/
+/* Стилизация 'section' №2 - вывод результатов и сортировка  */
+/* Фон */
+.results {
+  background-color: #fefefe;
 }
 /* Размер, интерлиньяж и жирное начертание для 'НАЙДЕНО' */
 .found {
@@ -98,9 +395,11 @@ a {
   line-height: 26px;
   font-weight: bold;
 }
-/* SORTING */
+
+/*************************** SORTING *************************/
 /* Размер и интерлиньяж для 'СОРТИРОВКИ' */
 .hotels-sort {
+  /* font: inherit; */
   font-size: 12px;
   line-height: 18px;
 }
@@ -121,59 +420,75 @@ a {
   color: #000000;
   text-decoration: none;
 }
-/* Как стилизовать ссылку в состоянии "Активный"? Пробовала ставить перед hover - не помогает */
-.hotels-sort a:visited {
+/* Текущая ссылка */
+.sort-price-link-current {
   color: #81b3d2;
-  text-decoration: none;
 }
 
+/* Стилизация иконок-стрелок 'СОРТИРОВКИ' вверх-вниз */
+/* .hotels-sort-buttons .button-up a {
+
+} */
 
 
-
-/* BUTTONS */
-/* Во всех кнопках делаем заглавные буквы и белый цвет текста */
-.button {
-  text-transform: uppercase;
-  color: #ffffff;
+/**************** Разделы с описанием гостиниц ***************/
+/* Фон */
+.hotels article {
+  background-color: #fefefe;
 }
-.button-blue {
-  background-color: #81b3d2;
+/* Между блоками 4 линии width="1200" height="1" color: #e5e5e5 */
+/* Их так нужно стидизовать? */
+.results::after {
+  content: "";
+  display: block;
+  background-color: #e5e5e5;
+  padding: 1px;
 }
-.button-brown {
-  background-color: #766357;
-}
-/* В кнопках начертание 'bold' кажется жирнее, чем в Photoshop. Почему так?
-Если 'bold' убрать, то больше похоже на кнопки из макета. Тогда почему в PS написано, что это 'bold'? */
-
-/* Стили кнопок "Поиск гостиницы" и "Найти" */
-.search .button {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
-}
-/* Стили кнопок "Подробнее" и "Забронировать" */
-.hotels-item-buttons a {
-  font-weight: bold;
+.hotels article::after {
+  content: "";
+  display: block;
+  background-color: #e5e5e5;
+  padding: 1px;
 }
 
-
-/* FOOTER */
-/* Стилизуем ссылку #VISITSEDONA */
-.main-link-footer a {
+/* Заголовки `article` - названия гостиницы */
+/* Меняем цвет ссылок */
+.hotels-item-title a {
   color: #000000;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
+}
+/* Цвет ссылок при наведении и в фокусе */
+.hotels-item-title a:hover,
+.hotels-item-title a:focus {
+  color: #81b3d2;
+}
+/* Цвет активных ссылок (при нажатии) */
+.hotels-item-title a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+/************************* RAITING ************************/
+/* Стилизация иконок-звёздочек 'РЕЙТИНГ' */
+/* width="75" height="71" color: #.. */
+/* ??? */
+.hotels-item-raiting {
+  background-image: url("/img/star.svg");
+  background-size: 70% 70%;
+  background-position: center; /* ??? */
+  background-repeat: no-repeat;
+}
+/* .hotels-item-raiting span::before {
+  content: "";
+  display: block;
+  background-image: url("/img/star.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+} */
+.hotels-item-raiting span {
+  background-color: #f2f2f2;
 }
 
-/* Стилизуем WEBSITE BY */
-.footer-copyright {
-  color: #000000;
-  line-height: 26px;
-}
 
 
-
+/*********** Правила для скрытых элементов ****************/
 /* .visually-hidden {
   position: absolute;
   width: 1px;
