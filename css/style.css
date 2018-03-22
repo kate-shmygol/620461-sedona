@@ -2,7 +2,6 @@
 /* WHOLE PAGE */
 /* Удаление отступов, подключение шрифта, настройка шрифта и фона */
 body {
-  margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
@@ -12,8 +11,6 @@ body {
   text-transform: uppercase;
 
   background-color: #f2f2f2; /* + эффекты в PS white, gray back */
-  background-position: top center;
-  background-repeat: no-repeat;
   /* Тень всей страницы */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-left: 40px;
