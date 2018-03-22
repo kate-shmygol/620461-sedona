@@ -53,32 +53,32 @@ a {
   color: #ffffff; /* белый цвет текста */
 }
 
-/* BLUE BUTTONS */
-.button-blue {
+/* primary BUTTONS - blue */
+.button-primary {
   background-color: #81b3d2;
 }
 /* Наведение и фокус */
-.button-blue:hover,
-.button-blue:focus {
+.button-primary:hover,
+.button-primary:focus {
   background-color: #669ec0;
 }
 /* Нажатие (активная ссылка) */
-.button-blue:active {
+.button-primary:active {
   color: #94b9d2;
   background-color: #5496bd;
 }
 
-/* BROWN BUTTONS */
-.button-brown {
+/* secondary BUTTONS - brown */
+.button-secondary {
   background-color: #766357;
 }
 /* Наведение и фокус */
-.button-brown:hover,
-.button-brown:focus {
+.button-secondary:hover,
+.button-secondary:focus {
   background-color: #604e43;
 }
 /* Нажатие (активная ссылка) */
-.button-brown:active {
+.button-secondary:active {
   color: #928a85;
   background-color: #503e33;
 }
@@ -194,9 +194,12 @@ a {
 .search-item input[type="text"],
 .search-item input[type="number"] {
   font: inherit;
-  color: #000000; /* Как сделать текст 'placeholder' чёрным? */
+  color: #000000;
   text-transform: uppercase;
 }
+/* Чёрный шрифт для placeholder */
+.input-style::placeholder {
+  color: #000000;
 /* В покое */
 .search-item input {
   font: inherit;
@@ -204,6 +207,7 @@ a {
   color: #000000;
   background-color: #f2f2f2;
   border: 2px solid #f2f2f2;
+  outline-color: #ffffff;
 }
 
 /* При наведении */
@@ -297,7 +301,7 @@ a {
 .features-logo {
   width: 1200px;
   height: 563px;
-  background-image: url("/img/photo-mask.jpg");
+  background-image: url("../img/photo-mask.jpg");
   background-size: 1200px 563px;
   background-repeat: no-repeat;
   background-position: center;
@@ -320,7 +324,7 @@ a {
 /*** Decor - house ***/
 /* width="313" height="300" */
 .feature-item-city:nth-child(2) {
-  background-image: url("/img/icon-1.svg");
+  background-image: url("../img/icon-1.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -328,7 +332,7 @@ a {
 /*** Decor - food ***/
 /* width="308" height="292" */
 .feature-item-city:nth-child(3) {
-  background-image: url("/img/icon-3.svg");
+  background-image: url("../img/icon-3.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -336,7 +340,7 @@ a {
 /*** Decor - souvenirs ***/
 /* width="267" height="317" */
 .feature-item-city:nth-child(4) {
-  background-image: url("/img/icon-2.svg");
+  background-image: url("../img/icon-2.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -351,7 +355,7 @@ width="2706" height="1804" */
   border: none;
 }
 .filtres {
-  background-image: url("/img/background-inner.jpg");
+  background-image: url("../img/background-inner.jpg");
   background-size: 1200px 780px;  /* Нужно обрезать картинку */
   background-repeat: no-repeat;
 }
@@ -467,7 +471,7 @@ width="2706" height="1804" */
 /* width="75" height="71" color: #.. */
 /* ??? */
 .hotels-item-raiting {
-  background-image: url("/img/star.svg");
+  background-image: url("../img/star.svg");
   background-size: 70% 70%;
   background-position: center; /* ??? */
   background-repeat: no-repeat;
@@ -475,7 +479,7 @@ width="2706" height="1804" */
 /* .hotels-item-raiting span::before {
   content: "";
   display: block;
-  background-image: url("/img/star.svg");
+  background-image: url("../img/star.svg");
   background-size: auto;
   background-repeat: no-repeat;
 } */
