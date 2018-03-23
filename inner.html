@@ -51,7 +51,7 @@
             Реализация - `background-image` для псевдоэлемента. width="1200" height="??" -->
 
         <!-- Форма фильтра гостиниц -->
-        <form class="filter white-text" method="get" action="filter.html">
+        <form class="filter text-secondary" method="get" action="filter.html">
           <!-- 2 'fieldset' для двух групп фильтра: инфраструктура и тип жилья -->
           <!-- 'fieldset' №1 - инфраструктура -->
           <!-- Добавили visually-hidden на checkbox, чтобы в будущем их скрыть и в CSS вставить вместо них другие иконки -->
@@ -106,17 +106,17 @@
               <div class="filter-price">
                 <label>
                   От
-                  <input class="white-text" type="number" name="price-day" min="0" value="0">
+                  <input class="text-secondary" type="number" name="price-day" min="0" value="0">
                 </label>
                 <label>
                   До
-                  <input class="white-text" type="number" name="price-day" max="3000" value="3000">
+                  <input class="text-secondary" type="number" name="price-day" max="3000" value="3000">
                 </label>
               </div>
               <div class="slider">
               <!-- Здесь будет шкала с двумя ползунками. Реализация в CSS -->
               </div>
-              <button class="button button-show white-text" type="submit">Показать</button>
+              <button class="button button-show text-secondary" type="submit">Показать</button>
           </fieldset>
         </form>
       </section>

@@ -158,7 +158,7 @@ a {
 
 /********************** COLOR OF TEXT *********************/
 /* Белый цвет текста для некоторых элементов (текст, фильтр, кнопки) */
-.white-text {
+.text-secondary {
   color: #ffffff;
 }
 
@@ -169,7 +169,7 @@ a {
   font-size: 21px;
 }
 /* Интерлиньяж для одного `h2` во `features` №1 */
-.black-text-sedona h2 {
+.text-primary-sedona h2 {
   line-height: 26px;
 }
 
@@ -200,6 +200,7 @@ a {
 /* Чёрный шрифт для placeholder */
 .input-style::placeholder {
   color: #000000;
+}
 /* В покое */
 .search-item input {
   font: inherit;
