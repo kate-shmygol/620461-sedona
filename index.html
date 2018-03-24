@@ -7,32 +7,24 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="shadow">
     <!-- Шапка сайта -->
     <header class="main-header">
       <!-- Навигационное меню -->
-      <nav class="main-navigation-header">
-        <!-- Логотип сайта города Седона -->
+      <nav class="main-navigation-header container">
+        <!-- Логотип - контентная картинка города Седона -->
+        <!-- Логотип в формате `svg` не отображается -->
+        <!-- width="138" height="70" -->
         <a class="main-logo-header">
-          <!-- Логотип - контентная картинка города Седона -->
-          <!-- Логотип в формате `svg` не отображается -->
-          <!-- width="138" height="70" -->
           <img class="img-logo-header" src="img/logo-sedona.png" width="138" height="70" alt="Логотип города Седона">
         </a>
         <!-- Неупорядоченный список меню, содержащий 4 пункта -->
         <ul class="site-navigation-header">
-          <li class="info-header">
-            <a class="nav-link-info" href="info.html">Информация</a>
-          </li>
-          <li class="gallery-header">
-            <a class="nav-link-gallery" href="gallery.html">Фото и видео</a>
-          </li>
-          <li class="map-header">
-            <a class="nav-link-map" href="map_of_state.html">Карта штата</a>
-          </li>
-          <li class="hotels-header">
-            <a class="nav-link-hotels" href="inner.html">Гостиницы</a>
-          </li>
+          <!-- <div class="main-navigation-header-wrapper"> -->
+            <li class="info-header"><a class="nav-link-info" href="info.html">Информация</a></li>
+            <li class="gallery-header"><a class="nav-link-gallery" href="gallery.html">Фото и видео</a></li>
+            <li class="map-header"><a class="nav-link-map" href="map_of_state.html">Карта штата</a></li>
+            <li class="hotels-header"><a class="nav-link-hotels" href="inner.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -55,19 +47,22 @@
         Реализация - `background-image` для псевдоэлемента. width="1200" height="780" -->
       </section>
 
-      <!-- `div` с классом 'container' -->
+      <!-- `div` с классом 'container' для задания ширины 1200px-->
       <div class="container">
         <!-- `section` №2 - Текст, указывающий на преимущества -->
-        <section class="features text-primary-sedona">
-            <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-            <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <section class="features future-item-1 text-primary-sedona">
+            <h2 class="title-item-1">Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h2>
+            <p class="text-item-1">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           </section>
 
           <!-- `section` №3 - Преимущество №1 - Настоящий городок -->
-          <section class="features text-secondary">
-            <h2>Настоящий городок</h2>
-            <p>&ndash; №1 &ndash;</p>
-            <p>Седона &ndash; не аттракцион для, туристов, там течет своя жизнь</p>
+          <section class="features future-item-2 text-secondary">
+            <div class="text-item-2">
+              <h2 class="title-item-2">Настоящий городок</h2>
+              <p>&mdash; №1 &mdash;</p>
+              <p>Седона &mdash; не аттракцион для, туристов, там течет своя жизнь</p>
+            </div>
+
             <!-- Контентная картинка преимущества №1 - Настоящий городок -->
             <!-- width="800" height="256" -->
             <img class="img-real-city" src="img/real-city.png" width="800" height="256" alt="Настоящий городок">
@@ -77,7 +72,7 @@
           <!-- Все 3 картинки - декоративные (вспомогательные, не имеющие смысла) -->
           <!-- `alt` - пустые, потому что описание картинки не несёт пользы для слушающих -->
           <!-- Реализация - `background-image` для псевдоэлемента -->
-          <section class="features">
+          <section class="features future-item-3">
             <h2 class="visually-hidden">Преимущества города Седона</h2>
             <div class="feature-item-city text-primary">
               <h3>Жилье</h3>
@@ -94,32 +89,33 @@
           </section>
 
           <!-- `section` №5 - Преимущество №2 - Мост дьявола -->
-          <section class="features text-secondary">
-            <h2>Там есть
-              <br>мост дьявола</h2>
-            <p>&ndash; №2 &ndash;</p>
-            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <section class="features future-item-4 text-secondary">
+            <div class="text-item-4">
+              <h2 class="title-item-4">Там есть<br> мост дьявола</h2>
+              <p>&mdash; №2 &mdash;</p>
+              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
             <!-- Контентная картинка преимущества №2 - Там есть мост дьявола -->
             <!-- width="800" height="256" -->
             <img class="img-bridge" src="img/bridge.png" width="800" height="256" alt="Мост дьявола">
           </section>
 
           <!-- `section` №6 - Преимущества №3, №4, №5 -->
-          <section class="features">
+          <section class="features future-item-5">
             <h2 class="visually-hidden">Преимущества города Седона</h2>
-            <div class="text-primary">
-              <h3>Небольшая площадь</h3>
-              <p>&ndash; №3 &ndash;</p>
+            <div class="text-primary text-item-5">
+              <h3 class="title-item-5">Небольшая площадь</h3>
+              <p>&mdash; №3 &mdash;</p>
               <p>Все достопримечательности находятся очень близко</p>
             </div>
-            <div class="text-primary">
-              <h3>Красивая дорога</h3>
-              <p>&ndash; №4 &ndash;</p>
+            <div class="text-primary text-item-5">
+              <h3 class="title-item-5">Красивая дорога</h3>
+              <p>&mdash; №4 &mdash;</p>
               <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
-            <div class="text-primary">
-              <h3>Мало туристов</h3>
-              <p>&ndash; №5 &ndash;</p>
+            <div class="text-primary text-item-5">
+              <h3 class="title-item-5">Мало туристов</h3>
+              <p>&mdash; №5 &mdash;</p>
               <p>Большинство едет в Гранд Каньон и толпится там</p>
             </div>
           </section>
@@ -132,7 +128,7 @@
               <p class="search-subtitle">Укажите предполагаемые даты поездки,
                 <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
               <!-- Кнопка, при нажатии на неё появляется попап с формой -->
-              <button class="button button-secondary title-form-search text-secondary">Поиск гостиницы в Седоне</button>
+              <button class="button button-secondary text-secondary button-search-hotels">Поиск гостиницы в Седоне</button>
             </div>
 
             <!-- Форма поиска гостиницы в Седоне (pop-up) -->
@@ -154,7 +150,7 @@
                 <label for="search-children">Дети:</label>
                 <input id="search-children" type="number" name="children" min="0" placeholder="0" class="input-style">
               </p>
-              <button class="button button-primary text-secondary" type="submit">Найти</button>
+              <button class="button button-primary text-secondary button-search" type="submit">Найти</button>
             </form>
           </section>
       </div>
@@ -172,7 +168,7 @@
     </main>
 
     <!-- Подвал сайта -->
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <!-- #VisitSedona -->
       <p class="main-link-footer">
         <a class="link-footer" href="info.html">#VisitSedona</a>

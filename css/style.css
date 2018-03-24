@@ -8,45 +8,30 @@ body {
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
-
   background-color: #f2f2f2; /* + эффекты в PS white, gray back */
-  /* Тень всей страницы */
+}
+/* Тень всей страницы */
+/* Как её сделать? */
+.shadow {
+  width: 1200px;
+  margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-left: 40px;
   margin-right: 40px;
 }
-
-/* Второй вариант отображения шрифтов. Как правильно оформить? */
-/* Regular */
-/* @font-face {
-  font-family: 'PT Sans', Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  src: local('PTSans'),
-  url('/fonts/ptsans.woff') format('woff'),
-  url('/fonts/ptsans.woff2') format('woff2');
-} */
-
-/* Bold */
-/* @font-face {
-  font-family: 'PT Sans', Arial, sans-serif;
-  font-style: bold;
-  font-weight: 700;
-  src: local('PTSans'),
-  url('/fonts/ptsansbold.woff') format('woff'),
-  url('/fonts/ptsansbold.woff2') format('woff2');
-} */
-
-/******************* Общие параметры **************************/
+/********************************** Общие параметры ****************************************/
 /* Удаляем подчёркивание у ВСЕХ ссылок */
 a {
   text-decoration: none;
+  /* cursor: pointer; */
 }
-/* Центруем блоки по центру */
-.main-navigation-header,
+/* Фиксируем ширину 1200 и центруем блоки по центру */
 .container {
   width: 1200px;
+  margin: 0 auto;
 }
+
+
 /******** Правила для скрытых элементов *********/
 .visually-hidden {
   position: absolute;
@@ -110,13 +95,41 @@ a {
 
 /* Кнопки "Поиск гостиницы" и "Найти" */
 .search .button {
+  font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+}
+.button-search-hotels {
+  width: 568px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.button-search {
+  width: 460px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+/* Кнопки "Подробнее" и "Забронировать" */
+.hotels-item-buttons .button {
+  font-size: 14px;
+  line-height: 21px;
   font-weight: bold;
 }
-/* Кнопки "Подробнее" и "Забронировать" */
-.hotels-item-buttons a {
-  font-weight: bold;
+.button-more-info {
+  width: 76px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.button-to-book {
+  width: 76px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 /* Кнопка 'ПОКАЗАТЬ' */
@@ -167,12 +180,28 @@ a {
 }
 /* Стилизация ЛОГОТИПА */
 
+/********************** Сетка в NAVIGATION ************************/
+.main-logo-header {
+  width: 138px;
+  height: 70px;
+}
+/* Список меню */
+/* Высота меню 57 */
+/* У списка обнулили отступы */
 .site-navigation-header {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1055px;
+  height: 57px;
+  margin: 0;
+  padding: 0;
 }
-
+.main-navigation-header {
+  display: flex;
+  flex-direction: column; /* располагаем элементы вертикально */
+  align-items: center; /* выравнивание элементов по центру внутри флекс-контейнера */
+  justify-content: space-between;
+}
 
 /************************* TEXT *****************************/
 /* Центруем текст, картинки в блоках: Welcome, преимущества, "Поиск гостиницы". Всё, кроме Footer
@@ -191,7 +220,7 @@ a {
   color: #ffffff;
 }
 
-/****************** Н1-H3 - HEADLINES *********************/
+/********************************* Н1-H3 - HEADLINES ***************************/
 /* Размер и интерлиньяж для всех `h2` и `h3` во `features` №2-5,  */
 .features h2,
 .features h3 {
@@ -223,7 +252,8 @@ a {
   color: #000000;
   background-color: #eeeeee;
 }
-/*********************************** IMAGES *********************************/
+/*************************************** FEATURES ***********************************/
+/******************* IMAGES ********************/
 /* Фоновая картинка к Welcome */
 /* width="1200" height="563" */
 .features-logo {
@@ -235,30 +265,165 @@ a {
 }
 /*** Decor - house ***/
 /* width="313" height="300" */
+/* width="75" height="72" */
 .feature-item-city:nth-child(2) {
   background-image: url("../img/icon-1.svg");
-  background-size: contain;
-  background-position: center;
+  background-size: 75px 72px;
+  background-position: top;
   background-repeat: no-repeat;
 }
 /*** Decor - food ***/
 /* width="308" height="292" */
+/* width="74" height="70" */
 .feature-item-city:nth-child(3) {
   background-image: url("../img/icon-3.svg");
-  background-size: contain;
-  background-position: center;
+  background-size: 74px 70px;
+  background-position: top;
   background-repeat: no-repeat;
 }
 /*** Decor - souvenirs ***/
 /* width="267" height="317" */
+/* width="64" height="76" */
 .feature-item-city:nth-child(4) {
   background-image: url("../img/icon-2.svg");
-  background-size: contain;
-  background-position: center;
+  background-size: 64px 76px;
+  background-position: top;
   background-repeat: no-repeat;
 }
-/************************** SEARCH ***************************/
+
+/********************** Сетка во FEATURES  ************************/
+/* `section` №2 - Текст, указывающий на преимущества */
+/*   height: 210px; */
+.future-item-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 70px;
+}
+.title-item-1 {
+  width: 50%;
+  display: flex;
+  align-self: center;
+}
+.text-item-1 {
+  display: flex;
+  align-self: center;
+  margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 55px;
+}
+/* `section` №3 - Преимущество №1 - Настоящий городок  */
+/*   height: 260px; */
+.future-item-2 {
+  width: 100%;
+  display: flex;
+}
+.title-item-2 {
+  width: 50%;
+  align-self: center;
+  margin: 0px;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+.text-item-2 {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.text-item-2 p {
+  margin-top: 10px;
+}
+/* `section` №4 - Жильё, Еда, Сувениры */
+.future-item-3 {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.feature-item-city {
+  width: 300px;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+.feature-item-city p {
+  margin-top: 4px;
+  margin-bottom: 23px;
+}
+
+/* `section` №5 - Преимущество №2 - Мост дьявола */
+.future-item-4 {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.future-item-4 {
+  width: 100%;
+  display: flex;
+}
+.title-item-4 {
+  width: 60%;
+  align-self: center;
+  margin: 0px;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+.text-item-4 {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.text-item-4 p {
+  margin-top: 10px;
+}
+
+/* `section` №6 - Преимущества №3, №4, №5 */
+.future-item-5 {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 28px;
+  padding-bottom: 30px;
+  margin-bottom: 0px;
+}
+.title-item-5 {
+  width: 50%;
+  align-self: center;
+}
+.text-item-5 {
+  width: 300px;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.text-item-5 p {
+  margin-top: 4px;
+  margin-bottom: 18px;
+}
+
+
+/************************************** SEARCH *************************************/
 /* Стилизация формы поиска гостиницы */
+
+.search-title {
+  margin-top: 0px;
+  padding-top: 62px;
+}
+.search-form {
+  width: 568px;
+  height: 395px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
 /* Размер и интерлиньяж для `h2` в `search` */
 .search h2 {
   font-size: 30px;
@@ -306,14 +471,17 @@ a {
   border-color: #e5e5e5; /* В Chrome рамка почему-то другого цвета. В Mozilla всё правильно */
 }
 
+/* Карта Седоны */
+/* width="1200" height="593" */
+
+
 /************************* FOOTER ****************************/
+/* Фон футера на .index.html, есть прозрачность */
 .main-footer {
-  color: #000000;
   background-color: rgba(255, 255, 255, 0.5); /* В PS не указан opacity, поставила 0.5 */
 }
-/* Фон футера на .inner.html, отличный от фона футера на главной странице */
+/* Фон футера на .inner.html, нет прозрачности */
 .main-footer-inner {
-  color: #000000;
   background-color: #fefefe;
 }
 /* Ссылка #VISITSEDONA */
@@ -485,6 +653,11 @@ a {
   background-color: #e5e5e5;
   padding: 1px;
 }
+/* Текст */
+
+.hotels-item-price span {
+  color: #333333;
+}
 
 /* Заголовки `article` - названия гостиницы */
 /* Меняем цвет ссылок */
@@ -518,6 +691,12 @@ a {
   background-repeat: no-repeat;
 } */
 .hotels-item-raiting span {
+  width: 110px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #666666;
   background-color: #f2f2f2;
 }
 
