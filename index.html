@@ -55,115 +55,119 @@
         Реализация - `background-image` для псевдоэлемента. width="1200" height="780" -->
       </section>
 
+      <!-- `div` с классом 'container' -->
+      <div class="container">
+        <!-- `section` №2 - Текст, указывающий на преимущества -->
+        <section class="features text-primary-sedona">
+            <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+            <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+          </section>
 
-      <!-- `section` №2 - Текст, указывающий на преимущества -->
-      <section class="features text-primary-sedona">
-        <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-      </section>
+          <!-- `section` №3 - Преимущество №1 - Настоящий городок -->
+          <section class="features text-secondary">
+            <h2>Настоящий городок</h2>
+            <p>&ndash; №1 &ndash;</p>
+            <p>Седона &ndash; не аттракцион для, туристов, там течет своя жизнь</p>
+            <!-- Контентная картинка преимущества №1 - Настоящий городок -->
+            <!-- width="800" height="256" -->
+            <img class="img-real-city" src="img/real-city.png" width="800" height="256" alt="Настоящий городок">
+          </section>
 
-      <!-- `section` №3 - Преимущество №1 - Настоящий городок -->
-      <section class="features text-secondary">
-        <h2>Настоящий городок</h2>
-        <p>&ndash; №1 &ndash;</p>
-        <p>Седона &ndash; не аттракцион для, туристов, там течет своя жизнь</p>
-        <!-- Контентная картинка преимущества №1 - Настоящий городок -->
-        <!-- width="800" height="256" -->
-        <img class="img-real-city" src="img/real-city.png" width="800" height="256" alt="Настоящий городок">
-      </section>
+          <!-- `section` №4 - Жильё, Еда, Сувениры -->
+          <!-- Все 3 картинки - декоративные (вспомогательные, не имеющие смысла) -->
+          <!-- `alt` - пустые, потому что описание картинки не несёт пользы для слушающих -->
+          <!-- Реализация - `background-image` для псевдоэлемента -->
+          <section class="features">
+            <h2 class="visually-hidden">Преимущества города Седона</h2>
+            <div class="feature-item-city text-primary">
+              <h3>Жилье</h3>
+              <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </div>
+            <div class="feature-item-city text-primary">
+              <h3>Еда</h3>
+              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </div>
+            <div class="feature-item-city text-primary">
+              <h3>Сувениры</h3>
+              <p>Не только китайского, но и местного производства!</p>
+            </div>
+          </section>
 
-      <!-- `section` №4 - Жильё, Еда, Сувениры -->
-      <!-- Все 3 картинки - декоративные (вспомогательные, не имеющие смысла) -->
-      <!-- `alt` - пустые, потому что описание картинки не несёт пользы для слушающих -->
-      <!-- Реализация - `background-image` для псевдоэлемента -->
-      <section class="features">
-        <h2 class="visually-hidden">Преимущества города Седона</h2>
-        <div class="feature-item-city text-primary">
-          <h3>Жилье</h3>
-          <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-        </div>
-        <div class="feature-item-city text-primary">
-          <h3>Еда</h3>
-          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-        </div>
-        <div class="feature-item-city text-primary">
-          <h3>Сувениры</h3>
-          <p>Не только китайского, но и местного производства!</p>
-        </div>
-      </section>
+          <!-- `section` №5 - Преимущество №2 - Мост дьявола -->
+          <section class="features text-secondary">
+            <h2>Там есть
+              <br>мост дьявола</h2>
+            <p>&ndash; №2 &ndash;</p>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <!-- Контентная картинка преимущества №2 - Там есть мост дьявола -->
+            <!-- width="800" height="256" -->
+            <img class="img-bridge" src="img/bridge.png" width="800" height="256" alt="Мост дьявола">
+          </section>
 
-      <!-- `section` №5 - Преимущество №2 - Мост дьявола -->
-      <section class="features text-secondary">
-        <h2>Там есть
-          <br>мост дьявола</h2>
-        <p>&ndash; №2 &ndash;</p>
-        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-        <!-- Контентная картинка преимущества №2 - Там есть мост дьявола -->
-        <!-- width="800" height="256" -->
-        <img class="img-bridge" src="img/bridge.png" width="800" height="256" alt="Мост дьявола">
-      </section>
+          <!-- `section` №6 - Преимущества №3, №4, №5 -->
+          <section class="features">
+            <h2 class="visually-hidden">Преимущества города Седона</h2>
+            <div class="text-primary">
+              <h3>Небольшая площадь</h3>
+              <p>&ndash; №3 &ndash;</p>
+              <p>Все достопримечательности находятся очень близко</p>
+            </div>
+            <div class="text-primary">
+              <h3>Красивая дорога</h3>
+              <p>&ndash; №4 &ndash;</p>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
+            <div class="text-primary">
+              <h3>Мало туристов</h3>
+              <p>&ndash; №5 &ndash;</p>
+              <p>Большинство едет в Гранд Каньон и толпится там</p>
+            </div>
+          </section>
 
-      <!-- `section` №6 - Преимущества №3, №4, №5 -->
-      <section class="features">
-        <h2 class="visually-hidden">Преимущества города Седона</h2>
-        <div class="text-primary">
-          <h3>Небольшая площадь</h3>
-          <p>&ndash; №3 &ndash;</p>
-          <p>Все достопримечательности находятся очень близко</p>
-        </div>
-        <div class="text-primary">
-          <h3>Красивая дорога</h3>
-          <p>&ndash; №4 &ndash;</p>
-          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-        </div>
-        <div class="text-primary">
-          <h3>Мало туристов</h3>
-          <p>&ndash; №5 &ndash;</p>
-          <p>Большинство едет в Гранд Каньон и толпится там</p>
-        </div>
-      </section>
+          <!-- `section` №7 - Заинтересовались? + форма поиска гостиницы -->
+          <section class="search">
+            <!-- Обернула в `div` для придания этому блоку одного фона -->
+            <div class="search-title-button">
+              <h2 class="search-title">Заинтересовались?</h2>
+              <p class="search-subtitle">Укажите предполагаемые даты поездки,
+                <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+              <!-- Кнопка, при нажатии на неё появляется попап с формой -->
+              <button class="button button-secondary title-form-search text-secondary">Поиск гостиницы в Седоне</button>
+            </div>
 
-      <!-- `section` №7 - Заинтересовались? + форма поиска гостиницы -->
-      <section class="search">
-        <!-- Обернула в `div` для придания этому блоку одного фона -->
-        <div class="search-title-button">
-          <h2 class="search-title">Заинтересовались?</h2>
-          <p class="search-subtitle">Укажите предполагаемые даты поездки,
-            <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <!-- Кнопка, при нажатии на неё появляется попап с формой -->
-          <button class="button button-secondary title-form-search text-secondary">Поиск гостиницы в Седоне</button>
-        </div>
+            <!-- Форма поиска гостиницы в Седоне (pop-up) -->
+            <form class="search-form" action="search.html" method="post">
+              <!-- Два поля для ввода с типом "text"+ два поля с типом "number" -->
+              <p class="search-item">
+                <label for="search-coming">Дата заезда:</label>
+                <input id="search-coming" type="text" name="date-coming" placeholder="24 апреля 2017" class="input-style">
+              </p>
+              <p class="search-item">
+                <label for="search-leaving">Дата выезда:</label>
+                <input id="search-leaving" type="text" name="date-leaving" placeholder="4 июля 2017" class="input-style">
+              </p>
+              <p class="search-item">
+                <label for="search-adults">Взрослые:</label>
+                <input id="search-adults" type="number" name="adults" min="1" placeholder="2" class="input-style">
+              </p>
+              <p class="search-item">
+                <label for="search-children">Дети:</label>
+                <input id="search-children" type="number" name="children" min="0" placeholder="0" class="input-style">
+              </p>
+              <button class="button button-primary text-secondary" type="submit">Найти</button>
+            </form>
+          </section>
+      </div>
 
-        <!-- Форма поиска гостиницы в Седоне (pop-up) -->
-        <form class="search-form" action="search.html" method="post">
-          <!-- Два поля для ввода с типом "text"+ два поля с типом "number" -->
-          <p class="search-item">
-            <label for="search-coming">Дата заезда:</label>
-            <input id="search-coming" type="text" name="date-coming" placeholder="24 апреля 2017" class="input-style">
-          </p>
-          <p class="search-item">
-            <label for="search-leaving">Дата выезда:</label>
-            <input id="search-leaving" type="text" name="date-leaving" placeholder="4 июля 2017" class="input-style">
-          </p>
-          <p class="search-item">
-            <label for="search-adults">Взрослые:</label>
-            <input id="search-adults" type="number" name="adults" min="1" placeholder="2" class="input-style">
-          </p>
-          <p class="search-item">
-            <label for="search-children">Дети:</label>
-            <input id="search-children" type="number" name="children" min="0" placeholder="0" class="input-style">
-          </p>
-          <button class="button button-primary text-secondary" type="submit">Найти</button>
-        </form>
-      </section>
-
-      <!-- Фоновая картинка - карта Седоны - после кнопки "Поиск гостиницы в Седоне" -->
-      <!-- Реализация - `background-image` для псевдоэлемента -->
-      <section>
-        <div id="map">
-          <!-- width="1200" height="593" -->
-        </div>
-      </section>
+      <div class="container">
+        <!-- Фоновая картинка - карта Седоны - после кнопки "Поиск гостиницы в Седоне" -->
+        <!-- Реализация - `background-image` для псевдоэлемента -->
+        <section>
+          <div id="map">
+            <!-- width="1200" height="593" -->
+          </div>
+        </section>
+      </div>
 
     </main>
 
