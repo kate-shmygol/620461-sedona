@@ -12,19 +12,24 @@
     <header class="main-header">
       <!-- Навигационное меню -->
       <nav class="main-navigation-header container">
-        <!-- Логотип - контентная картинка города Седона -->
-        <!-- Логотип в формате `svg` не отображается -->
-        <!-- width="138" height="70" -->
-        <a class="main-logo-header">
-          <img class="img-logo-header" src="img/logo-sedona.png" width="138" height="70" alt="Логотип города Седона">
-        </a>
+
         <!-- Неупорядоченный список меню, содержащий 4 пункта -->
         <ul class="site-navigation-header">
-          <!-- <div class="main-navigation-header-wrapper"> -->
+          <div class="main-navigation-header-wrapper-1">
             <li class="info-header"><a class="nav-link-info" href="info.html">Информация</a></li>
             <li class="gallery-header"><a class="nav-link-gallery" href="gallery.html">Фото и видео</a></li>
+          </div>
+          <!-- Логотип - контентная картинка города Седона -->
+          <!-- 3.2. Логотип не является пунктом меню. Его нужно размечать отдельным элементом -->
+          <!-- Логотип в формате `svg` не отображается -->
+          <!-- width="138" height="70" -->
+          <a class="main-logo-header" href="#">
+          <img class="img-logo-header-link" src="../img/logo-sedona.png" width="138" height="70" alt="Логотип города Седона">
+          </a>
+          <div class="main-navigation-header-wrapper-2">
             <li class="map-header"><a class="nav-link-map" href="map_of_state.html">Карта штата</a></li>
             <li class="hotels-header"><a class="nav-link-hotels" href="inner.html">Гостиницы</a></li>
+          </div>
         </ul>
       </nav>
     </header>
@@ -134,22 +139,25 @@
             <!-- Форма поиска гостиницы в Седоне (pop-up) -->
             <form class="search-form" action="search.html" method="post">
               <!-- Два поля для ввода с типом "text"+ два поля с типом "number" -->
-              <p class="search-item">
-                <label for="search-coming">Дата заезда:</label>
-                <input id="search-coming" type="text" name="date-coming" placeholder="24 апреля 2017" class="input-style">
-              </p>
-              <p class="search-item">
-                <label for="search-leaving">Дата выезда:</label>
-                <input id="search-leaving" type="text" name="date-leaving" placeholder="4 июля 2017" class="input-style">
-              </p>
-              <p class="search-item">
+              <div class="search-item-1">
+                <p class="search-item">
+                  <label for="search-coming">Дата заезда:</label>
+                  <input id="search-coming" type="text" name="date-coming" placeholder="24 апреля 2017" class="input-style">
+                </p>
+                <p class="search-item">
+                  <label for="search-leaving">Дата выезда:</label>
+                  <input id="search-leaving" type="text" name="date-leaving" placeholder="4 июля 2017" class="input-style">
+                </p>
+              </div>
+              <p class="search-item search-item-2">
                 <label for="search-adults">Взрослые:</label>
                 <input id="search-adults" type="number" name="adults" min="1" placeholder="2" class="input-style">
               </p>
-              <p class="search-item">
+              <p class="search-item search-item-2">
                 <label for="search-children">Дети:</label>
                 <input id="search-children" type="number" name="children" min="0" placeholder="0" class="input-style">
               </p>
+
               <button class="button button-primary text-secondary button-search" type="submit">Найти</button>
             </form>
           </section>
@@ -170,33 +178,41 @@
     <!-- Подвал сайта -->
     <footer class="main-footer container">
       <!-- #VisitSedona -->
-      <p class="main-link-footer">
+      <p>
         <a class="link-footer" href="info.html">#VisitSedona</a>
       </p>
       <!-- Социальные кнопки -->
       <nav class="main-navigation-footer footer-social">
         <ul class="site-navigation-footer">
-            <!-- Все 3 картинки - декоративные. Реализация - `background-image` для соц-иконок (ссылки) -->
-            <!-- Обязательно их подписать, чтобы скринридеры смогли их прочесть -->
-            <!-- width=".." height=".." -->
+          <!-- Все 3 картинки - декоративные. Реализация - `background-image` для соц-иконок (ссылки) -->
+          <!-- width="46" height="48" -->
           <li>
-            <a class="social-button" href="https://twitter.com/htmlacademy_ru">Twitter</a>
+            <a class="social-button" href="https://twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Twitter</span>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/></svg>
+            </a>
           </li>
           <li>
-            <a class="social-button" href="https://www.facebook.com/htmlacademy">Facebook</a>
+            <a class="social-button" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Facebook</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"><path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/></svg>
+            </a>
           </li>
           <li>
-            <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">Youtube</a>
+            <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Youtube</span>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16"><path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg>
+            </a>
           </li>
         </ul>
       </nav>
       <!-- Копирайт -->
       <p class="footer-copyright">
-        Website by
+        <span>Website by</span>
         <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">
           <!-- Логотип HTML Academy - контент -->
           <!-- width="450" height="154" -->
-          <img src="img/logo-htmlacademy.svg" width="10%" height="10%" alt="HTML Academy">
+          <img class="img-html-academy" src="../img/logo-htmlacademy.svg" width="450" height="154" alt="HTML Academy">
         </a>
       </p>
     </footer>

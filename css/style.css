@@ -11,28 +11,29 @@ body {
   background-color: #f2f2f2; /* + эффекты в PS white, gray back */
 }
 /* Тень всей страницы */
-/* Как её сделать? */
-.shadow {
+/* 3.12. При достижении 1200px сетка перестаёт масштабироваться, слева и справа от неё появляется серый фон, на который сайт бросает лёгкую тень. */
+/* Как сделать, чтобы по центру была? */
+
+/* .shadow {
   width: 1200px;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-left: 40px;
   margin-right: 40px;
-}
-/********************************** Общие параметры ****************************************/
+} */
+
+/********************************** COMMON SETTINGS ****************************************/
 /* Удаляем подчёркивание у ВСЕХ ссылок */
 a {
   text-decoration: none;
   /* cursor: pointer; */
 }
-/* Фиксируем ширину 1200 и центруем блоки по центру */
-.container {
-  width: 1200px;
-  margin: 0 auto;
+/* Добавляем стилевые правила для всех контентных изображений */
+img {
+  max-width: 100%;
+  height: auto;
 }
-
-
-/******** Правила для скрытых элементов *********/
+/******** Правила для скрытия элементов со страницы *********/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -43,7 +44,11 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
+/* Фиксируем ширину 1200 и центруем блоки по центру */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
 /************************ BUTTONS **************************/
 .button {
   text-align: center; /* горизонтальное выравнивание текста по центру */
@@ -53,7 +58,6 @@ a {
   color: #ffffff; /* белый цвет текста */
   cursor: pointer;
 }
-
 /********************************/
 /***                          ***/
 /***  primary BUTTONS - blue  ***/
@@ -72,8 +76,6 @@ a {
   color: #94b9d2;
   background-color: #5496bd;
 }
-
-
 /************************************/
 /***                              ***/
 /***  secondary BUTTONS - brown   ***/
@@ -93,62 +95,6 @@ a {
   background-color: #503e33;
 }
 
-/* Кнопки "Поиск гостиницы" и "Найти" */
-.search .button {
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-}
-.button-search-hotels {
-  width: 568px;
-  padding-top: 35px;
-  padding-bottom: 35px;
-}
-.button-search {
-  width: 460px;
-  padding-top: 17px;
-  padding-bottom: 17px;
-}
-
-/* Кнопки "Подробнее" и "Забронировать" */
-.hotels-item-buttons .button {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: bold;
-}
-.button-more-info {
-  width: 76px;
-  padding-left: 17px;
-  padding-right: 17px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.button-to-book {
-  width: 76px;
-  padding-left: 17px;
-  padding-right: 17px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-/* Кнопка 'ПОКАЗАТЬ' */
-/* В покое */
-.button-show {
-  color: #ffffff;
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 3px / 3px;
-}
-/* При наведении */
-.button-show:hover {
-  color: #000000;
-  background-color: #ffffff;
-  border: 2px solid #ffffff;
-  border-radius: 2px / 2px;
-}
-/* Стиль кнопки при нажатии - НЕ УКАЗАН */
-
 /******************************* NAVIGATION **********************************/
 /* Настраиваем шрифт и фон */
 .main-navigation-header {
@@ -157,6 +103,10 @@ a {
 
   background-color: #ffffff;
 }
+/* main-header: {
+    margin-bottom: 0px;
+} */
+
 /* Удаляем маркеры в списке */
 .site-navigation-header {
   list-style: none;
@@ -175,42 +125,90 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 /* Текущая ссылка */
-.nav-link-hotels-current {
+.nav-link-hotels-current li {
   color: #766357;
 }
-/* Стилизация ЛОГОТИПА */
 
 /********************** Сетка в NAVIGATION ************************/
+/* Делаем логотип флекс-элементом */
 .main-logo-header {
-  width: 138px;
-  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
 }
-/* Список меню */
+/* Список меню делаем флекс-элементами */
 /* Высота меню 57 */
 /* У списка обнулили отступы */
 .site-navigation-header {
   display: flex;
-  justify-content: space-between;
-  width: 1055px;
-  height: 57px;
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  /* padding: 10px; */
 }
-.main-navigation-header {
+.main-navigation-header-wrapper-1 {
   display: flex;
-  flex-direction: column; /* располагаем элементы вертикально */
-  align-items: center; /* выравнивание элементов по центру внутри флекс-контейнера */
-  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+  justify-content: flex-end;
+  /* align-items: flex-end; */
+  /* justify-content: flex-end; */
+  /* width: 530px; */
+  /* align-self: flex-end; */
+}
+.main-navigation-header-wrapper-2 {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  /* width: 530px; */
+  /* justify-content: flex-end; */
+  /* align-items: flex-start; */
+}
+/* Отступы у ссылок */
+.site-navigation-header li {
+  display: flex;
+  margin: 0px;
+  padding-top: 0px;
+  /* padding: 25px 23px; */
+  /* vertical-align: middle; */
+  /* flex-basis: 300px; */
 }
 
+
+/* Второй вариант */
+/* Абсолютное позиционирование логотипа относительно меню */
+/* .main-navigation-header .main-logo-header {
+  position: relative;
+  padding-left: -500px;
+}
+.main-logo-header::before {
+  content: "";
+
+  position: absolute;
+  top: 0px;
+  right: 100px;
+
+  width: 138px;
+  height: 70px;
+}
+  background-color: #ff0000; */
+
+  /* background-image: url("../img/logo-sedona.png"); */
+  /* background-repeat: no-repeat;
+  background-position: 0 0; */
+
 /************************* TEXT *****************************/
-/* Центруем текст, картинки в блоках: Welcome, преимущества, "Поиск гостиницы". Всё, кроме Footer
- */
-/* форму поиска (pop-up) будем стилизовать отдельно
-*/
+/* Центруем текст, картинки в блоках: Welcome, преимущества, "Поиск гостиницы", футер */
 .features-logo,
 .features,
-.search {
+.search,
+.main-footer {
   text-align: center;
 }
 
@@ -231,8 +229,8 @@ a {
   line-height: 26px;
 }
 
-/********************************** BACKGROUNDS ******************************/
-/* FEATURES */
+/*************************************** FEATURES ***********************************/
+/********************** BACKGROUNDS ************************/
 /* Белый фон под чёрный текст */
 .container .features:nth-child(1),
 .container .features:nth-child(3),
@@ -252,10 +250,8 @@ a {
   color: #000000;
   background-color: #eeeeee;
 }
-/*************************************** FEATURES ***********************************/
 /******************* IMAGES ********************/
-/* Фоновая картинка к Welcome */
-/* width="1200" height="563" */
+/* Фоновая картинка к Welcome */ /* width="1200" height="563" */
 .features-logo {
   width: 100%;
   height: 563px;
@@ -264,8 +260,7 @@ a {
   background-position: center;
 }
 /*** Decor - house ***/
-/* width="313" height="300" */
-/* width="75" height="72" */
+/* width="313" height="300" */ /* width="75" height="72" */
 .feature-item-city:nth-child(2) {
   background-image: url("../img/icon-1.svg");
   background-size: 75px 72px;
@@ -273,8 +268,7 @@ a {
   background-repeat: no-repeat;
 }
 /*** Decor - food ***/
-/* width="308" height="292" */
-/* width="74" height="70" */
+/* width="308" height="292" */ /* width="74" height="70" */
 .feature-item-city:nth-child(3) {
   background-image: url("../img/icon-3.svg");
   background-size: 74px 70px;
@@ -282,8 +276,7 @@ a {
   background-repeat: no-repeat;
 }
 /*** Decor - souvenirs ***/
-/* width="267" height="317" */
-/* width="64" height="76" */
+/* width="267" height="317" */ /* width="64" height="76" */
 .feature-item-city:nth-child(4) {
   background-image: url("../img/icon-2.svg");
   background-size: 64px 76px;
@@ -309,9 +302,8 @@ a {
 .text-item-1 {
   display: flex;
   align-self: center;
-  margin-bottom: 50px;
+  margin-bottom: 52px;
   text-align: center;
-  margin-bottom: 55px;
 }
 /* `section` №3 - Преимущество №1 - Настоящий городок  */
 /*   height: 260px; */
@@ -352,7 +344,7 @@ a {
 }
 .feature-item-city p {
   margin-top: 4px;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 }
 
 /* `section` №5 - Преимущество №2 - Мост дьявола */
@@ -388,7 +380,7 @@ a {
 .future-item-5 {
   display: flex;
   justify-content: space-around;
-  padding-top: 28px;
+  padding-top: 26px;
   padding-bottom: 30px;
   margin-bottom: 0px;
 }
@@ -405,8 +397,8 @@ a {
   padding-right: 60px;
 }
 .text-item-5 p {
-  margin-top: 4px;
-  margin-bottom: 18px;
+  margin-top: 3px;
+  margin-bottom: 23px;
 }
 
 
@@ -415,15 +407,16 @@ a {
 
 .search-title {
   margin-top: 0px;
-  padding-top: 62px;
+  padding-top: 51px;
 }
 .search-form {
   width: 568px;
   height: 395px;
   margin: 0 auto;
+  padding-top: 55px;
   vertical-align: middle;
+  box-shadow: 0 0 50px rgba(221, 217, 209, 0.7);
 }
-
 /* Размер и интерлиньяж для `h2` в `search` */
 .search h2 {
   font-size: 30px;
@@ -432,13 +425,32 @@ a {
 /* Интерлиньяж для `p` в `search-subtitle` */
 .search-subtitle {
   line-height: 24px;
+  margin-bottom: 45px;
+}
+/* Кнопки "Поиск гостиницы" и "Найти" */
+.search .button {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+.button-search-hotels {
+  width: 568px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* Кнопка НАЙТИ была нормальной, потом что-то поломало её.. */
+.button-search {
+  display: block;
+  width: 460px;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 /* Размер и жирное начертание для подписей и 'placeholder' формы поиска */
-
 .search-item {
   font: inherit;
   line-height: 26px;
   font-weight: bold;
+  margin-top: 0px;
 }
 .search-item input[type="text"],
 .search-item input[type="number"] {
@@ -459,7 +471,6 @@ a {
   border: 2px solid #f2f2f2;
   outline-color: #ffffff;
 }
-
 /* При наведении */
 .search-item input:hover {
   background-color: #ebebeb;
@@ -470,71 +481,121 @@ a {
   background-color: #ffffff;
   border-color: #e5e5e5; /* В Chrome рамка почему-то другого цвета. В Mozilla всё правильно */
 }
+/*********************************** Сетка ФОРМЫ **********************************/
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* flex-shrink: ; */
+}
+.search-form label {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.search-item-1 {
+  margin-bottom: -80px;
+}
+.search-item-1 .search-item {
+  margin-bottom: 30px;
+}
+.search-item-1 input {
+  width: 345px;
+  height: 40px;
+  padding-left: 10px;
+}
+/* Не знаю как выровнять взрослых и детей */
+.search-item-2 input {
+  width: 115px;
+  height: 40px;
+  text-align: center;
+}
+.search-item-2 {
+  padding-left: 20px;
+}
+
+
 
 /* Карта Седоны */
 /* width="1200" height="593" */
 
-
 /************************* FOOTER ****************************/
 /* Фон футера на .index.html, есть прозрачность */
 .main-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 120px;
+  margin-top: 0px;
   background-color: rgba(255, 255, 255, 0.5); /* В PS не указан opacity, поставила 0.5 */
 }
 /* Фон футера на .inner.html, нет прозрачности */
 .main-footer-inner {
+  min-height: 120px;
   background-color: #fefefe;
 }
 /* Ссылка #VISITSEDONA */
-.main-link-footer {
-  text-align: left;
-}
 .link-footer {
+  /* display: flex; */
+  width: 146px;
   color: #000000;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  /* align-self: center; */
 }
 /* Стилизация соц-иконок */
-/* Добавить иконки */
-.footer-social {
-  text-align: center;
-}
 .social-button {
-  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
 }
 .footer-social ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 150px;
+
   list-style: none;
 }
-/* В покое */
-/* Цвет #81b3d2 */
-.social-button a {
-  color: #000000;
-}
-/* ??? */
 /* Наведение и фокус */
-.social-button a:hover,
-.social-button a:focus {
-  color: #81b3d2;
+.social-button:hover,
+.social-button:focus {
+  background-color: #669ec0;
 }
 /* Нажатие (активная ссылка) */
-.social-button a:active {
-  color: rgba(0, 0, 0, 0.3);
+.social-button:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
+
 /* Стиль WEBSITE BY */
-.footer-copyright {
-  color: #000000;
-  line-height: 26px;
+/* Не получается в одну строку  */
+.footer-copyright span {
+  display: block;
+  /* width: 80px; */
+  padding-right: 10px;
+  margin-bottom: 15px;
 }
 /* Стиль ссылки-картинки HTML Academy */
+
 .footer-copyright {
-  text-align: right;
+  display: flex;
+  align-items: center;
+  line-height: 26px;
+  width: 15%;
+  height: 15%;
 }
-/* В покое */
 /* ??? */
-.footer-copyright .button {
-  background-color: #231f20;
-}
+/* Подсвечивается только картинка, а не контур */
+/* В покое */
+/*.footer-copyright .button {}
+   background-color: #231f20; */
+
 /* ??? */
 /* Наведение и фокус */
 .footer-copyright .button:hover,
@@ -550,26 +611,133 @@ a {
 
 /************************* FILTER ****************************/
 /* Стилизация формы 'ФИЛЬТР' `section` №1 */
+.filtres form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.filter-range {
+  display: flex;
+  align-self: flex-start;
+  width: 320px;
+}
+
 .filtres fieldset {
+  margin-left: -25px;
+  padding-left: 20px;
+  margin-top: 28px;
+  margin-bottom: 0px;
   border: none;
-}
-/* Размер и жирное начертание для заголовков (`legend`) фильтра */
-.filter legend {
-  font-size: 16px;
-  font-weight: bold;
-}
-.filtres ul {
-  list-style: none;
 }
 /* Фоновая картинка к ФИЛЬТРУ */
 /* Реализация - `background-image` для псевдоэлемента */
 /* width="2706" height="1804" */
 .filtres {
   background-image: url("../img/background-inner.jpg");
-  background-size: 1200px 780px;  /* Нужно обрезать картинку */
+  background-size: 100%;  /* Нужно обрезать картинку 1200px 780px*/
   background-repeat: no-repeat;
+  background-position: 0px;
 }
-/* Вставить иконки */
+
+.filter legend {
+  margin-bottom: 20px;
+  font-size: 16px; /* Размер и жирное начертание для заголовков (`legend`) фильтра */
+  font-weight: bold;
+  padding-left: 25px;
+}
+.filtres ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.filter-option {
+  margin-bottom: 25px;
+  padding-left: 55px;
+}
+/*********************** Checkbox ********************/
+/* Делаем label блочным, задаём относительное позиционирование. Задаём курсор с указателем и отменяем выделение текста подписи цветом. */
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+/* Поле не выбрано */
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+
+  left: -40px;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* Поле не выбрано + заблокировано */
+.filter-input-checkbox:disabled + label::before {
+  content: "";
+  position: absolute;
+
+  left: -40px;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+
+  /* Как задать цвет svg картинкам? */
+  /* background-color: #6a6a6a; */
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* Поле выбрано */
+.filter-input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0px;
+  left: -40px;
+
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* Поле выбрано + заблокировано */
+.filter-input-checkbox:disabled + label::before,
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+
+  left: -40px;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+
+  /* Как задать цвет svg картинкам? */
+  /* background-color: #6a6a6a; */
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 /* В покое */
 .filter-input:hover + label,
 .filter-input:focus + label {
@@ -580,16 +748,144 @@ a {
   color: #6a6a6a;
 }
 
-/* Checkbox */
+/* Стоимость в сутки */
+.filter-range {
+  width: 320px;
+  color: #ffffff;
+}
+.filter-range-title {
+  margin-bottom: 9px;
 
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+.price-controls {
+  margin-top: -16px;
+  position: relative;
+
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 3px / 3px;
+}
+/* Палочка - спозиционированный абсолютно псевдоэлемент */
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%,-50%);
+}
+/* MIN - MAX Price */
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
 
 /* Ползунки */
+.range-controls {
+  position: relative;
 
+  margin-bottom: 32px;
+}
+.range-controls .scale {
+  height: 2px;
 
+  background: rgba(255, 255, 255, 0.3);
+}
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+.range-toggle-min {
+  left: 0;
+}
+.range-toggle-max {
+  left: 80%;
+}
+.range-toggle:hover {
+  background: #1c4f80;
+  border: 9px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+/***** Кнопка 'ПОКАЗАТЬ' ******/
+/* В покое */
+.button-show {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 33px;
+
+  color: #ffffff;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 3px/3px;
+  cursor: pointer;
+}
+/* При наведении */
+.button-show:hover {
+  color: #000000;
+  background: #ffffff;
+}
 /***************************** FOUND **************************/
 /* Стилизация 'section' №2 - вывод результатов и сортировка  */
 /* Фон */
 .results {
+  width: 100%;
+  min-height: 87px;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  /* padding-right: 70px; */
+
   background-color: #fefefe;
 }
 /* Размер, интерлиньяж и жирное начертание для 'НАЙДЕНО' */
@@ -602,7 +898,13 @@ a {
 /*************************** SORTING *************************/
 /* Размер и интерлиньяж для 'СОРТИРОВКИ' */
 .hotels-sort {
-  /* font: inherit; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 70px;
+  width: 360px;
+
   font-size: 12px;
   line-height: 18px;
 }
@@ -635,30 +937,10 @@ a {
 
 
 /**************** Разделы с описанием гостиниц ***************/
-/* Фон */
-.hotels article {
-  background-color: #fefefe;
-}
-/* Между блоками 4 линии width="1200" height="1" color: #e5e5e5 */
-/* Их так нужно стидизовать? */
-.results::after {
-  content: "";
-  display: block;
-  background-color: #e5e5e5;
-  padding: 1px;
-}
-.hotels article::after {
-  content: "";
-  display: block;
-  background-color: #e5e5e5;
-  padding: 1px;
-}
 /* Текст */
-
 .hotels-item-price span {
   color: #333333;
 }
-
 /* Заголовки `article` - названия гостиницы */
 /* Меняем цвет ссылок */
 .hotels-item-title a {
@@ -673,11 +955,68 @@ a {
 .hotels-item-title a:active {
   color: rgba(0, 0, 0, 0.3);
 }
+/* Кнопки "Подробнее" и "Забронировать" */
+.hotels-item-buttons .button {
+  display: inline-block;
+
+  padding: 3px 17px;
+  margin-right: 2px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.hotels article {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  min-height: 150px;
+
+  background-color: #fefefe;
+  margin-bottom: 2px;
+}
+
+.hotels-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 1200px;
+  min-height: 94px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.hotels-item-content h3,
+.hotels-item-content p {
+  margin: 0px;
+  margin-bottom: 18px;
+  padding: 0px;
+}
+
+
+/* width: 20%; */
+.hotels-item-image {
+  width: 180px;
+  margin-left: 60px;
+  margin-right: 30px;
+}
 /************************* RAITING ************************/
 /* Стилизация иконок-звёздочек 'РЕЙТИНГ' */
+.hotels-item-raiting {
+  flex-wrap: wrap;
+  align-self: flex-end;
+  width: 100px;
+
+  /* vertical-align: middle;
+  text-align: center; */
+}
 /* width="75" height="71" color: #.. */
 /* ??? */
-.hotels-item-raiting {
+.hotels-item-raiting .stars {
+
+
   background-image: url("../img/star.svg");
   background-size: 70% 70%;
   background-position: center; /* ??? */
