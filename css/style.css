@@ -409,14 +409,7 @@ img {
   margin-top: 0px;
   padding-top: 51px;
 }
-.search-form {
-  width: 568px;
-  height: 395px;
-  margin: 0 auto;
-  padding-top: 55px;
-  vertical-align: middle;
-  box-shadow: 0 0 50px rgba(221, 217, 209, 0.7);
-}
+
 /* Размер и интерлиньяж для `h2` в `search` */
 .search h2 {
   font-size: 30px;
@@ -438,12 +431,13 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* Кнопка НАЙТИ была нормальной, потом что-то поломало её.. */
+/* Про кнопку: Флексбокс, часть 2 / Карточка курса, часть 3 [26/28] */
 .button-search {
   display: block;
   width: 460px;
   padding-top: 17px;
   padding-bottom: 17px;
+  margin-top: auto;
 }
 /* Размер и жирное начертание для подписей и 'placeholder' формы поиска */
 .search-item {
@@ -479,7 +473,7 @@ img {
 /* В фокусе*/
 .search-item input:focus {
   background-color: #ffffff;
-  border-color: #e5e5e5; /* В Chrome рамка почему-то другого цвета. В Mozilla всё правильно */
+  border-color: #e5e5e5;
 }
 /*********************************** Сетка ФОРМЫ **********************************/
 .search-form {
@@ -487,6 +481,16 @@ img {
   flex-wrap: wrap;
   justify-content: space-around;
   /* flex-shrink: ; */
+
+  width: 568px;
+  height: 395px;
+
+  margin: 0 auto;
+  padding-top: 55px;
+
+  vertical-align: middle;
+
+  box-shadow: 0 0 50px rgba(221, 217, 209, 0.7);
 }
 .search-form label {
   display: inline-block;
@@ -494,8 +498,17 @@ img {
   margin-right: 20px;
 }
 .search-item-1 {
+  flex-basis: auto;
+  margin-bottom: -90px;
+}
+.search-item-2 {
+  display: flex;
+  width: 520px;
+  justify-content: space-around;
+  flex-basis: auto;
   margin-bottom: -80px;
 }
+
 .search-item-1 .search-item {
   margin-bottom: 30px;
 }
@@ -503,12 +516,14 @@ img {
   width: 345px;
   height: 40px;
   padding-left: 10px;
+  flex-grow: 1;
 }
 /* Не знаю как выровнять взрослых и детей */
 .search-item-2 input {
   width: 115px;
   height: 40px;
   text-align: center;
+  flex-grow: 1;
 }
 .search-item-2 {
   padding-left: 20px;
@@ -572,12 +587,10 @@ img {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-
 /* Стиль WEBSITE BY */
 /* Не получается в одну строку  */
 .footer-copyright span {
   display: block;
-  /* width: 80px; */
   padding-right: 10px;
   margin-bottom: 15px;
 }
@@ -587,8 +600,6 @@ img {
   display: flex;
   align-items: center;
   line-height: 26px;
-  width: 15%;
-  height: 15%;
 }
 /* ??? */
 /* Подсвечивается только картинка, а не контур */
@@ -596,11 +607,19 @@ img {
 /*.footer-copyright .button {}
    background-color: #231f20; */
 
+   /* Не получается сделать. Если через img, то невозможно её стилизовать. При вставке SVG не понимаю тогда, как стилизовать. Потому что через fill не видно изменений */
+.footer-copyright svg {
+  display: block;
+  width: 118px;
+  height: 40px;
+  fill: #000000;
+}
+
 /* ??? */
 /* Наведение и фокус */
 .footer-copyright .button:hover,
 .footer-copyright .button:focus {
-  background-color: #81b3d2;
+  fill: #81b3d2;
 }
 /* ??? */
 /* Нажатие */
@@ -630,7 +649,6 @@ img {
   border: none;
 }
 /* Фоновая картинка к ФИЛЬТРУ */
-/* Реализация - `background-image` для псевдоэлемента */
 /* width="2706" height="1804" */
 .filtres {
   background-image: url("../img/background-inner.jpg");
@@ -875,24 +893,41 @@ img {
 }
 /***************************** FOUND **************************/
 /* Стилизация 'section' №2 - вывод результатов и сортировка  */
-/* Фон */
 .results {
-  width: 100%;
-  min-height: 87px;
-  margin-bottom: 2px;
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   flex-wrap: wrap;
   align-items: center;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 2px;
+
   /* padding-right: 70px; */
 
   background-color: #fefefe;
 }
-/* Размер, интерлиньяж и жирное начертание для 'НАЙДЕНО' */
+/* Стили для 'НАЙДЕНО' */
+/* Как убрать отступ у div? См. DevTools */
+/* padding-left: 60px; */
+/* flex-basis: auto; */
 .found {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding-right: 20px;
+  width: 120px;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+}
+.hotels-sort-buttons {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+
+  padding-right: 73px;
 }
 
 /*************************** SORTING *************************/
@@ -900,19 +935,29 @@ img {
 .hotels-sort {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding-right: 70px;
+  flex-grow: 2;
+
   width: 360px;
 
   font-size: 12px;
   line-height: 18px;
 }
+.sort-title {
+  padding-right: 40px;
+}
+.sort-price-link-current {
+  padding-right: 33px;
+}
 /* Меняем цвет ссылок */
 .hotels-sort a {
+  padding-right: 33px;
+
   color: rgba(0, 0, 0, 0.3);
   text-decoration: underline;
-  text-decoration-style: dotted; /* точки в макете квадратные, здесь круглые. Есть ещё вариант dashed. Но там штришки длиннее  */
+  text-decoration-style: dotted;
+  /* реализовать штрихи в SVG  */
   text-decoration-color: #81b3d2;
 }
 /* Цвет ссылок при наведении и в фокусе */
@@ -934,7 +979,6 @@ img {
 /* .hotels-sort-buttons .button-up a {
 
 } */
-
 
 /**************** Разделы с описанием гостиниц ***************/
 /* Текст */
@@ -967,6 +1011,7 @@ img {
   font-weight: bold;
 }
 
+/***************************** Сетка *******************************/
 .hotels article {
   display: flex;
   align-items: center;
@@ -977,8 +1022,18 @@ img {
   margin-bottom: 2px;
 }
 
+/* width: 20%; */
+.hotels-item-image {
+  display: flex;
+  flex-grow: 1;
+  width: 180px;
+  margin-left: 60px;
+  margin-right: 30px;
+}
+
 .hotels-item-content {
   display: flex;
+  flex-grow: 2;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
@@ -996,32 +1051,43 @@ img {
 }
 
 
-/* width: 20%; */
-.hotels-item-image {
-  width: 180px;
-  margin-left: 60px;
-  margin-right: 30px;
-}
 /************************* RAITING ************************/
 /* Стилизация иконок-звёздочек 'РЕЙТИНГ' */
 .hotels-item-raiting {
+  display: flex;
   flex-wrap: wrap;
-  align-self: flex-end;
-  width: 100px;
-
-  /* vertical-align: middle;
-  text-align: center; */
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  /* width: 150px; */
 }
+.hotels-item-raiting::
+
 /* width="75" height="71" color: #.. */
 /* ??? */
 .hotels-item-raiting .stars {
-
-
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100px;
+  padding-bottom: 50px;
   background-image: url("../img/star.svg");
-  background-size: 70% 70%;
-  background-position: center; /* ??? */
+  background-size: 25%;
+  background-position: center;
   background-repeat: no-repeat;
 }
+
+.stars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* flex-direction: row-reverse; */
+  width: 300px;
+}
+
+
 /* .hotels-item-raiting span::before {
   content: "";
   display: block;
