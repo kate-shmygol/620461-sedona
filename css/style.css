@@ -1,6 +1,4 @@
 
-/* WHOLE PAGE */
-/* Удаление отступов, подключение шрифта, настройка шрифта и фона */
 body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
@@ -8,32 +6,15 @@ body {
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
-  background-color: #f2f2f2; /* + эффекты в PS white, gray back */
+  background-color: #f2f2f2;
 }
-/* Тень всей страницы */
-/* 3.12. При достижении 1200px сетка перестаёт масштабироваться, слева и справа от неё появляется серый фон, на который сайт бросает лёгкую тень. */
-/* Как сделать, чтобы по центру была? */
-
-/* .shadow {
-  width: 1200px;
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin-left: 40px;
-  margin-right: 40px;
-} */
-
-/********************************** COMMON SETTINGS ****************************************/
-/* Удаляем подчёркивание у ВСЕХ ссылок */
 a {
   text-decoration: none;
-  /* cursor: pointer; */
 }
-/* Добавляем стилевые правила для всех контентных изображений */
 img {
   max-width: 100%;
   height: auto;
 }
-/******** Правила для скрытия элементов со страницы *********/
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -44,271 +25,164 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* Фиксируем ширину 1200 и центруем блоки по центру */
 .container {
   width: 1200px;
   margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-left: 40px;
+  margin-right: 40px;
 }
-/************************ BUTTONS **************************/
 .button {
-  text-align: center; /* горизонтальное выравнивание текста по центру */
-  vertical-align: middle; /* вертикальное выравнивание текста по центру */
-  text-transform: uppercase; /* заглавные буквы */
-  border: none; /* удаление стандартной рамки */
-  color: #ffffff; /* белый цвет текста */
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  color: #ffffff;
   cursor: pointer;
 }
-/********************************/
-/***                          ***/
-/***  primary BUTTONS - blue  ***/
-/***                          ***/
-/********************************/
 .button-primary {
   background-color: #81b3d2;
 }
-/* Наведение и фокус */
 .button-primary:hover,
 .button-primary:focus {
   background-color: #669ec0;
 }
-/* Нажатие (активная ссылка) */
 .button-primary:active {
   color: #94b9d2;
   background-color: #5496bd;
 }
-/************************************/
-/***                              ***/
-/***  secondary BUTTONS - brown   ***/
-/***                              ***/
-/************************************/
 .button-secondary {
   background-color: #766357;
 }
-/* Наведение и фокус */
 .button-secondary:hover,
 .button-secondary:focus {
   background-color: #604e43;
 }
-/* Нажатие (активная ссылка) */
+
 .button-secondary:active {
   color: #928a85;
   background-color: #503e33;
 }
-
 /******************************* NAVIGATION **********************************/
-/* Настраиваем шрифт и фон */
+.main-header {
+  position: relative;
+
+  margin: 0 auto;
+}
+.main-logo-header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .main-navigation-header {
   line-height: 26px;
   font-weight: bold;
 
   background-color: #ffffff;
 }
-/* main-header: {
-    margin-bottom: 0px;
-} */
-
-/* Удаляем маркеры в списке */
 .site-navigation-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 0px;
+  padding: 14px;
+
   list-style: none;
 }
-/* Меняем цвет ссылок */
-.site-navigation-header a {
+/* 3.4. Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому. */
+.site-navigation-header li:first-child,
+.site-navigation-header li:nth-child(2) {
+  text-align: start;
+}
+.site-navigation-header li:nth-child(3),
+.site-navigation-header li:nth-child(4) {
+  /* justify-content: flex-end; */
+  text-align: end;
+}
+
+.site-navigation-header a,
+.site-navigation-header a:not(.nav-link-hotels-current) {
   color: #000000;
 }
-/* Цвет ссылок при наведении и в фокусе */
+.nav-link-hotels-current a {
+  color: #766357;
+}
 .site-navigation-header a:hover,
 .site-navigation-header a:focus {
   color: #81b3d2;
 }
-/* Нажатие (активная ссылка) */
 .site-navigation-header a:active {
   color: rgba(0, 0, 0, 0.3);
 }
-/* Текущая ссылка */
-.nav-link-hotels-current li {
-  color: #766357;
-}
-
-/********************** Сетка в NAVIGATION ************************/
-/* Делаем логотип флекс-элементом */
-.main-logo-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0px;
-  padding: 0px;
-}
-/* Список меню делаем флекс-элементами */
-/* Высота меню 57 */
-/* У списка обнулили отступы */
-.site-navigation-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0px;
-  padding: 0px;
-  /* padding: 10px; */
-}
-.main-navigation-header-wrapper-1 {
-  display: flex;
-  margin: 0px;
-  padding: 0px;
-  justify-content: flex-end;
-  /* align-items: flex-end; */
-  /* justify-content: flex-end; */
-  /* width: 530px; */
-  /* align-self: flex-end; */
-}
-.main-navigation-header-wrapper-2 {
-  display: flex;
-  align-items: center;
-  margin: 0px;
-  padding: 0px;
-  /* width: 530px; */
-  /* justify-content: flex-end; */
-  /* align-items: flex-start; */
-}
-/* Отступы у ссылок */
-.site-navigation-header li {
-  display: flex;
-  margin: 0px;
-  padding-top: 0px;
-  /* padding: 25px 23px; */
-  /* vertical-align: middle; */
-  /* flex-basis: 300px; */
-}
-
-
-/* Второй вариант */
-/* Абсолютное позиционирование логотипа относительно меню */
-/* .main-navigation-header .main-logo-header {
-  position: relative;
-  padding-left: -500px;
-}
-.main-logo-header::before {
-  content: "";
-
-  position: absolute;
-  top: 0px;
-  right: 100px;
-
-  width: 138px;
-  height: 70px;
-}
-  background-color: #ff0000; */
-
-  /* background-image: url("../img/logo-sedona.png"); */
-  /* background-repeat: no-repeat;
-  background-position: 0 0; */
-
-/************************* TEXT *****************************/
-/* Центруем текст, картинки в блоках: Welcome, преимущества, "Поиск гостиницы", футер */
 .features-logo,
 .features,
 .search,
 .main-footer {
   text-align: center;
 }
-
-/********************** COLOR OF TEXT *********************/
-/* Белый цвет текста для некоторых элементов (текст, фильтр, кнопки) */
 .text-secondary {
   color: #ffffff;
 }
-
-/********************************* Н1-H3 - HEADLINES ***************************/
-/* Размер и интерлиньяж для всех `h2` и `h3` во `features` №2-5,  */
+.features h1,
 .features h2,
 .features h3 {
   font-size: 21px;
 }
-/* Интерлиньяж для одного `h2` во `features` №1 */
-.text-primary-sedona h2 {
+.text-primary-sedona h1 {
   line-height: 26px;
 }
-
 /*************************************** FEATURES ***********************************/
-/********************** BACKGROUNDS ************************/
-/* Белый фон под чёрный текст */
-.container .features:nth-child(1),
-.container .features:nth-child(3),
+.main-page .features:nth-child(2),
+.main-page .features:nth-child(4),
 .search-title-button,
 .search-form {
   color: #000000;
   background-color: #ffffff;
 }
-/* Голубой фон под белый текст */
-.container .features:nth-child(2),
-.container .features:nth-child(4) {
+.main-page .features:nth-child(3),
+.main-page .features:nth-child(5) {
   color: #ffffff;
   background-color: #81b3d2;
 }
-/* Серый фон под преимущества №3,4,5 */
-.container .features:nth-child(5) {
+.main-page .features:nth-child(6) {
   color: #000000;
   background-color: #eeeeee;
 }
-/******************* IMAGES ********************/
-/* Фоновая картинка к Welcome */ /* width="1200" height="563" */
 .features-logo {
-  width: 100%;
-  height: 563px;
+  margin-top: -48px;
+
   background-image: url("../img/photo-mask.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
-/*** Decor - house ***/
-/* width="313" height="300" */ /* width="75" height="72" */
-.feature-item-city:nth-child(2) {
-  background-image: url("../img/icon-1.svg");
-  background-size: 75px 72px;
-  background-position: top;
-  background-repeat: no-repeat;
+.features-logo .img-welcome {
+  margin-top: 125px;
+  margin-bottom: 75px;
 }
-/*** Decor - food ***/
-/* width="308" height="292" */ /* width="74" height="70" */
-.feature-item-city:nth-child(3) {
-  background-image: url("../img/icon-3.svg");
-  background-size: 74px 70px;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-/*** Decor - souvenirs ***/
-/* width="267" height="317" */ /* width="64" height="76" */
-.feature-item-city:nth-child(4) {
-  background-image: url("../img/icon-2.svg");
-  background-size: 64px 76px;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-
-/********************** Сетка во FEATURES  ************************/
-/* `section` №2 - Текст, указывающий на преимущества */
-/*   height: 210px; */
 .future-item-1 {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 70px;
+
+  padding-top: 48px;
 }
 .title-item-1 {
-  width: 50%;
   display: flex;
   align-self: center;
+
+  width: 50%;
 }
 .text-item-1 {
   display: flex;
   align-self: center;
-  margin-bottom: 52px;
+
+  margin-bottom: 54px;
+
   text-align: center;
 }
-/* `section` №3 - Преимущество №1 - Настоящий городок  */
-/*   height: 260px; */
 .future-item-2 {
-  width: 100%;
   display: flex;
 }
 .title-item-2 {
@@ -328,7 +202,6 @@ img {
 .text-item-2 p {
   margin-top: 10px;
 }
-/* `section` №4 - Жильё, Еда, Сувениры */
 .future-item-3 {
   display: flex;
   justify-content: space-around;
@@ -346,14 +219,29 @@ img {
   margin-top: 4px;
   margin-bottom: 22px;
 }
-
-/* `section` №5 - Преимущество №2 - Мост дьявола */
+.feature-item-city:nth-child(2) {
+  background-image: url("../img/icon-1.svg");
+  background-size: 75px 72px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.feature-item-city:nth-child(3) {
+  background-image: url("../img/icon-3.svg");
+  background-size: 74px 70px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.feature-item-city:nth-child(4) {
+  background-image: url("../img/icon-2.svg");
+  background-size: 64px 76px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
 .future-item-4 {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
 }
-
 .future-item-4 {
   width: 100%;
   display: flex;
@@ -361,6 +249,7 @@ img {
 .title-item-4 {
   width: 60%;
   align-self: center;
+
   margin: 0px;
   padding: 3px;
   margin-bottom: 10px;
@@ -369,58 +258,52 @@ img {
   display: flex;
   flex-direction: column;
   align-self: center;
+
   padding-left: 40px;
   padding-right: 40px;
 }
 .text-item-4 p {
   margin-top: 10px;
 }
-
-/* `section` №6 - Преимущества №3, №4, №5 */
 .future-item-5 {
   display: flex;
   justify-content: space-around;
+
   padding-top: 26px;
   padding-bottom: 30px;
-  margin-bottom: 0px;
 }
 .title-item-5 {
-  width: 50%;
   align-self: center;
+  width: 50%;
 }
 .text-item-5 {
-  width: 300px;
   align-self: flex-end;
   display: flex;
   flex-direction: column;
+
+  width: 300px;
   padding-left: 60px;
   padding-right: 60px;
+  margin-bottom: 14px;
 }
 .text-item-5 p {
   margin-top: 3px;
-  margin-bottom: 23px;
+  padding-top: 0px;
+  padding-bottom: 3px;
 }
-
-
 /************************************** SEARCH *************************************/
-/* Стилизация формы поиска гостиницы */
-
 .search-title {
   margin-top: 0px;
-  padding-top: 51px;
+  padding-top: 50px;
 }
-
-/* Размер и интерлиньяж для `h2` в `search` */
 .search h2 {
   font-size: 30px;
   line-height: 36px;
 }
-/* Интерлиньяж для `p` в `search-subtitle` */
 .search-subtitle {
   line-height: 24px;
   margin-bottom: 45px;
 }
-/* Кнопки "Поиск гостиницы" и "Найти" */
 .search .button {
   font-weight: bold;
   font-size: 21px;
@@ -431,20 +314,10 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* Про кнопку: Флексбокс, часть 2 / Карточка курса, часть 3 [26/28] */
-.button-search {
-  display: block;
-  width: 460px;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  margin-top: auto;
-}
-/* Размер и жирное начертание для подписей и 'placeholder' формы поиска */
 .search-item {
   font: inherit;
   line-height: 26px;
   font-weight: bold;
-  margin-top: 0px;
 }
 .search-item input[type="text"],
 .search-item input[type="number"] {
@@ -452,11 +325,9 @@ img {
   color: #000000;
   text-transform: uppercase;
 }
-/* Чёрный шрифт для placeholder */
 .input-style::placeholder {
   color: #000000;
 }
-/* В покое */
 .search-item input {
   font: inherit;
 
@@ -465,101 +336,138 @@ img {
   border: 2px solid #f2f2f2;
   outline-color: #ffffff;
 }
-/* При наведении */
 .search-item input:hover {
   background-color: #ebebeb;
   border-color: #ebebeb;
 }
-/* В фокусе*/
 .search-item input:focus {
   background-color: #ffffff;
   border-color: #e5e5e5;
 }
-/*********************************** Сетка ФОРМЫ **********************************/
 .search-form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  /* flex-shrink: ; */
+  justify-content: center;
 
   width: 568px;
-  height: 395px;
 
   margin: 0 auto;
-  padding-top: 55px;
-
-  vertical-align: middle;
+  padding-top: 53px;
+  padding-bottom: 0px;
+  margin-bottom: 77px;
 
   box-shadow: 0 0 50px rgba(221, 217, 209, 0.7);
 }
-.search-form label {
-  display: inline-block;
-  margin-left: 20px;
-  margin-right: 20px;
-}
 .search-item-1 {
-  flex-basis: auto;
-  margin-bottom: -90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 500px;
+
+  margin-bottom: -17px;
+}
+.search-item-1 label {
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.search-item-1 input {
+  width: 340px;
+  height: 40px;
+  padding-left: 10px;
+  margin-bottom: 20px;
 }
 .search-item-2 {
   display: flex;
-  width: 520px;
+  align-items: center;
   justify-content: space-around;
-  flex-basis: auto;
-  margin-bottom: -80px;
-}
 
-.search-item-1 .search-item {
-  margin-bottom: 30px;
+  width: 500px;
+
+  margin-top: 20px;
+  margin-bottom: 48px;
+
+  position: relative;
 }
-.search-item-1 input {
-  width: 345px;
-  height: 40px;
-  padding-left: 10px;
-  flex-grow: 1;
-}
-/* Не знаю как выровнять взрослых и детей */
 .search-item-2 input {
-  width: 115px;
+  width: 110px;
   height: 40px;
   text-align: center;
-  flex-grow: 1;
 }
-.search-item-2 {
-  padding-left: 20px;
+/* Доделать + и - и календарь */
+.search-item-2::before {
+  position: absolute;
+  content: "";
+  top: 44%;
+  left: 50%;
+
+  width: 3px;
+  height: 15px;
+
+  background-color: #6a6a6a;
+  transform: translate(-45%,-5%);
 }
+.search-item-2::after {
+  position: absolute;
+  content: "";
+  top: 40%;
+  left: 50%;
 
+  width: 3px;
+  height: 15px;
 
+  background-color: #6a6a6a;
+  transform: rotate(30deg);
+  /* transform: translate(-45%,-5%); */
+}
+.search-item-2:nth-child(2)::after {
+  position: absolute;
+  content: "";
+  top: 49%;
+  left: 35%;
+
+  width: 15px;
+  height: 3px;
+
+  background-color: #6a6a6a;
+  transform: translate(-45%,-5%);
+}
+.button-search {
+  display: block;
+
+  width: 460px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin-bottom: 53px;
+}
 
 /* Карта Седоны */
 /* width="1200" height="593" */
 
 /************************* FOOTER ****************************/
-/* Фон футера на .index.html, есть прозрачность */
 .main-footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 120px;
-  margin-top: 0px;
+
+  margin-top: 10px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: 28px;
+
   background-color: rgba(255, 255, 255, 0.5); /* В PS не указан opacity, поставила 0.5 */
 }
-/* Фон футера на .inner.html, нет прозрачности */
 .main-footer-inner {
-  min-height: 120px;
   background-color: #fefefe;
 }
-/* Ссылка #VISITSEDONA */
 .link-footer {
-  /* display: flex; */
-  width: 146px;
-  color: #000000;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-  /* align-self: center; */
+
+  color: #000000;
 }
-/* Стилизация соц-иконок */
 .social-button {
   display: flex;
   align-items: center;
@@ -567,120 +475,129 @@ img {
 
   width: 46px;
   height: 48px;
+
   background-color: #81b3d2;
 }
 .footer-social ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   width: 150px;
 
   list-style: none;
 }
-/* Наведение и фокус */
 .social-button:hover,
 .social-button:focus {
   background-color: #669ec0;
 }
-/* Нажатие (активная ссылка) */
 .social-button:active {
   background-color: rgba(0, 0, 0, 0.3);
 }
-
-/* Стиль WEBSITE BY */
-/* Не получается в одну строку  */
 .footer-copyright span {
   display: block;
-  padding-right: 10px;
-  margin-bottom: 15px;
-}
-/* Стиль ссылки-картинки HTML Academy */
 
+  margin-top: 8px;
+}
 .footer-copyright {
   display: flex;
-  align-items: center;
+  justify-content: center;
+
   line-height: 26px;
 }
-/* ??? */
-/* Подсвечивается только картинка, а не контур */
-/* В покое */
-/*.footer-copyright .button {}
-   background-color: #231f20; */
-
-   /* Не получается сделать. Если через img, то невозможно её стилизовать. При вставке SVG не понимаю тогда, как стилизовать. Потому что через fill не видно изменений */
 .footer-copyright svg {
   display: block;
-  width: 118px;
-  height: 40px;
+
+  width: 115px;
+  padding-left: 20px;
+
   fill: #000000;
 }
-
-/* ??? */
-/* Наведение и фокус */
-.footer-copyright .button:hover,
-.footer-copyright .button:focus {
+.footer-copyright svg:hover,
+.footer-copyright svg:focus {
   fill: #81b3d2;
 }
-/* ??? */
-/* Нажатие */
-.footer-copyright .button:active {
-  background-color: #bdbbbc;
+.footer-copyright svg:active {
+  fill: #bdbbbc;
 }
-
-
 /************************* FILTER ****************************/
-/* Стилизация формы 'ФИЛЬТР' `section` №1 */
+/* Фоновая картинка к ФИЛЬТРУ */
+/* width="2706" height="1804" */
+.filtres {
+  background-image: url("../img/background-inner.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0px;
+}
 .filtres form {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.filter-range {
-  display: flex;
-  align-self: flex-start;
-  width: 320px;
-}
-
-.filtres fieldset {
-  margin-left: -25px;
-  padding-left: 20px;
-  margin-top: 28px;
-  margin-bottom: 0px;
-  border: none;
-}
-/* Фоновая картинка к ФИЛЬТРУ */
-/* width="2706" height="1804" */
-.filtres {
-  background-image: url("../img/background-inner.jpg");
-  background-size: 100%;  /* Нужно обрезать картинку 1200px 780px*/
-  background-repeat: no-repeat;
-  background-position: 0px;
-}
-
-.filter legend {
-  margin-bottom: 20px;
-  font-size: 16px; /* Размер и жирное начертание для заголовков (`legend`) фильтра */
+.infrastructure legend,
+.accommodation legend {
+  font-size: 16px;
   font-weight: bold;
+
   padding-left: 25px;
 }
+
 .filtres ul {
-  padding: 0;
-  margin: 0;
+  padding-left: 20px;
   list-style: none;
 }
 .filter-option {
   margin-bottom: 25px;
   padding-left: 55px;
 }
+.filtres fieldset {
+  margin-top: 28px;
+
+  border: none;
+}
+.infrastructure label,
+.accommodation label {
+  margin-top: 20px;
+}
+.infrastructure {
+  flex-grow: 1;
+
+  margin-left: 20px;
+  padding-left: 20px;
+}
+.accommodation {
+  flex-grow: 2;
+
+  margin-left: -110px;
+  padding-left: 23px;
+}
+.filter-range {
+  display: flex;
+
+  width: 320px;
+
+  margin-top: 0px;
+  margin-bottom: 25px;
+  padding-top: 10px;
+  margin-right: 60px;
+
+  color: #ffffff;
+}
+.filter-range-title {
+  padding-bottom: 0px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
 /*********************** Checkbox ********************/
-/* Делаем label блочным, задаём относительное позиционирование. Задаём курсор с указателем и отменяем выделение текста подписи цветом. */
 .filter-option label {
   position: relative;
 
   display: block;
 
-  cursor: pointer;
   user-select: none;
+  cursor: pointer;
 }
 /* Поле не выбрано */
 .filter-input-checkbox + label::before {
@@ -692,6 +609,7 @@ img {
 
   width: 100%;
   height: 100%;
+  /* Если не задать высоту, то иконки обрезаются */
   padding: 5px;
 
   background-image: url("../img/checkbox-off.svg");
@@ -717,11 +635,9 @@ img {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-
 /* Поле выбрано */
 .filter-input-checkbox:checked + label::after {
   content: "";
-
   position: absolute;
 
   top: 0px;
@@ -735,7 +651,6 @@ img {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-
 /* Поле выбрано + заблокировано */
 .filter-input-checkbox:disabled + label::before,
 .filter-input-checkbox:checked + label::after {
@@ -754,32 +669,16 @@ img {
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  fill: #6a6a6a;
 }
-
-/* В покое */
 .filter-input:hover + label,
 .filter-input:focus + label {
   color: #ffffff;
 }
-/* Доработать. Нужно чтобы подписи в Типе жилья тоже окрашивались в коричневый цвет */
 .filter-input:disabled + label {
   color: #6a6a6a;
 }
-
-/* Стоимость в сутки */
-.filter-range {
-  width: 320px;
-  color: #ffffff;
-}
-.filter-range-title {
-  margin-bottom: 9px;
-
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 21px;
-}
 .price-controls {
-  margin-top: -16px;
   position: relative;
 
   height: 36px;
@@ -790,10 +689,10 @@ img {
   border: 2px solid #ffffff;
   border-radius: 3px / 3px;
 }
-/* Палочка - спозиционированный абсолютно псевдоэлемент */
 .price-controls::after {
   content: "";
   position: absolute;
+
   top: 50%;
   left: 50%;
 
@@ -803,7 +702,6 @@ img {
   background: #ffffff;
   transform: translate(-50%,-50%);
 }
-/* MIN - MAX Price */
 .price-controls label {
   display: inline-block;
 
@@ -816,11 +714,12 @@ img {
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
+
   padding-left: 65px;
 }
 .price-controls input {
   width: 50px;
-  margin: 0;
+  margin: 0px;
 
   color: inherit;
   font: inherit;
@@ -828,8 +727,6 @@ img {
   background: none;
   border: none;
 }
-
-/* Ползунки */
 .range-controls {
   position: relative;
 
@@ -872,51 +769,42 @@ img {
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
-/***** Кнопка 'ПОКАЗАТЬ' ******/
-/* В покое */
 .button-show {
   display: block;
-  margin: 0 auto;
+
+  margin: auto;
   padding: 8px 33px;
 
   color: #ffffff;
-
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 3px/3px;
   cursor: pointer;
 }
-/* При наведении */
 .button-show:hover {
   color: #000000;
   background: #ffffff;
 }
 /***************************** FOUND **************************/
-/* Стилизация 'section' №2 - вывод результатов и сортировка  */
 .results {
   display: flex;
-  /* justify-content: space-around; */
   flex-wrap: wrap;
   align-items: center;
+
   width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
   margin-bottom: 2px;
 
-  /* padding-right: 70px; */
-
   background-color: #fefefe;
 }
-/* Стили для 'НАЙДЕНО' */
-/* Как убрать отступ у div? См. DevTools */
-/* padding-left: 60px; */
-/* flex-basis: auto; */
 .found {
   display: flex;
   justify-content: center;
   flex-grow: 1;
-  padding-right: 20px;
+
   width: 120px;
+  padding-right: 20px;
 
   font-size: 21px;
   line-height: 26px;
@@ -929,9 +817,7 @@ img {
 
   padding-right: 73px;
 }
-
 /*************************** SORTING *************************/
-/* Размер и интерлиньяж для 'СОРТИРОВКИ' */
 .hotels-sort {
   display: flex;
   flex-wrap: wrap;
@@ -950,27 +836,22 @@ img {
 .sort-price-link-current {
   padding-right: 33px;
 }
-/* Меняем цвет ссылок */
 .hotels-sort a {
   padding-right: 33px;
 
   color: rgba(0, 0, 0, 0.3);
   text-decoration: underline;
   text-decoration-style: dotted;
-  /* реализовать штрихи в SVG  */
   text-decoration-color: #81b3d2;
 }
-/* Цвет ссылок при наведении и в фокусе */
 .hotels-sort a:hover,
 .hotels-sort a:focus {
   color: #81b3d2;
 }
-/* Цвет активных ссылок (при нажатии) */
 .hotels-sort a:active {
   color: #000000;
   text-decoration: none;
 }
-/* Текущая ссылка */
 .sort-price-link-current {
   color: #81b3d2;
 }
@@ -981,25 +862,19 @@ img {
 } */
 
 /**************** Разделы с описанием гостиниц ***************/
-/* Текст */
 .hotels-item-price span {
   color: #333333;
 }
-/* Заголовки `article` - названия гостиницы */
-/* Меняем цвет ссылок */
 .hotels-item-title a {
   color: #000000;
 }
-/* Цвет ссылок при наведении и в фокусе */
 .hotels-item-title a:hover,
 .hotels-item-title a:focus {
   color: #81b3d2;
 }
-/* Цвет активных ссылок (при нажатии) */
 .hotels-item-title a:active {
   color: rgba(0, 0, 0, 0.3);
 }
-/* Кнопки "Подробнее" и "Забронировать" */
 .hotels-item-buttons .button {
   display: inline-block;
 
@@ -1010,58 +885,45 @@ img {
   line-height: 21px;
   font-weight: bold;
 }
-
-/***************************** Сетка *******************************/
 .hotels article {
   display: flex;
   align-items: center;
-  width: 1200px;
-  min-height: 150px;
+
+  margin-bottom: 2px;
 
   background-color: #fefefe;
-  margin-bottom: 2px;
 }
-
-/* width: 20%; */
 .hotels-item-image {
   display: flex;
-  flex-grow: 1;
+
   width: 180px;
   margin-left: 60px;
   margin-right: 30px;
 }
-
 .hotels-item-content {
   display: flex;
-  flex-grow: 2;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+
   width: 1200px;
-  min-height: 94px;
   margin: 0px;
   padding: 0px;
 }
-
 .hotels-item-content h3,
 .hotels-item-content p {
+  padding: 0px;
   margin: 0px;
   margin-bottom: 18px;
-  padding: 0px;
 }
 
-
 /************************* RAITING ************************/
-/* Стилизация иконок-звёздочек 'РЕЙТИНГ' */
 .hotels-item-raiting {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
-  /* width: 150px; */
 }
-.hotels-item-raiting::
+.hotels-item-raiting
 
 /* width="75" height="71" color: #.. */
 /* ??? */
@@ -1069,10 +931,11 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
+
   width: 100px;
   padding-bottom: 50px;
+
   background-image: url("../img/star.svg");
   background-size: 25%;
   background-position: center;
@@ -1083,7 +946,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* flex-direction: row-reverse; */
+
   width: 300px;
 }
 
@@ -1101,6 +964,7 @@ img {
   padding-right: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
+
   color: #666666;
   background-color: #f2f2f2;
 }
