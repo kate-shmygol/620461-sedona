@@ -403,9 +403,8 @@ input::-webkit-inner-spin-button {
 .search-item label:nth-child(6) {
   padding-left: 10px;
   margin-right: -19px;
-  color: red;
 }
-/* Доделать + и - и календарь */
+/* Доделать календарь */
 .btn-minus-1,
 .btn-minus-2,
 .btn-plus-1,
@@ -451,9 +450,17 @@ input::-webkit-inner-spin-button {
   padding-bottom: 17px;
   margin-bottom: 55px;
 }
-
 /* Карта Седоны */
 /* width="1200" height="593" */
+.img-map {
+  width: 100%;
+  /* padding-bottom: 0px;
+  margin-top: 0px; */
+
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-position: top;
+}
 
 /************************* FOOTER ****************************/
 .main-footer {
