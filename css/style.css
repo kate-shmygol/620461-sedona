@@ -82,12 +82,14 @@ img {
 }
 .site-navigation-header {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
 
   margin: 0px;
   padding: 15px;
-
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: left;
   list-style: none;
 }
 /* 3.4. Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому. */
@@ -419,6 +421,7 @@ input::-webkit-inner-spin-button {
   border: none;
 
   cursor: pointer;
+  /* outline-color: #ffffff; */
 }
 .btn-minus-1 {
   left: 28%;
