@@ -111,7 +111,7 @@ img {
 .site-navigation-header a:active {
   color: #cacaca;
 }
-.link-current {
+.site-navigation-header a:not([href]) {
   color: #766357;
 }
 .features-logo,
@@ -837,11 +837,6 @@ input::-webkit-inner-spin-button {
 .sort-title {
   padding-right: 40px;
 }
-.sort-price-link-current {
-  padding-right: 33px;
-  color: #81b3d2;
-}
-
 .hotels-sort a {
   padding-right: 33px;
 
@@ -859,22 +854,17 @@ input::-webkit-inner-spin-button {
   color: #000000;
   text-decoration: none;
 }
-.hotels-sort a:hover,
-.hotels-sort a:focus {
-  color: #81b3d2;
-}
-.hotels-sort a:active {
-  color: #000000;
+.sort-current-link a:not([href]) {
+  padding-right: 33px;
   text-decoration: none;
+  color: #81b3d2;
 }
 .button-down {
   padding-left: 15px;
 }
-.button-up svg {
-  fill: #cacaca;
-}
+.button-up svg,
 .button-down svg {
-  fill: #81b3d2;
+  fill: #cacaca;
 }
 .button-up svg:hover,
 .button-up svg:focus {
@@ -883,6 +873,10 @@ input::-webkit-inner-spin-button {
 .button-up svg:active {
   fill: #81b3d2;
 }
+.sort-current-button a:not([href]) svg {
+  fill: #81b3d2;
+}
+
 /**************** Разделы с описанием гостиниц ***************/
 .hotels-item-price span {
   color: #333333;
