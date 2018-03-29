@@ -82,24 +82,20 @@ img {
 .site-navigation-header {
   display: flex;
   flex-wrap: wrap;
+  width: 1060px;
   justify-content: space-between;
   align-items: center;
 
-  margin: 0px;
+  margin: 0 auto;
   padding: 15px;
 
   list-style: none;
 }
-.site-navigation-header li:first-child {
-  margin-left: 55px;
-}
 .site-navigation-header li:nth-child(2) {
-  margin-left: 90px;
-  margin-right: 330px;
+  margin-right: 240px;
 }
-.site-navigation-header li:nth-child(4) {
-  margin-left: 107px;
-  margin-right: 56px;
+.site-navigation-header li:nth-child(3) {
+  margin-right: 17px;
 }
 .site-navigation-header a {
   color: #000000;
