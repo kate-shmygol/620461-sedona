@@ -348,7 +348,7 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.search-text {
+.search {
   position: relative;
 }
 .search-form {
@@ -367,7 +367,8 @@ input::-webkit-inner-spin-button {
   padding-bottom: 0px;
   margin-bottom: 77px;
 
-  box-shadow: 0 0 50px rgba(221, 217, 209, 0.7);
+  box-shadow: 0 20px 30px rgba(221, 217, 209, 0.7);
+
 }
 /* .map {
   background-color: #f2f2f2;
