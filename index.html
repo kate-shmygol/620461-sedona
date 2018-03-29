@@ -108,7 +108,7 @@
 
         <!-- `section` №7 - Заинтересовались? + форма поиска гостиницы -->
         <section class="search">
-          <div class="search-title-button">
+          <div class="search-text">
             <h2 class="search-title">Заинтересовались?</h2>
             <p class="search-subtitle">Укажите предполагаемые даты поездки,
               <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
@@ -135,24 +135,23 @@
             <div class="search-item search-item-2">
               <label for="search-adults">Взрослые:</label>
               <p class="visually-hidden">Уменьшить количество взрослых</p>
-              <button type="submit" class="btn-minus-1"> - </button>
+              <button type="button" class="btn-minus-1"> - </button>
               <input id="search-adults" type="number" name="adults" min="1" placeholder="2" class="input-style">
               <p class="visually-hidden">Увеличить количество взрослых</p>
-              <button type="submit" class="btn-plus-1"> + </button>
+              <button type="button" class="btn-plus-1"> + </button>
 
               <p class="visually-hidden">Уменьшить количество детей</p>
-              <button type="submit" class="btn-minus-2"> - </button>
+              <button type="button" class="btn-minus-2"> - </button>
               <label for="search-children">Дети:</label>
               <input id="search-children" type="number" name="children" min="0" placeholder="0" class="input-style">
               <p class="visually-hidden">Увеличить количество детей</p>
-              <button type="submit" class="btn-plus-2"> + </button>
+              <button type="button" class="btn-plus-2"> + </button>
             </div>
             <div>
               <button class="button button-primary text-secondary button-search" type="submit">Найти</button>
             </div>
           </form>
         </section>
-
         <!-- `section` №8 - фоновая картинка - карта Седоны - после кнопки "Поиск гостиницы в Седоне" -->
         <!-- Реализация - `background-image` для псевдоэлемента -->
         <section class="map">
@@ -162,6 +161,7 @@
             <img src="img/map.png" width="1200" height="593" alt="Карта Седоны">
           <!-- </div> -->
         </section>
+
       </main>
 
       <footer class="main-footer">

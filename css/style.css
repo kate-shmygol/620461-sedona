@@ -134,7 +134,7 @@ img {
 /*************************************** FEATURES ***********************************/
 .main-page .features:nth-child(2),
 .main-page .features:nth-child(4),
-.search-title-button,
+.search-text,
 .search-form {
   color: #000000;
   background-color: #ffffff;
