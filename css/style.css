@@ -377,7 +377,6 @@ input::-webkit-inner-spin-button {
   margin-bottom: 22px;
 }
 .search-item-1 input {
-
   width: 330px;
   height: 33px;
   padding-left: 10px;
@@ -393,7 +392,7 @@ input::-webkit-inner-spin-button {
 }
 .search-item-1 .calendar-2 {
   position: absolute;
-  top: 55%;
+  top: 57%;
   left: 90%;
 
   fill: #a9a9a9;
@@ -422,9 +421,9 @@ input::-webkit-inner-spin-button {
   height: 33px;
   text-align: center;
 }
-.search-item label:nth-child(6) {
+.search-item label:nth-child(9) {
   padding-left: 10px;
-  margin-right: -19px;
+  margin-right: -13px;
 }
 .btn-minus-1,
 .btn-minus-2,
@@ -795,7 +794,7 @@ input::-webkit-inner-spin-button {
   flex-wrap: wrap;
   align-items: center;
 
-  padding-top: 27px;
+  padding-top: 32px;
   padding-bottom: 30px;
   margin-bottom: 2px;
 
@@ -818,6 +817,7 @@ input::-webkit-inner-spin-button {
   justify-content: flex-end;
 
   padding-right: 70px;
+  padding-top: 5px;
 }
 /*************************** SORTING *************************/
 .hotels-sort {
@@ -841,6 +841,7 @@ input::-webkit-inner-spin-button {
   padding-right: 33px;
   color: #81b3d2;
 }
+
 .hotels-sort a {
   padding-right: 33px;
 
@@ -866,10 +867,22 @@ input::-webkit-inner-spin-button {
   color: #000000;
   text-decoration: none;
 }
-/* Стилизация иконок-стрелок 'СОРТИРОВКИ' вверх-вниз */
-/* .hotels-sort-buttons .button-up a {
-} */
-
+.button-down {
+  padding-left: 15px;
+}
+.button-up svg {
+  fill: #cacaca;
+}
+.button-down svg {
+  fill: #81b3d2;
+}
+.button-up svg:hover,
+.button-up svg:focus {
+  fill: #000000;
+}
+.button-up svg:active {
+  fill: #81b3d2;
+}
 /**************** Разделы с описанием гостиниц ***************/
 .hotels-item-price span {
   color: #333333;
@@ -944,49 +957,18 @@ input::-webkit-inner-spin-button {
 .hotels-item-raiting {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-  padding-top: 67px;
-  padding-right: 73px;
-}
-/* width="75" height="71" color: #.. */
-/* ??? */
-.hotels-item-raiting .stars {
-  display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-end;
 
-  width: 100px;
-  padding-bottom: 50px;
-
-  background-image: url("../img/star.svg");
-  background-size: 25%;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding-right: 72px;
 }
-.stars {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  width: 300px;
-}
-
-/* .hotels-item-raiting span::before {
-  content: "";
-  display: block;
-  background-image: url("../img/star.svg");
-  background-size: auto;
-  background-repeat: no-repeat;
-} */
 .hotels-item-raiting span {
-  width: 110px;
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
+  margin-top: 40px;
 
   color: #666666;
   background-color: #f2f2f2;

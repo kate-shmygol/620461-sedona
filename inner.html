@@ -15,7 +15,7 @@
         <nav class="main-navigation-header">
           <!-- Логотип в формате `svg` не отображается -->
           <!-- width="138" height="70" -->
-          <a class="main-logo-header" href="index.html">
+          <a class="main-logo-header">
             <img class="img-logo-header-link" src="../img/logo-sedona.png" width="138" height="70" alt="Логотип города Седона">
           </a>
           <ul class="site-navigation-header">
@@ -107,22 +107,21 @@
           </div>
           <div class="hotels-sort">
             <span class="sort-title">Сортировка:</span>
-            <!--  -->
             <span class="sort-price-link-current">По цене</span>
             <a class="sort-type-link" href="#type">По типу</a>
             <a class="sort-raiting-link" href="#raiting">По рейтингу</a>
           </div>
           <div class="hotels-sort-buttons">
             <!-- Здесь будет кнопка сортировки со стрелкой - вверх -->
-            <!-- Можно ли добавить ещё подсказки сортировки по типу и рейтингу? -->
             <a class="button-up" href="#start_cheap">
               <!-- width="46" height="42" -->
-              <img src="img/icon-up-dir.svg" alt="Сначала дешёвые" width="15" height="10">
+              <!-- <img src="img/icon-up-dir.svg" alt="Сначала дешёвые" width="15" height="10"> -->
+              <!-- Добавить описание SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"/></svg>
             </a>
-            <!-- Здесь будет кнопка сортировки со стрелкой - вниз -->
-            <!-- Текущая кнопка -->
-            <a class="button-down" href="#start_expensive">
-              <img src="img/icon-down-dir.svg" alt="Сначала дорогие" width="15" height="10">
+            <a class="button-down button-down-current">
+              <!-- <img src="img/icon-down-dir.svg" alt="Сначала дорогие" width="15" height="10"> -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 10L0 0h11"/></svg>
             </a>
           </div>
         </section>
@@ -168,10 +167,10 @@
             </div>
             <!-- Блок 'Рейтинг' -->
             <div class="hotels-item-raiting">
-              <!-- Здесь будут декоративные картинки звёздочек в CSS -->
-              <!-- width=".." height=".." -->
-              <div class="stars"><span class="visually-hidden">stars</span></div>
-              <div><span>Рейтинг: 8,5</span></div>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="17" viewBox="0 0 90 17">
+                <image width="90" height="17" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAARCAMAAABq6UufAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAk1BMVEUAAAD///+Bs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9IAAADa/b9WAAAAL3RSTlMAADM0iN0tMoPYbJCZbQyhog1a8fIixscEsrPNI3X2Z2Z4yNEqKcke/pEHXEtKXSu8tu8AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4gMbFC0nye9eTwAAAORJREFUOMt10lUSwzAQA1CXmZkhZdr73661XbdxtNJPMk8zChrzTb4QznIuzFmB/EuxqE9nnRXIv5RK+nTWWYEcUhapaNPgrEAOqYpUtWlwViCH1ERq2jQ4K5BNvWHTlE+a7rTlF5izAtm0OxKl2/MLzFmB/Lnv/uAPw/7/hejOCmSb0TjIZJR+16qzAtllOvMyn8afUXNWIPssPC2yf4jirEB2WYYHWcbTmrMC2WUlst5s1yK7eFpzViC77CU5GHNM5BRPa84KZJvz5Xqzx1vjck5Pq84KZJv7I1zk+UpPq84K5DfNiEsT5TwGeAAAAABJRU5ErkJggg=="/>
+                </svg>
+              <span>Рейтинг: 8,5</span>
             </div>
           </article>
 
@@ -204,10 +203,10 @@
             </div>
             <!-- Блок 'Рейтинг' -->
             <div class="hotels-item-raiting">
-              <!-- Здесь будут декоративные картинки звёздочек в CSS -->
-              <!-- width=".." height=".." -->
-              <div class="stars"><span class="visually-hidden">stars</span></div>
-              <div><span>Рейтинг: 8,9</span></div>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="17" viewBox="0 0 65 17">
+                  <image width="65" height="17" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAARCAMAAAC1pzGAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAk1BMVEUAAAD///+Bs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9IAAADa/b9WAAAAL3RSTlMAADM0iN0tMoPYbJCZbQyhog1a8fIixscEsrPNI3X2Z2Z4yNEqKcke/pEHXEtKXSu8tu8AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4gMbFCk2xzO7uQAAAM1JREFUOMt10dkWgiAUhWEqK81GyyabrTQbzvu/XQGhwj7+N7q+i70QhfjX7pi3lqrBkcs8j19wHLms2+UXHEc29Yj63ILryCafyOcWXEc2BUQBt+A6shiEsiH9GqrXkV5ocGQxnpDVdKYXGhz5d4poXsEiqr6CdWRZvDSyiuv3wDmyar3Rsl3bN8k4si7RlLj/Ah1ZtTPH2tkLjCOr9kSH4+lAdLYXGEdWXSi9CnFL6W4vMI4sy/JHIZ9FmGf1Bc6RZc+X2Xp/6gucI38B/d84JDigojYAAAAASUVORK5CYII="/>
+                  </svg>
+              <span>Рейтинг: 8,9</span>
             </div>
           </article>
 
@@ -240,9 +239,11 @@
             </div>
             <!-- Блок 'Рейтинг' -->
             <div class="hotels-item-raiting">
-              <!-- Здесь будут декоративные картинки звёздочек в CSS -->
-              <div class="stars"><span class="visually-hidden">stars</span></div>
-              <div><span>Рейтинг: 9,2</span></div>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="17" viewBox="0 0 43 17">
+                  <image width="43" height="17" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAARCAMAAABzYqU5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAk1BMVEUAAAD///+Bs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9KBs9IAAADa/b9WAAAAL3RSTlMAADM0iN0tMoPYbJCZbQyhog1a8fIixscEsrPNI3X2Z2Z4yNEqKcke/pEHXEtKXSu8tu8AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4gMbFDMLL3YNcwAAALdJREFUKM91kG0bQjAUQFdRRG9KKaJSkV7u//932Wbs3nG+bM89BxvGGsYTtRtJTNFiWQNtJ1pse6DthGIKMOttNaFwAJzeVhMKF8DtbTXB5h7HhxpfbBdNawq2XAFivWlaU9RvDrbdYBdoZ6CCE+7V5BCi8xIhiI5ycorI3bCQxHIUG/8BCUGiPpWQFgvBGSDNLinAlbRYCG6Q3xl75PAkLRaconxVfK28skAtEZz3Rz31/aGWiD+JuyVoGFzKHgAAAABJRU5ErkJggg=="/>
+                  </svg>
+
+              <span>Рейтинг: 9,2</span>
             </div>
           </article>
         </section>
