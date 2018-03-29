@@ -19,11 +19,10 @@
             <img class="img-logo-header-link" src="../img/logo-sedona.png" width="138" height="70" alt="Логотип города Седона">
           </a>
           <ul class="site-navigation-header">
-            <li class="info-header"><a class="nav-link-info" href="info.html">Информация</a></li>
-            <li class="gallery-header"><a class="nav-link-gallery" href="gallery.html">Фото и видео</a></li>
-            <li class="map-header"><a class="nav-link-map" href="map_of_state.html">Карта штата</a></li>
-            <!-- Задаём класс активному пункту меню - Гостиницы -->
-            <li><a class="nav-link-hotels-current">Гостиницы</a></li>
+            <li><a href="info.html">Информация</a></li>
+            <li><a href="gallery.html">Фото и видео</a></li>
+            <li><a href="map_of_state.html">Карта штата</a></li>
+            <li class="link-current"><a>Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -42,11 +41,11 @@
               <legend>Инфраструктура:</legend>
               <ul>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
                   <label for="filter-pool">Бассейн</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking" disabled>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
                   <label for="filter-parking">Парковка</label>
                 </li>
                 <li class="filter-option">
@@ -61,7 +60,7 @@
               <legend>Тип жилья:</legend>
               <ul>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked disabled>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
                   <label for="filter-hotel">Гостиница</label>
                 </li>
                 <li class="filter-option">
@@ -81,11 +80,11 @@
               <div class="price-controls">
                 <label class="min-price text-secondary">
                   От
-                  <input type="text" name="min-price" min="0" value="0">
+                  <input type="text" name="min-price" value="0">
                 </label>
                 <label class="max-price text-secondary">
                   До
-                  <input type="text" name="max-price" max="3000" value="3000">
+                  <input type="text" name="max-price" value="3000">
                 </label>
               </div>
               <div class="range-controls">
@@ -102,6 +101,7 @@
 
         <!-- 'section' №2 - вывод результатов и сортировка -->
         <section class="results">
+          <h2 class="visually-hidden">Результаты</h2>
           <div class="found">
             <span>Найдено: 3</span>
           </div>

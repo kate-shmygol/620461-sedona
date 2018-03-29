@@ -19,10 +19,10 @@
               </svg>
           </a>
           <ul class="site-navigation-header">
-            <li class="info-header"><a class="nav-link-info" href="info.html">Информация</a></li>
-            <li class="gallery-header"><a class="nav-link-gallery" href="gallery.html">Фото и видео</a></li>
-            <li class="map-header"><a class="nav-link-map" href="map_of_state.html">Карта штата</a></li>
-            <li class="hotels-header"><a class="nav-link-hotels" href="inner.html">Гостиницы</a></li>
+            <li><a href="info.html">Информация</a></li>
+            <li><a href="gallery.html">Фото и видео</a></li>
+            <li><a href="map_of_state.html">Карта штата</a></li>
+            <li><a href="inner.html">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -143,9 +143,11 @@
         <!-- `section` №8 - фоновая картинка - карта Седоны - после кнопки "Поиск гостиницы в Седоне" -->
         <!-- Реализация - `background-image` для псевдоэлемента -->
         <section class="map">
-          <div id="map" class="img-map">
+          <h2 class="visually-hidden">Карта Седоны</h2>
+          <!-- <div id="map" class="img-map"> -->
             <!-- width="1200" height="593" -->
-          </div>
+            <img src="img/map.png" width="1200" height="593" alt="Карта Седоны">
+          <!-- </div> -->
         </section>
       </main>
 

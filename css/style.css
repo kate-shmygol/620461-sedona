@@ -82,40 +82,43 @@ img {
 }
 .site-navigation-header {
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: space-between;
   align-items: center;
 
   margin: 0px;
   padding: 15px;
-  padding-left: 40px;
-  padding-right: 40px;
-  text-align: left;
+  /* padding-left: 70px;
+  padding-right: 330px; */
+  /* text-align: left; */
   list-style: none;
 }
-/* 3.4. Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому. */
-.site-navigation-header li:first-child,
+.site-navigation-header li:first-child {
+  margin-left: 55px;
+}
 .site-navigation-header li:nth-child(2) {
-  text-align: left;
+  margin-left: 90px;
+  margin-right: 330px;
 }
-.site-navigation-header li:nth-child(3),
 .site-navigation-header li:nth-child(4) {
-  text-align: right;
-  color: #c01414;
+  margin-left: 107px;
+  margin-right: 56px;
 }
-
-.site-navigation-header a,
-.site-navigation-header a:not(.nav-link-hotels-current) {
+.site-navigation-header a {
   color: #000000;
-}
-.nav-link-hotels-current a {
-  color: #766357;
 }
 .site-navigation-header a:hover,
 .site-navigation-header a:focus {
   color: #81b3d2;
 }
 .site-navigation-header a:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: #cacaca;
+}
+.link-current a {
+  color: #766357;
+}
+.link-current a:hover,
+.link-current a:focus {
+  color: #766357;
 }
 .features-logo,
 .features,
@@ -421,7 +424,7 @@ input::-webkit-inner-spin-button {
   border: none;
 
   cursor: pointer;
-  /* outline-color: #ffffff; */
+  outline-color: #ffffff;
 }
 .btn-minus-1 {
   left: 28%;
@@ -453,17 +456,14 @@ input::-webkit-inner-spin-button {
   padding-bottom: 17px;
   margin-bottom: 55px;
 }
-/* Карта Седоны */
-/* width="1200" height="593" */
-.img-map {
-  width: 100%;
-  /* padding-bottom: 0px;
-  margin-top: 0px; */
-
-  background-image: url("../img/map.png");
-  background-repeat: no-repeat;
-  background-position: top;
+/* .map {
+  background-color: #f2f2f2;
 }
+
+.map img {
+  display: block;
+  margin: 0 auto;
+} */
 
 /************************* FOOTER ****************************/
 .main-footer {
@@ -561,7 +561,6 @@ input::-webkit-inner-spin-button {
 
   padding-left: 32px;
 }
-
 .filtres ul {
   padding-left: 20px;
   list-style: none;
@@ -571,7 +570,7 @@ input::-webkit-inner-spin-button {
   padding-left: 55px;
 }
 .filtres fieldset {
-  margin-top: 28px;
+  margin-top: 26px;
 
   border: none;
 }
@@ -597,7 +596,7 @@ input::-webkit-inner-spin-button {
   width: 320px;
 
   margin-top: 0px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   padding-top: 10px;
   margin-right: 60px;
 
@@ -619,7 +618,7 @@ input::-webkit-inner-spin-button {
   user-select: none;
   cursor: pointer;
 }
-/* Поле не выбрано */
+/* Поле не выбрано off */
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
@@ -637,25 +636,8 @@ input::-webkit-inner-spin-button {
   background-position: 0 0;
 }
 
-/* Поле не выбрано + заблокировано */
-.filter-input-checkbox:disabled + label::before {
-  content: "";
-  position: absolute;
 
-  left: -40px;
-  top: 0;
-
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-
-  /* Как задать цвет svg картинкам? */
-  /* background-color: #6a6a6a; */
-  background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-/* Поле выбрано */
+/* Поле выбрано on*/
 .filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
@@ -671,26 +653,6 @@ input::-webkit-inner-spin-button {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-/* Поле выбрано + заблокировано */
-.filter-input-checkbox:disabled + label::before,
-.filter-input-checkbox:checked + label::after {
-  content: "";
-  position: absolute;
-
-  left: -40px;
-  top: 0;
-
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-
-  /* Как задать цвет svg картинкам? */
-  /* background-color: #6a6a6a; */
-  background-image: url("../img/checkbox-on.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  fill: #6a6a6a;
-}
 .filter-input:hover + label,
 .filter-input:focus + label {
   color: #ffffff;
@@ -701,7 +663,7 @@ input::-webkit-inner-spin-button {
 .price-controls {
   position: relative;
 
-  height: 36px;
+  height: 31px;
   margin-bottom: 20px;
 
   font-size: 0;
@@ -726,19 +688,19 @@ input::-webkit-inner-spin-button {
   display: inline-block;
 
   font-size: 14px;
-  line-height: 38px;
+  line-height: 32px;
   vertical-align: top;
 
   cursor: pointer;
 }
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
+  width: 86px;
 
-  padding-left: 65px;
+  padding-left: 62px;
 }
 .price-controls input {
-  width: 50px;
+  width: 48px;
   margin: 0px;
 
   color: inherit;
@@ -750,7 +712,7 @@ input::-webkit-inner-spin-button {
 .range-controls {
   position: relative;
 
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 }
 .range-controls .scale {
   height: 2px;
@@ -793,6 +755,8 @@ input::-webkit-inner-spin-button {
   display: block;
 
   margin: auto;
+  margin-top: 20px;
+  margin-left: 85px;
   padding: 8px 33px;
 
   color: #ffffff;
@@ -875,7 +839,14 @@ input::-webkit-inner-spin-button {
 .sort-price-link-current {
   color: #81b3d2;
 }
-
+.hotels-sort a:hover,
+.hotels-sort a:focus {
+  color: #81b3d2;
+}
+.hotels-sort a:active {
+  color: #000000;
+  text-decoration: none;
+}
 /* Стилизация иконок-стрелок 'СОРТИРОВКИ' вверх-вниз */
 /* .hotels-sort-buttons .button-up a {
 
