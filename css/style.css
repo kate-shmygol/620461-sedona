@@ -658,11 +658,12 @@ input::-webkit-inner-spin-button {
   padding: 5px;
 
   background-image: url("../img/checkbox-off.svg");
+  background-size: 23px 23px;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 /* Поле выбрано on*/
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked + label::before {
   content: "";
   position: absolute;
 
@@ -674,15 +675,20 @@ input::-webkit-inner-spin-button {
   padding: 5px;
 
   background-image: url("../img/checkbox-on.svg");
+  background-size: 27px 23px;
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+input:disabled ~ label::after,
+input:disabled ~ label::before {
+  opacity: 0.4;
 }
 .filter-input:hover + label,
 .filter-input:focus + label {
   color: #ffffff;
 }
 .filter-input:disabled + label {
-  color: #6a6a6a;
+  color: rgba(255, 255, 255, 0.4);
 }
 .price-controls {
   position: relative;
