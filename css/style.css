@@ -972,6 +972,9 @@ input::-webkit-inner-spin-button {
   color: #666666;
   background-color: #f2f2f2;
 }
-
+/**************************** POP-UP ***************************/
+.modal-show {
+  display: block;
+}
 
 

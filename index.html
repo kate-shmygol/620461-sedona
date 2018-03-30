@@ -106,12 +106,12 @@
         </section>
 
         <!-- `section` №7 - Заинтересовались? + форма поиска гостиницы -->
-        <section class="search">
+        <section class="search modal-search">
           <div class="search-text">
             <h2 class="search-title">Заинтересовались?</h2>
             <p class="search-subtitle">Укажите предполагаемые даты поездки,
               <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-              <a href="search.html">
+              <a class="search-link-open search-link-close" href="search.html">
                 <button class="button button-secondary text-secondary button-search-hotels">Поиск гостиницы в Седоне
                 </button>
               </a>
@@ -151,7 +151,7 @@
             </div>
           </form>
         </section>
-        
+
         <!-- `section` №8 - фоновая картинка - карта Седоны - после кнопки "Поиск гостиницы в Седоне" -->
         <section class="map">
           <h2 class="visually-hidden">Карта Седоны</h2>
@@ -198,7 +198,24 @@
   </body>
 
   <script>
-    var link = document.querySelector(".login-link");
+    var link = document.querySelector(".search-link-open");
+
+    var popup = document.querySelector(".modal-search");
+
+    var close = popup.querySelector(".search-link-close");
+
+
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+    });
+
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+    });
+
   </script>
 
 </html>
