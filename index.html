@@ -111,12 +111,12 @@
             <h2 class="search-title">Заинтересовались?</h2>
             <p class="search-subtitle">Укажите предполагаемые даты поездки,
               <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <!-- Кнопка, при нажатии на неё появляется попап с формой -->
-            <button class="button button-secondary text-secondary button-search-hotels">Поиск гостиницы в Седоне</button>
+              <a href="search.html">
+                <button class="button button-secondary text-secondary button-search-hotels">Поиск гостиницы в Седоне
+                </button>
+              </a>
           </div>
-          <!-- Форма поиска гостиницы в Седоне (pop-up) -->
           <form class="search-form" action="echo.htmlacademy.ru" method="post">
-            <!-- Два поля для ввода с типом "text"+ два поля с типом "number" -->
             <div class="search-item search-item-1">
               <label for="search-coming">Дата заезда:</label>
               <input id="search-coming" type="text" name="date-coming" placeholder="24 апреля 2017" class="input-style">
@@ -151,14 +151,11 @@
             </div>
           </form>
         </section>
+        
         <!-- `section` №8 - фоновая картинка - карта Седоны - после кнопки "Поиск гостиницы в Седоне" -->
-        <!-- Реализация - `background-image` для псевдоэлемента -->
         <section class="map">
           <h2 class="visually-hidden">Карта Седоны</h2>
-          <!-- <div id="map" class="img-map"> -->
-            <!-- width="1200" height="593" -->
             <img src="img/map.png" width="1200" height="593" alt="Карта Седоны">
-          <!-- </div> -->
         </section>
 
       </main>
@@ -199,4 +196,9 @@
       </footer>
     </div>  <!-- от container -->
   </body>
+
+  <script>
+    var link = document.querySelector(".login-link");
+  </script>
+
 </html>
