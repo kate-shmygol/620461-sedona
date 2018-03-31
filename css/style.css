@@ -496,13 +496,12 @@ input::-webkit-inner-spin-button {
   padding-bottom: 23px;
   padding-left: 28px;
 
+  background-color: #fefefe;
+}
+.main-footer-index {
   margin-top: -122px;
   position: relative;
-
   background-color: rgba(255, 255, 255, 0.8);
-}
-.main-footer-inner {
-  background-color: #fefefe;
 }
 .link-footer {
   font-size: 21px;
