@@ -491,12 +491,11 @@ input::-webkit-inner-spin-button {
   justify-content: space-around;
   align-items: center;
 
-  margin-top: 0px;
   padding-top: 23px;
   padding-bottom: 23px;
   padding-left: 28px;
 
-  background-color: rgba(255, 255, 255, 0.5); /* В PS не указан opacity, поставила 0.5 */
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .main-footer-inner {
   background-color: #fefefe;
@@ -981,8 +980,6 @@ input:disabled ~ label::before {
   animation: bounce 0.5s;
 }
 
-/* .search-item */
-
 @keyframes bounce
 {
   0% {
@@ -997,14 +994,25 @@ input:disabled ~ label::before {
     height: 340px;
   }
 }
+/* Прозрачность футера? */
+.modal-map {
+  position: relative;
+  display: block;
+}
+/* Пропадает футер и тень, если iframe отключить */
+.modal-map a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 
+  margin: 0 auto;
+  padding-bottom: 2px;
+}
 
+.modal-map iframe {
+  position: relative; /* Если отключить этот параметр, */
+  z-index: 2;
 
-/* {
-  from
-  {top: 200px;
-  }
-  to
-  {top: 290px;
-  }
-} */
+  border: none;
+}
