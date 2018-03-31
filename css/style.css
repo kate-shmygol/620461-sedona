@@ -308,6 +308,7 @@ img {
   padding-bottom: 30px;
 }
 .search-item {
+  display: inline;
   font: inherit;
   line-height: 26px;
   font-weight: bold;
@@ -351,7 +352,6 @@ img {
   left: 50%;
   transform: translateX(-50%);
 
-  /* margin: 0 auto; */
   padding-top: 53px;
   padding-bottom: 0px;
   margin-bottom: 77px;
@@ -974,12 +974,37 @@ input:disabled ~ label::before {
 /**************************** POP-UP ***************************/
 .search-form {
   display: none;
-  visibility: hidden;
 }
 .modal-show {
   display: block;
+
+  animation: bounce 0.5s;
 }
-.modal-close {
-  display: none;
-  visibility: hidden; /* если анимация */
+
+/* .search-item */
+
+@keyframes bounce
+{
+  0% {
+    top: 290px;
+    background:transparent;
+    height: 0px;
+  }
+
+  100% {
+    top: 290px;
+    background:white;
+    height: 340px;
+  }
 }
+
+
+
+/* {
+  from
+  {top: 200px;
+  }
+  to
+  {top: 290px;
+  }
+} */

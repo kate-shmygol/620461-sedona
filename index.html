@@ -111,8 +111,8 @@
             <h2 class="search-title">Заинтересовались?</h2>
             <p class="search-subtitle">Укажите предполагаемые даты поездки,
               <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-              <a class="search-link-open search-link-close" href="search.html">
-                <button class="button button-secondary text-secondary button-search-hotels">Поиск гостиницы в Седоне
+              <a href="search.html">
+                <button class="button button-secondary text-secondary button-search-hotels search-button-open">Поиск гостиницы в Седоне
                 </button>
               </a>
           </div>
@@ -198,32 +198,13 @@
   </body>
 
   <script>
-    var open = document.querySelector(".search-link-open");
+    var open = document.querySelector(".search-button-open");
     var popup = document.querySelector(".modal-search");
-    var close = popup.querySelector(".search-link-close");
-    var toggle = document.querySelector(".modal-show");
-    //var popup = document.querySelector(".search-form");
-
-
-    //var form = popup.querySelector("form");
 
     open.addEventListener("click", function (evt) {
       evt.preventDefault();
-      //console.log ("клик по кнопке Поиск гостиницы");
-      popup.classList.add("modal-show"); // JS должен добавить класс в вёрстку
-      toggle.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.toggle(".modal-close");
-      }
-      // popup.classList.remove("modal-show");
-// Toggle нужен
+      popup.classList.toggle("modal-show"); // JS должен добавить класс в вёрстку
     });
-
-    //close.addEventListener("click", function (evt) {
-      //evt.preventDefault();
-      //popup.classList.remove("modal-show");
-    //});
-
   </script>
 
 </html>
