@@ -150,6 +150,7 @@ img {
   margin-top: -57px;
 
   background-image: url("../img/photo-mask.jpg");
+  background-size: 1200px 510px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -574,7 +575,7 @@ input::-webkit-inner-spin-button {
 /* width="2706" height="1804" */
 .filtres {
   background-image: url("../img/background-inner.jpg");
-  background-size: 100%;
+  background-size: 1200px 800px;
   background-repeat: no-repeat;
   background-position: 0px;
 }
@@ -886,7 +887,7 @@ input:disabled ~ label::before {
 .button-up svg:active {
   fill: #81b3d2;
 }
-.sort-current-button a:not([href]) svg {
+.sort-current-button a:not([href]) {
   fill: #81b3d2;
 }
 /**************** Разделы с описанием гостиниц ***************/
@@ -913,6 +914,7 @@ input:disabled ~ label::before {
   margin-bottom: 2px;
   margin-right: 2px;
 
+  vertical-align: top;
   font-size: 14px;
   line-height: 21px;
   font-weight: bold;
@@ -980,6 +982,7 @@ input:disabled ~ label::before {
 
   padding-bottom: 118px;
   background-image: url(../img/map.png);
+  background-size: 1200px 470px;
 }
 /**************************** POP-UP ***************************/
 .search-form {
