@@ -985,6 +985,7 @@ input:disabled ~ label::before {
 .modal-map {
   height: 593px;
 
+  padding-bottom: 122px;
   background-image: url(../img/map.png);
 }
 /**************************** POP-UP ***************************/
