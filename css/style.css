@@ -160,6 +160,7 @@ img {
   margin-top: -57px;
 
   background-image: url("../img/photo-mask.jpg");
+  background-color: #ffffff;
   background-size: 1200px 510px;
   background-repeat: no-repeat;
   background-position: center;
@@ -263,18 +264,21 @@ img {
 }
 .feature-item-city:nth-child(2) {
   background-image: url("../img/icon-1.svg");
+  background-color: #ffffff;
   background-size: 75px 72px;
   background-position: top;
   background-repeat: no-repeat;
 }
 .feature-item-city:nth-child(3) {
   background-image: url("../img/icon-3.svg");
+  background-color: #ffffff;
   background-size: 74px 70px;
   background-position: top;
   background-repeat: no-repeat;
 }
 .feature-item-city:nth-child(4) {
   background-image: url("../img/icon-2.svg");
+  background-color: #ffffff;
   background-size: 64px 76px;
   background-position: top;
   background-repeat: no-repeat;
@@ -690,6 +694,7 @@ input::-webkit-inner-spin-button {
 /* width="2706" height="1804" */
 .filtres {
   background-image: url("../img/background-inner.jpg");
+  background-color: #ffffff;
   background-size: 1200px 800px;
   background-repeat: no-repeat;
   background-position: 0px;
@@ -793,6 +798,7 @@ input::-webkit-inner-spin-button {
   padding: 5px;
 
   background-image: url("../img/checkbox-off.svg");
+  background-color: #385f7e;
   background-size: 23px 23px;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -810,6 +816,7 @@ input::-webkit-inner-spin-button {
   padding: 5px;
 
   background-image: url("../img/checkbox-on.svg");
+  background-color: #385f7e;
   background-size: 27px 23px;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1170,6 +1177,7 @@ input:disabled ~ label::before {
 
   padding-bottom: 118px;
   background-image: url(../img/map.png);
+  background-color: #ffffff;
   background-size: 1200px 470px;
 }
 /**************************** POP-UP ***************************/
