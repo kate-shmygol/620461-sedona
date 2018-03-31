@@ -201,12 +201,20 @@
     var open = document.querySelector(".search-link-open");
     var popup = document.querySelector(".modal-search");
     var close = popup.querySelector(".search-link-close");
+    var toggle = document.querySelector(".modal-show");
+    //var popup = document.querySelector(".search-form");
+
+
     //var form = popup.querySelector("form");
 
     open.addEventListener("click", function (evt) {
       evt.preventDefault();
       //console.log ("клик по кнопке Поиск гостиницы");
       popup.classList.add("modal-show"); // JS должен добавить класс в вёрстку
+      toggle.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.toggle(".modal-close");
+      }
       // popup.classList.remove("modal-show");
 // Toggle нужен
     });
