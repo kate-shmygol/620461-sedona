@@ -195,8 +195,7 @@ img {
   align-self: center;
 
   margin-top: 40px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 0 50px;
 }
 .text-item-2 p {
   margin-top: 10px;
@@ -205,8 +204,7 @@ img {
   display: flex;
   justify-content: space-around;
 
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 .feature-item-city {
   display: flex;
@@ -254,8 +252,7 @@ img {
   flex-direction: column;
   align-self: center;
 
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0 40px;
 }
 .text-item-4 p {
   margin-top: 10px;
@@ -276,13 +273,11 @@ img {
   flex-direction: column;
 
   width: 300px;
-  padding-left: 60px;
-  padding-right: 60px;
-  margin-bottom: 15px;
+  padding: 0 60px;
+  margin-bottom: 14px;
 }
 .text-item-5 p {
   margin-top: 3px;
-  padding-top: 2px;
   padding-bottom: 3px;
 }
 /************************************** SEARCH *************************************/
@@ -296,7 +291,7 @@ img {
 }
 .search-subtitle {
   line-height: 24px;
-  margin-bottom: 45px;
+  margin-bottom: 77px;
 }
 .search .button {
   font-weight: bold;
@@ -305,8 +300,11 @@ img {
 }
 .button-search-hotels {
   width: 568px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 140px;
+  margin-top: 90px;
+}
+.search-text {
+  padding-bottom: 31px;
 }
 .search-item {
   display: inline;
@@ -478,11 +476,8 @@ input::-webkit-inner-spin-button {
   color: #81b3d2;
 }
 .button-search {
-  /* display: block; */
-
   width: 460px;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding: 17px 0;
   margin-bottom: 55px;
 }
 
@@ -492,16 +487,18 @@ input::-webkit-inner-spin-button {
   justify-content: space-around;
   align-items: center;
 
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding-top: 20px;
   padding-left: 28px;
+  padding-bottom: 25px;
 
   background-color: #fefefe;
 }
 .main-footer-index {
-  margin-top: -122px;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.8);
+
+  margin-top: -120px;
+
+  opacity: 0.8;
 }
 .link-footer {
   font-size: 21px;
@@ -524,13 +521,14 @@ input::-webkit-inner-spin-button {
 .footer-social ul {
   display: flex;
   flex-wrap: wrap;
-  width: 150px;
+  width: 160px;
+  margin-left: 10px;
 
   list-style: none;
 }
 .footer-social li {
-  margin-right: 4px;
-  margin-bottom: 4px;
+  margin-right: 6px;
+  margin-bottom: 6px;
 }
 
 .social-button:hover,
@@ -540,14 +538,6 @@ input::-webkit-inner-spin-button {
 .social-button:active {
   background-color: rgba(0, 0, 0, 0.3);
 }
-.footer-copyright span {
-  display: flex;
-  flex-wrap: wrap;
-
-  line-height: 26px;
-
-  margin-top: 8px;
-}
 .footer-copyright {
   display: flex;
   justify-content: center;
@@ -555,11 +545,20 @@ input::-webkit-inner-spin-button {
 
   line-height: 26px;
 }
+.footer-copyright span {
+  display: flex;
+  flex-wrap: wrap;
+
+  line-height: 26px;
+
+  margin-left: 13px;
+  margin-top: 8px;
+}
 .footer-copyright svg {
   display: block;
 
   width: 115px;
-  padding-left: 20px;
+  padding-left: 7px;
 
   fill: #000000;
 }
@@ -625,9 +624,9 @@ input::-webkit-inner-spin-button {
 
   width: 320px;
 
+  padding-top: 10px;
   margin-top: 0px;
   margin-bottom: 22px;
-  padding-top: 10px;
   margin-right: 60px;
 
   color: #ffffff;
@@ -808,8 +807,8 @@ input:disabled ~ label::before {
   flex-wrap: wrap;
   align-items: center;
 
-  padding-top: 32px;
-  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 28px;
   margin-bottom: 2px;
 
   background-color: #fefefe;
@@ -830,8 +829,8 @@ input:disabled ~ label::before {
   display: flex;
   justify-content: flex-end;
 
-  padding-right: 70px;
-  padding-top: 5px;
+  padding-right: 72px;
+  padding-top: 4px;
 }
 /*************************** SORTING *************************/
 .hotels-sort {
@@ -890,7 +889,6 @@ input:disabled ~ label::before {
 .sort-current-button a:not([href]) svg {
   fill: #81b3d2;
 }
-
 /**************** Разделы с описанием гостиниц ***************/
 .hotels-item-price span {
   color: #333333;
@@ -942,8 +940,7 @@ input:disabled ~ label::before {
   flex-grow: 1;
 
   margin: 0px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding: 25px 0;
 }
 .hotels-item-content h3 {
   padding: 0px;
@@ -972,19 +969,16 @@ input:disabled ~ label::before {
   padding-right: 72px;
 }
 .hotels-item-raiting span {
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  margin-top: 40px;
+  padding: 4px 12px;
+  margin-top: 43px;
 
   color: #666666;
   background-color: #f2f2f2;
 }
 .modal-map {
-  height: 593px;
+  height: 470px;
 
-  padding-bottom: 122px;
+  padding-bottom: 118px;
   background-image: url(../img/map.png);
 }
 /**************************** POP-UP ***************************/
