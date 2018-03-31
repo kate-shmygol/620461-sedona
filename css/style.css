@@ -343,7 +343,7 @@ img {
 }
 .search-form {
   position: absolute;
-
+  z-index: 3;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -506,6 +506,7 @@ input::-webkit-inner-spin-button {
   font-weight: bold;
 
   color: #000000;
+  background-color: transparent;
 }
 .social-button {
   display: flex;
@@ -970,6 +971,11 @@ input:disabled ~ label::before {
   color: #666666;
   background-color: #f2f2f2;
 }
+.modal-map {
+  height: 593px;
+
+  background-image: url(../img/map.png);
+}
 /**************************** POP-UP ***************************/
 .search-form {
   display: none;
@@ -977,42 +983,18 @@ input:disabled ~ label::before {
 .modal-show {
   display: block;
 
-  animation: bounce 0.5s;
+  animation: appearance 0.7s;
 }
-
-@keyframes bounce
+@keyframes appearance
 {
   0% {
     top: 290px;
-    background:transparent;
+    background: transparent;
     height: 0px;
   }
-
   100% {
     top: 290px;
-    background:white;
+    opacity: 1;
     height: 340px;
   }
-}
-/* Прозрачность футера? */
-.modal-map {
-  position: relative;
-  display: block;
-}
-/* Пропадает футер и тень, если iframe отключить */
-.modal-map a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-
-  margin: 0 auto;
-  padding-bottom: 2px;
-}
-
-.modal-map iframe {
-  position: relative; /* Если отключить этот параметр, */
-  z-index: 2;
-
-  border: none;
 }
