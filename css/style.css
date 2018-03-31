@@ -1001,7 +1001,7 @@ input:disabled ~ label::before {
 {
   0% {
     top: 290px;
-    background: transparent;
+    opacity: 0;
     height: 0px;
   }
   100% {
