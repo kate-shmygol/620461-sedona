@@ -29,12 +29,9 @@
 
       <main class="main-page">
         <h1 class="visually-hidden">Гостиницы Седоны</h1>
-        <!-- 'section' №1 - фильтр гостиниц города Седона -->
         <section class="filtres">
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
-          <!-- Форма фильтра гостиниц -->
           <form class="filter text-secondary" method="get" action="filter.html">
-            <!-- 'fieldset' №1 - инфраструктура -->
             <fieldset class="infrastructure">
               <legend>Инфраструктура:</legend>
               <ul>
@@ -53,7 +50,6 @@
               </ul>
             </fieldset>
 
-            <!-- 'fieldset' №2 - тип жилья -->
             <fieldset class="accommodation">
               <legend>Тип жилья:</legend>
               <ul>
@@ -72,7 +68,6 @@
               </ul>
             </fieldset>
 
-            <!-- 'div' №3 - Стоимость в сутки -->
             <div class="filter-range">
               <span class="filter-range-title">Стоимость в сутки (Р):</span>
               <div class="price-controls">
@@ -97,7 +92,6 @@
           </form>
         </section>
 
-        <!-- 'section' №2 - вывод результатов и сортировка -->
         <section class="results">
           <h2 class="visually-hidden">Результаты</h2>
           <div class="found">
@@ -125,45 +119,27 @@
           </div>
         </section>
 
-        <!-- `section` №3 - содержит 3 `article` - информация о 3-ёх гостиницах -->
-        <!-- Каждому `article` скрытый заголовок `h3` -->
-        <!-- Порядок блоков в `article`:
-          -> картинка-ссылка
-          -> заголовок-ссылка
-          -> блок 'Тип гостиницы' и 'Цена'
-          -> блок кнопкок-ссылок 'Подробнее' и 'Забронировать'
-          -> блок 'Рейтинг'  -->
         <section class="hotels">
-          <!-- Скрытый заголовок `section` гостиниц Седоны -->
           <h2 class="visually-hidden">Гостиницы Седоны</h2>
-          <!-- `article`№1 - вся информация о гостинице Amara Resort & SPA: картинка, название, цена, рейтинг -->
           <article>
-            <!-- Контентная картинка гостиницы №1 -->
             <div class="hotels-item-image">
               <a href="hotels-item-1.html">
-                <!-- width="135" height="90" -->
                 <img src="img/amara.png" alt="Гостиница Amara Resort & SPA" width="135" height="90">
               </a>
             </div>
             <div class="hotels-item-content">
-              <!-- Заголовок `article` - название гостиницы №1 + ссылка на неё -->
               <h3 class="hotels-item-title">
                 <a class="hotels-links" href="hotels-item-1.html">Amara Resort & SPA</a>
               </h3>
-              <!-- Блок 'Тип гостиницы' и 'Цена' -->
               <p class="hotels-item-price">
                 <span>Гостиница</span>
                 <span>От 4000 Р.</span>
               </p>
-              <!-- Блок кнопок-ссылок
-              'Подробнее' (на страницу описания гостиницы)
-              'Забронировать' (на форму бронирования) -->
               <div class="hotels-item-buttons">
                 <a class="button button-more-info button-primary" href="#AmaraResort&SPA">Подробнее</a>
                 <a class="button button-to-book button-secondary" href="#to-book-amara">Забронировать</a>
               </div>
             </div>
-            <!-- Блок 'Рейтинг' -->
             <div class="hotels-item-raiting">
               <p class="visually-hidden">AmaraResort & SPA. Четыре звезды</p>
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="17" viewBox="0 0 90 17">
@@ -173,32 +149,25 @@
             </div>
           </article>
 
-          <!-- `article`№2 - вся информация о мотеле Desert Quail Inn: картинка, название, цена, рейтинг -->
           <article>
-            <!-- Контентная картинка мотеля №2 -->
             <div class="hotels-item-image">
               <a href="hotels-item-2.html">
-                <!-- width="135" height="90" -->
                 <img src="img/desert.png" alt="Мотель Desert Quail Inn" width="135" height="90">
               </a>
             </div>
             <div class="hotels-item-content">
-              <!-- Заголовок `article` - название мотеля №2 + ссылка на него -->
               <h3 class="hotels-item-title">
                 <a class="hotels-links" href="hotels-item-2.html">Desert Quail Inn</a>
               </h3>
-              <!-- Блок 'Тип гостиницы' и 'Цена' -->
               <p class="hotels-item-price">
                 <span>Мотель</span>
                 <span>От 3000 Р.</span>
               </p>
-              <!-- Блок кнопок-ссылок -->
               <div class="hotels-item-buttons">
                 <a class="button button-more-info button-primary" href="#DesertQuailInn">Подробнее</a>
                 <a class="button button-to-book button-secondary" href="#to-book-desert">Забронировать</a>
               </div>
             </div>
-            <!-- Блок 'Рейтинг' -->
             <div class="hotels-item-raiting">
               <p class="visually-hidden">Desert Quail Inn. Три звезды</p>
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="17" viewBox="0 0 65 17">
@@ -208,32 +177,25 @@
             </div>
           </article>
 
-          <!-- `article`№3 - вся информация об апартаментах Villas At Poco Diablo: картинка, название, цена, рейтинг -->
           <article>
-            <!-- Контентная картинка апартаментов №3 -->
             <div class="hotels-item-image">
               <a href="hotels-item-3.html">
-                <!-- width="135" height="90" -->
                 <img src="img/villas.png" alt="Апартаменты Villas At Poco Diablo" width="135" height="90">
               </a>
             </div>
             <div class="hotels-item-content">
-              <!-- Заголовок `article` - название апартаментов №3 + ссылка на них -->
               <h3 class="hotels-item-title">
                 <a class="hotels-links" href="hotels-item-3.html">Villas At Poco Diablo</a>
               </h3>
-              <!-- Блок 'Тип гостиницы' и 'Цена' -->
               <p class="hotels-item-price">
                 <span>Апартаменты</span>
                 <span>От 2000 Р.</span>
               </p>
-              <!-- Блок кнопок-ссылок -->
               <div class="hotels-item-buttons">
                 <a class="button button-more-info button-primary" href="#VillasAtPocoDiablo">Подробнее</a>
                 <a class="button button-to-book button-secondary" href="#to-book-villas">Забронировать</a>
               </div>
             </div>
-            <!-- Блок 'Рейтинг' -->
             <div class="hotels-item-raiting">
               <p class="visually-hidden">Villas At Poco Diablo. Две звезды</p>
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="17" viewBox="0 0 43 17">
@@ -288,6 +250,6 @@
           </a>
         </p>
       </footer>
-    </div>  <!-- от container -->
+    </div>
   </body>
 </html>
