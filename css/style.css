@@ -199,7 +199,6 @@ img {
   -ms-flex-item-align: center;
       align-self: center;
 
-  padding-bottom: 3px;
   width: 50%;
 }
 .text-item-1 {
@@ -225,7 +224,7 @@ img {
 
   margin: 0px;
   padding: 3px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .text-item-2 {
   display: -webkit-box;
@@ -307,8 +306,8 @@ img {
       align-self: center;
 
   margin: 0px;
-  padding: 3px;
-  margin-bottom: 10px;
+  padding: 0px;
+  margin-bottom: 18px;
 }
 .text-item-4 {
   display: -webkit-box;
@@ -324,7 +323,7 @@ img {
   padding: 0 40px;
 }
 .text-item-4 p {
-  margin-top: 10px;
+  margin-top: 6px;
 }
 .future-item-5 {
   display: -webkit-box;
@@ -333,7 +332,7 @@ img {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 
-  padding-top: 28px;
+  padding-top: 26px;
   padding-bottom: 30px;
 }
 .title-item-5 {
@@ -358,7 +357,6 @@ img {
 }
 .text-item-5 p {
   margin-top: 5px;
-  padding-bottom: 3px;
 }
 /************************************** SEARCH *************************************/
 .search-title {
@@ -724,8 +722,6 @@ input::-webkit-inner-spin-button {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-
-  padding-bottom: 2px;
 }
 .infrastructure legend,
 .accommodation legend {
@@ -740,7 +736,7 @@ input::-webkit-inner-spin-button {
   list-style: none;
 }
 .filter-option {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   padding-left: 55px;
 }
 .filtres fieldset {
@@ -1189,8 +1185,8 @@ input:disabled ~ label::before {
   padding-right: 74px;
 }
 .hotels-item-raiting span {
-  padding: 5px 12px;
-  margin-top: 43px;
+  padding: 2px 12px;
+  margin-top: 48px;
 
   color: #666666;
   background-color: #f2f2f2;
