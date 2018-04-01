@@ -1,4 +1,3 @@
-// Форма поиска
 var open = document.querySelector(".search-button-open");
 var popup = document.querySelector(".modal-search");
 
