@@ -31,13 +31,11 @@
         <h1 class="visually-hidden">Гостиницы Седоны</h1>
         <!-- 'section' №1 - фильтр гостиниц города Седона -->
         <section class="filtres">
-          <!-- Cкрытый заголовок 'Фильтр гостиниц' -->
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
           <!-- Форма фильтра гостиниц -->
           <form class="filter text-secondary" method="get" action="filter.html">
             <!-- 'fieldset' №1 - инфраструктура -->
             <fieldset class="infrastructure">
-              <!-- Сделать по аналогии с Типом жилья, обернуть label в input -->
               <legend>Инфраструктура:</legend>
               <ul>
                 <li class="filter-option">
@@ -74,9 +72,9 @@
               </ul>
             </fieldset>
 
-            <!-- 'fieldset' №3 - Стоимость в сутки -->
-            <fieldset class="filter-range">
-              <legend class="filter-range-title">Стоимость в сутки (Р):</legend>
+            <!-- 'div' №3 - Стоимость в сутки -->
+            <div class="filter-range">
+              <span class="filter-range-title">Стоимость в сутки (Р):</span>
               <div class="price-controls">
                 <label class="min-price text-secondary">
                   От
@@ -94,8 +92,8 @@
                 <div class="range-toggle range-toggle-min"></div>
                 <div class="range-toggle range-toggle-max"></div>
               </div>
-              <button class="button button-show text-secondary" type="submit">Показать</button>
-            </fieldset>
+              <a class="button button-show text-secondary" href="filter.html">Показать</a>
+            </div>
           </form>
         </section>
 
@@ -194,9 +192,7 @@
                 <span>Мотель</span>
                 <span>От 3000 Р.</span>
               </p>
-              <!-- Блок кнопок-ссылок
-                'Подробнее' (на страницу описания гостиницы)
-                'Забронировать' (на форму бронирования) -->
+              <!-- Блок кнопок-ссылок -->
               <div class="hotels-item-buttons">
                 <a class="button button-more-info button-primary" href="#DesertQuailInn">Подробнее</a>
                 <a class="button button-to-book button-secondary" href="#to-book-desert">Забронировать</a>
@@ -231,9 +227,7 @@
                 <span>Апартаменты</span>
                 <span>От 2000 Р.</span>
               </p>
-              <!-- Блок кнопок-ссылок
-                'Подробнее' (на страницу описания гостиницы)
-                'Забронировать' (на форму бронирования) -->
+              <!-- Блок кнопок-ссылок -->
               <div class="hotels-item-buttons">
                 <a class="button button-more-info button-primary" href="#VillasAtPocoDiablo">Подробнее</a>
                 <a class="button button-to-book button-secondary" href="#to-book-villas">Забронировать</a>
