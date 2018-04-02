@@ -266,7 +266,8 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-      align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
 
   width: 300px;
   padding-top: 78px;
